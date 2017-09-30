@@ -17,20 +17,35 @@ body {
   height: 100vh;
 }
 
-.movie-item-container{
+.movie-items-container{
   background: black;
   padding-bottom: 16px;
   height: 100vh;
   overflow-y: scroll;
 }
 
-.movie-item{
+.movie-item-container-single{
   margin-top: 16px;
+}
+
+.movie-item{
+
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  background: red;
 
 }
 
 .movie-img{
   width: 100%;
+}
+
+.like-button{
+  position:absolute;
+  /*bottom:10px;*/
+  right:4px;
+  opacity: 0.8;
 }
 
 .selected-indicator{
@@ -58,3 +73,9 @@ body {
 .text-secondary{
   color: #9E9E9E;
 }
+
+.text-red{
+  color: palevioletred;
+}
+
+
