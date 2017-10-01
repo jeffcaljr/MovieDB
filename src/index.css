@@ -160,3 +160,16 @@ movie-info-right-column{
   padding-top: 2rem;
 }
 
+
+.genre{
+  display: inline-block;
+  background: darkred;
+  color: white;
+  padding: 2px 4px;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+

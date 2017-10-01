@@ -16,8 +16,8 @@ class Movie{
     }
 
     getImage(width = 500){
-        if(imagePath == ""){
-            return ""
+        if(this.imagePath == ""){
+            return undefined
         }
         else{
             return `${BASE_IMAGE_URL}w${width}${this.imagePath}`
@@ -27,7 +27,7 @@ class Movie{
 
 export const MockMovie = new Movie(381284, "Hidden Figures", "2016-12-10", "",
     "The untold story of Katherine G. Johnson, Dorothy Vaughan and Mary Jackson – brilliant African-American women working at NASA and serving as the brains behind one of the greatest operations in history – the launch of astronaut John Glenn into orbit. The visionary trio crossed all gender and race lines to inspire generations to dream big.",
-    7.8, 2091, [], false, "/6cbIDZLfwUTmttXTmNi8Mp3Rnmg.jpg")
+    7.8, 2091, [{id: 2, name: "Drama"}], false, "/6cbIDZLfwUTmttXTmNi8Mp3Rnmg.jpg")
 
 
 export default Movie;

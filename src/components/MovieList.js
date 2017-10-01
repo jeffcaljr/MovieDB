@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+
+import {MockMovie} from '../models/movie'
 import MovieItem from "./MovieItem";
 import MovieDetails from "./MovieDetails";
 
@@ -11,39 +13,40 @@ class MovieList extends Component {
         this.toggleMovieDetail = this.toggleMovieDetail.bind(this)
 
         this.state = {
-            showModal: false
+            showModal: false,
+            selectedMovie: null
         }
     }
 
-    toggleMovieDetail = () => {
-        this.setState({showModal: !this.state.showModal})
+    toggleMovieDetail = (movie) => {
+        let isShown = !this.state.showModal;
+        let movieToShow = (isShown) ? movie : null
+        this.setState({showModal: isShown, selectedMovie: movieToShow})
     }
 
     render(){
         return (
             <div className={this.props.className + " " + ((this.state.showModal) ? " no-scroll " : "scroll-y ")}>
                 <MovieDetails
+                    movie={this.state.selectedMovie}
                     show={this.state.showModal}
                     onClick={this.toggleMovieDetail}/>
 
                 <div className="row">
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+
+
+
+
 
                 </div>
 

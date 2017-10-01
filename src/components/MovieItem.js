@@ -1,16 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cover from '../movie_cover.jpg'
+
+import Movie from '../models/movie'
+import cover from '../images/default_movie_cover.jpg'
 
 
-const MovieItem = (props) => {
+const MovieItem = ({movie, onClick}) => {
 
     return (
         <div className="movie-item-container-single col-3 col-sm-3 col-md-3 col-lg-2">
             <figure
                 className="movie-item image-btn-container"
-                onClick={() => props.onClick()}>
-                <img src={cover} alt="movie-cover" className="movie-img"/>
+                onClick={() => onClick(movie)}>
+                <img src={movie.getImage() || cover} alt={movie.title || "Movie Cover"} className="movie-img"/>
 
                 <a className="btn like-button like-button btn-sm" href="#">
                     <i className="fa fa-heart-o text-red"></i>
@@ -23,6 +25,7 @@ const MovieItem = (props) => {
 }
 
 MovieItem.propTypes = {
+    movie: PropTypes.instanceOf(Movie).isRequired,
     onClick: PropTypes.func.isRequired
 }
 
