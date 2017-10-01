@@ -25,7 +25,7 @@ class FavoriteButton extends Component {
     render(){
         return (
             <a
-                className="btn like-button like-button btn-sm"
+                className="btn like-button like-button btn-sm borderless"
                 href="#"
                 onClick={(e) => {this.toggledFavorite(e)}}>
                 {this.state.favorite ? <i className="fa fa-heart text-red"></i> : <i className="fa fa-heart-o text-red"></i>}
