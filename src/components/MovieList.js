@@ -28,35 +28,23 @@ class MovieList extends Component {
 
                 <div className="row">
                     <MovieItem onClick={this.toggleMovieDetail}/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+                    <MovieItem onClick={this.toggleMovieDetail}/>
+
                 </div>
 
             </div>
