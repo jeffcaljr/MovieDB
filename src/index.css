@@ -172,4 +172,9 @@ movie-info-right-column{
   margin-bottom: 0.4rem;
 }
 
-
+.empty-movies-list{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -81,7 +81,7 @@ const MovieDetails = ({movie, show, onClick}) => {
                                 <img src={movie.getImage() || cover} alt={movie.title || "Movie Cover"} className="movie-info-image"/>
                                 <a
                                     href="#"
-                                    className={"cover-button play-button " + ( !movie.hasVideo ? " hidden" : ""git )}
+                                    className={"cover-button play-button " + ( !movie.hasVideo ? " hidden" : "")}
                                     ><i className="fa fa-play fa-3x"></i></a>
                             </figure>
                             <div className="movie-rating clearfix">

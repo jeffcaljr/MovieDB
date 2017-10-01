@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
-import {MockMovie} from '../models/movie'
+import Movie, {MockMovie} from '../models/movie'
 import MovieItem from "./MovieItem";
 import MovieDetails from "./MovieDetails";
 
@@ -24,6 +24,27 @@ class MovieList extends Component {
         this.setState({showModal: isShown, selectedMovie: movieToShow})
     }
 
+    renderMovies = () => {
+
+        if(this.props.movies.length > 0){
+            let moviesJSX = [];
+            this.props.movies.map((movie) => {
+                let movieJSX = <MovieItem movie={movie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                moviesJSX.push(movieJSX);
+            })
+
+            return moviesJSX
+        }
+        else{
+            return <div className="empty-movies-list">
+                <h2 className="text-center text-white">No Movies Found</h2>
+            </div>
+        }
+
+
+
+    }
+
     render(){
         return (
             <div className={this.props.className + " " + ((this.state.showModal) ? " no-scroll " : "scroll-y ")}>
@@ -33,20 +54,7 @@ class MovieList extends Component {
                     onClick={this.toggleMovieDetail}/>
 
                 <div className="row">
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-                    <MovieItem movie={MockMovie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
-
-
-
-
+                    {this.renderMovies(this.props.movies)}
 
                 </div>
 
@@ -56,10 +64,12 @@ class MovieList extends Component {
 }
 
 MovieList.propTypes = {
+    movies: PropTypes.arrayOf(PropTypes.instanceOf(Movie)).isRequired,
     className: PropTypes.string
 }
 
 MovieList.defaultProps = {
+    movies: [],
     className: ""
 }
 
