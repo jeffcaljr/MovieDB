@@ -48,10 +48,12 @@ class MovieList extends Component {
     render(){
         return (
             <div className={this.props.className + " " + ((this.state.showModal) ? " no-scroll " : "scroll-y ")}>
-                <MovieDetails
+                {this.state.selectedMovie
+                    ? <MovieDetails
                     movie={this.state.selectedMovie}
                     show={this.state.showModal}
                     onClick={this.toggleMovieDetail}/>
+                : ""}
 
                 <div className="row">
                     {this.renderMovies(this.props.movies)}

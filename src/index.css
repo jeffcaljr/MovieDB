@@ -7,7 +7,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   background: black;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 
@@ -114,6 +114,11 @@ body {
 }
 
 
+.nav-category-item[selected]{
+  color:red;
+}
+
+
 
 .hidden{
   display: none;
@@ -132,7 +137,7 @@ scroll-y{
 }
 
 .no-scroll-y{
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
 }
 
 

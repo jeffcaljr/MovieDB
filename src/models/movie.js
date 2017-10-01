@@ -1,7 +1,7 @@
 const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/"
 
 class Movie{
-    constructor(id, title = "", releaseDate = -1, tagline = "", overview = "", voteAverage = 0.0, voteCount = 0, genres = [], hasVideo = false, imagePath = ""){
+    constructor(id, title = "", releaseDate = -1, tagline = "", overview = "", voteAverage = 0.0, voteCount = 0, genres = [], hasVideo = false, imagePath = "", favorited = false){
         this.id = id;
         this.title = title;
         this.releaseDate = releaseDate;
@@ -12,16 +12,22 @@ class Movie{
         this.genres = genres;
         this.hasVideo = hasVideo;
         this.imagePath = imagePath;
+        this.favorited = favorited;
+
 
     }
 
-    getImage(width = 500){
+    getImage = (width = 500) => {
         if(this.imagePath == ""){
             return undefined
         }
         else{
             return `${BASE_IMAGE_URL}w${width}${this.imagePath}`
         }
+    }
+
+    toggleFavorited = () => {
+        this.favorited = !this.favorited;
     }
 }
 
