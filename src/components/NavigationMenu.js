@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import NavCategory from "./NavCategory";
+import DropdownWrapper from "./DropdownWrapper";
 
 class NavigationMenu extends Component{
     constructor(){
@@ -8,7 +9,7 @@ class NavigationMenu extends Component{
         this.categorySelected = this.categorySelected.bind(this);
 
         this.state = {
-            selected: 0
+            selected: -1
         }
     }
 
@@ -46,6 +47,8 @@ class NavigationMenu extends Component{
         return(
             <div className={this.props.className}>
 
+                <i className="fa fa-gear text-white pull-right" aria-hidden="false"></i>
+
                 <div className="nav-item input-group">
                     <form className="input-group">
                         <input className="form-control" type="text" placeholder="Search"/>
@@ -61,13 +64,14 @@ class NavigationMenu extends Component{
 
 
 
-                <h3 className="text-white">Categories</h3>
-                <ul className="list-group categories-list">
-                    {this.generateCategories(10)}
+                <h3 className="text-white font-weight-bold">Trending</h3>
+                <DropdownWrapper title={"Categories"}
+                                 children={
+                                            <ul className="list-group categories-list">
+                                                {this.generateCategories(10)}
 
-                </ul>
-
-                <i className="fa fa-gear text-white pull-left" aria-hidden="false"></i>
+                                            </ul>}
+                />
 
             </div>
 

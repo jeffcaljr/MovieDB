@@ -21,7 +21,7 @@ class DropdownWrapper extends Component{
         return (
             <div className="dropdown">
                 <div className="dropdown-header">
-                    <h3 className="title d-inline-block ">{this.props.title}</h3>
+                    <h3 className="title d-inline-block text-white">{this.props.title}</h3>
                     <a
                         className="btn dropdown-toggle-btn d-inline-block borderless"
                         onClick={this.toggleExpanded}>
