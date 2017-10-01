@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import NavCategory from "./NavCategory";
 
 class NavigationMenuCollapsed extends Component{
@@ -73,14 +74,17 @@ class NavigationMenuCollapsed extends Component{
                     </div>
                 </nav>
 
-
-
-
-
-
         );
     }
 
+}
+
+NavigationMenuCollapsed.propTypes = {
+    className: PropTypes.string
+}
+
+NavigationMenuCollapsed.defaultProps = {
+    className: ""
 }
 
 export default NavigationMenuCollapsed;

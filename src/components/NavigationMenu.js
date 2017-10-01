@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import NavCategory from "./NavCategory";
 
 class NavigationMenu extends Component{
@@ -64,6 +65,14 @@ class NavigationMenu extends Component{
         );
     }
 
+}
+
+NavigationMenu.propTypes = {
+    className: PropTypes.string
+}
+
+NavigationMenu.defaultProps = {
+    className: ""
 }
 
 export default NavigationMenu;
