@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Movie from '../models/movie'
 import cover from '../images/default_movie_cover.jpg'
 import FavoriteButton from "./FavoriteButton";
+import DropdownWrapper from "./DropdownWrapper";
 
 class MovieDetails extends Component {
     constructor(props) {
@@ -38,35 +39,37 @@ class MovieDetails extends Component {
         }
         else {
             //MOCK DATA
-            return (
-                <div className="genres-container">
-                    <div className="genre">Drama</div>
-                    <div className="genre">Comedy</div>
-                    <div className="genre">Action</div>
-                    <div className="genre">Horror</div>
-                    <div className="genre">Documentary</div>
-                    <div className="genre">Drama</div>
-                    <div className="genre">Comedy</div>
-                    <div className="genre">Action</div>
-                    <div className="genre">Horror</div>
-                    <div className="genre">Documentary</div>
-                    <div className="genre">Drama</div>
-                    <div className="genre">Comedy</div>
-                    <div className="genre">Action</div>
-                    <div className="genre">Horror</div>
-                    <div className="genre">Documentary</div>
-                    <div className="genre">Drama</div>
-                    <div className="genre">Comedy</div>
-                    <div className="genre">Action</div>
-                    <div className="genre">Horror</div>
-                    <div className="genre">Documentary</div>
-                    <div className="genre">Drama</div>
-                    <div className="genre">Comedy</div>
-                    <div className="genre">Action</div>
-                    <div className="genre">Horror</div>
-                    <div className="genre">Documentary</div>
 
-                </div>
+            let mockGenres = <div className="genres-container">
+                <div className="genre">Drama</div>
+                <div className="genre">Comedy</div>
+                <div className="genre">Action</div>
+                <div className="genre">Horror</div>
+                <div className="genre">Documentary</div>
+                <div className="genre">Drama</div>
+                <div className="genre">Comedy</div>
+                <div className="genre">Action</div>
+                <div className="genre">Horror</div>
+                <div className="genre">Documentary</div>
+                <div className="genre">Drama</div>
+                <div className="genre">Comedy</div>
+                <div className="genre">Action</div>
+                <div className="genre">Horror</div>
+                <div className="genre">Documentary</div>
+                <div className="genre">Drama</div>
+                <div className="genre">Comedy</div>
+                <div className="genre">Action</div>
+                <div className="genre">Horror</div>
+                <div className="genre">Documentary</div>
+                <div className="genre">Drama</div>
+                <div className="genre">Comedy</div>
+                <div className="genre">Action</div>
+                <div className="genre">Horror</div>
+                <div className="genre">Documentary</div>
+            </div>
+
+            return (
+                <DropdownWrapper title={"Genres"} children={mockGenres}/>
             );
         }
     }

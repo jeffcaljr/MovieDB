@@ -47,7 +47,7 @@ class MovieList extends Component {
 
     render(){
         return (
-            <div className={this.props.className + " " + ((this.state.showModal) ? " no-scroll " : "scroll-y ")}>
+            <div className={this.props.className + " " + ((this.state.showModal) ? " no-scroll-y " : " scroll-y ")}>
                 {this.state.selectedMovie
                     ? <MovieDetails
                     movie={this.state.selectedMovie}

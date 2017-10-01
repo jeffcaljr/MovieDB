@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html{
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,11 +27,11 @@ body {
   padding-bottom: 16px;
   padding-top: 16px;
   height: 100vh;
-
+  overflow-y: scroll;
 }
 
 .category-name{
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .categories-list{
@@ -137,7 +141,7 @@ scroll-y{
 }
 
 .no-scroll-y{
-  /*overflow-y: hidden;*/
+  overflow-y: hidden;
 }
 
 
@@ -183,3 +187,33 @@ movie-info-right-column{
   justify-content: center;
   align-items: center;
 }
+
+
+.dropdown-divider{
+  color: white;
+  margin-top: 0;
+  margin-left: 8%;
+  margin-right: 5%;
+}
+
+.dropdown-toggle-btn{
+  margin-bottom: 1.1rem;
+}
+
+.dropdown-header{
+  padding-bottom: 0;
+}
+
+.dropdown .title{
+  margin: 0;
+}
+
+.dropdown-content{
+  padding-left: 8%;
+  padding-right: 5%;
+}
+
+.borderless{
+  border: none;
+}
+

@@ -6,6 +6,7 @@ import './App.css';
 import NavigationMenu from "./components/NavigationMenu";
 import MovieList from "./components/MovieList";
 import NavigationMenuCollapsed from "./components/NavigationMenuCollapsed";
+import DropdownWrapper from "./components/DropdownWrapper";
 
 class App extends Component {
     constructor(){
@@ -47,6 +48,7 @@ class App extends Component {
     }
   render() {
     return (
+
       <div className="App">
           <div className="container-fluid">
               <div className="row">
