@@ -16,11 +16,7 @@ class VideoPlayer extends Component{
         let src = this.props.movie.loadYouTubeTrailerURL()
             .then((res) => {
 
-                // alert(JSON.stringify(res))
                 const results = res.results;
-                //
-                // // alert("results: " + results)
-                //
                 const trailers = results.filter((video) => {return video.type === "Trailer"})
                 const firstTrailerVideo = trailers.find((video) => {return video["site"] === "YouTube"})
                 //

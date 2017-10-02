@@ -136,9 +136,6 @@ class MovieDetails extends Component {
 
 }
 
-
-
-
 MovieDetails.propTypes = {
     movie: PropTypes.instanceOf(Movie).isRequired,
     show: PropTypes.bool.isRequired,
