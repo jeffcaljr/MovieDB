@@ -64,8 +64,8 @@ class MovieList extends Component {
 
                 <div className="row">
                     {this.renderMovies(this.props.movies)}
-
                 </div>
+                <a href="#" className="btn text-white w-100 text-center" onClick={() => { if(this.props.loadMore != undefined){this.props.loadMore()}}}>Load More</a>
 
             </div>
         );
@@ -75,7 +75,8 @@ class MovieList extends Component {
 MovieList.propTypes = {
     movies: PropTypes.arrayOf(PropTypes.instanceOf(Movie)).isRequired,
     className: PropTypes.string,
-    playVideo: PropTypes.func.isRequired
+    playVideo: PropTypes.func.isRequired,
+    loadMore: PropTypes.func
 }
 
 MovieList.defaultProps = {

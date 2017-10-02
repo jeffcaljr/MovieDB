@@ -14,6 +14,7 @@ class App extends Component {
         super();
 
         this.state = {
+            page: 1,
             movies: [],
             categories: [],
             videoPlaying: null
@@ -22,11 +23,12 @@ class App extends Component {
         this.loadTopMovies = this.loadTopMovies.bind(this)
         this.loadCategories = this.loadCategories.bind(this)
         this.toggleVideoPlayer = this.toggleVideoPlayer.bind(this)
+        this.loadMoreMovies = this.loadMoreMovies.bind(this)
     }
 
     // movies = [MockMovie, MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie]
 
-    loadTopMovies = (page = 1) => {
+    loadTopMovies = (page = this.state.page) => {
         return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=f3d495d80d7a7139830e3297dc3923e1&language=en-US&page=${page}`)
             .then( (res) => {
                 if(res.ok){
@@ -69,6 +71,24 @@ class App extends Component {
         }
 
     }
+
+
+    loadMoreMovies = () =>{
+        this.loadTopMovies()
+            .then((res) => {
+                // alert(JSON.stringify(res.results))
+                let moviesJSON = res.results;
+                let movies = []
+                moviesJSON.map( (topMovie) => {
+                    let movie = new Movie(topMovie.id, topMovie.title, topMovie["release_date"], "", topMovie.overview, topMovie["vote_average"], topMovie["vote_count"], topMovie["genre_ids"], topMovie.video, topMovie["poster_path"])
+                    movies.push(movie)
+                })
+                this.setState({movies: this.state.movies.concat(movies), page: ++this.state.page})
+            })
+            .catch((err) => alert(err))
+    }
+
+
   render() {
     return (
 
@@ -82,7 +102,11 @@ class App extends Component {
               <div className="row">
                   <NavigationMenu className="navigation-container col-md-3 hidden-sm-down" categories={this.state.categories}/>
                   <NavigationMenuCollapsed className=" navigation-container hidden-md-up col-12 navbar navbar-toggleable-md navbar-light bg-faded"/>
-                  <MovieList movies={this.state.movies} className="movie-items-container col-md-9 " playVideo={(movie) => this.toggleVideoPlayer(movie)}/>
+                  <MovieList
+                      movies={this.state.movies}
+                      className="movie-items-container col-md-9 "
+                      playVideo={(movie) => this.toggleVideoPlayer(movie)}
+                      loadMore={() => this.loadMoreMovies()}/>
               </div>
           </div>
       </div>
@@ -90,22 +114,10 @@ class App extends Component {
   }
 
   componentDidMount(){
-        this.loadTopMovies()
-            .then((res) => {
-                // alert(JSON.stringify(res.results))
-                let moviesJSON = res.results;
-                let movies = []
-                moviesJSON.map( (topMovie) => {
-                    let movie = new Movie(topMovie.id, topMovie.title, topMovie["release_date"], "", topMovie.overview, topMovie["vote_average"], topMovie["vote_count"], topMovie["genre_ids"], topMovie.video, topMovie["poster_path"])
-                    movies.push(movie)
-                })
-                this.setState({movies: movies})
-            })
-            .catch((err) => alert(err))
-
-      this.loadCategories()
-          .then( (res) => this.setState({categories: res.genres}))
-          .catch( (err) => alert(err))
+        this.loadMoreMovies()
+        this.loadCategories()
+            .then( (res) => this.setState({categories: res.genres}))
+            .catch( (err) => alert(err))
   }
 }
 
