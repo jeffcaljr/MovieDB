@@ -11,11 +11,14 @@ class MovieList extends Component {
         super()
 
         this.toggleMovieDetail = this.toggleMovieDetail.bind(this)
+        this.renderMovies = this.renderMovies.bind(this)
+        this.playVideo = this.playVideo.bind(this)
 
         this.state = {
             showModal: false,
             selectedMovie: null
         }
+
     }
 
     toggleMovieDetail = (movie) => {
@@ -41,8 +44,11 @@ class MovieList extends Component {
             </div>
         }
 
+    }
 
-
+    playVideo = (movie) => {
+        // alert("playing movie " + movie.title)
+        this.props.playVideo(movie)
     }
 
     render(){
@@ -52,7 +58,8 @@ class MovieList extends Component {
                     ? <MovieDetails
                     movie={this.state.selectedMovie}
                     show={this.state.showModal}
-                    onClick={this.toggleMovieDetail}/>
+                    onClick={this.toggleMovieDetail}
+                    playVideo={(movie) => this.playVideo(movie)}/>
                 : ""}
 
                 <div className="row">
@@ -67,7 +74,8 @@ class MovieList extends Component {
 
 MovieList.propTypes = {
     movies: PropTypes.arrayOf(PropTypes.instanceOf(Movie)).isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
+    playVideo: PropTypes.func.isRequired
 }
 
 MovieList.defaultProps = {

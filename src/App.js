@@ -7,6 +7,7 @@ import NavigationMenu from "./components/NavigationMenu";
 import MovieList from "./components/MovieList";
 import NavigationMenuCollapsed from "./components/NavigationMenuCollapsed";
 import DropdownWrapper from "./components/DropdownWrapper";
+import VideoPlayer from "./components/VideoPlayer";
 
 class App extends Component {
     constructor(){
@@ -14,8 +15,13 @@ class App extends Component {
 
         this.state = {
             movies: [],
-            categories: []
+            categories: [],
+            videoPlaying: null
         }
+
+        this.loadTopMovies = this.loadTopMovies.bind(this)
+        this.loadCategories = this.loadCategories.bind(this)
+        this.toggleVideoPlayer = this.toggleVideoPlayer.bind(this)
     }
 
     // movies = [MockMovie, MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie]
@@ -46,15 +52,37 @@ class App extends Component {
             })
             .catch( (err) => Promise.reject(err))
     }
+
+
+    toggleVideoPlayer = (movie) => {
+        // alert("playing movie " + movie.title)
+
+        if(this.state.videoPlaying != null){
+            //stop the video
+            alert("hiding movie")
+            this.setState({playingVideo: null})
+
+        }
+        else{
+            //play a video when none was playing before
+            this.setState({videoPlaying: movie})
+        }
+
+    }
   render() {
     return (
 
       <div className="App">
+
+          {this.state.videoPlaying != null ? <VideoPlayer movie={this.state.videoPlaying} toggleVideo={(movie) => this.toggleVideoPlayer(movie)}/>  : ""}
+
+
+
           <div className="container-fluid">
               <div className="row">
                   <NavigationMenu className="navigation-container col-md-3 hidden-sm-down" categories={this.state.categories}/>
                   <NavigationMenuCollapsed className=" navigation-container hidden-md-up col-12 navbar navbar-toggleable-md navbar-light bg-faded"/>
-                  <MovieList movies={this.state.movies} className="movie-items-container col-md-9 "/>
+                  <MovieList movies={this.state.movies} className="movie-items-container col-md-9 " playVideo={(movie) => this.toggleVideoPlayer(movie)}/>
               </div>
           </div>
       </div>

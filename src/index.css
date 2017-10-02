@@ -79,6 +79,15 @@ body {
   width: 100%;
 }
 
+@media (min-width: 960px){
+  .movie-info-image{
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+
+
 .movie-img:hover{
   cursor: pointer;
 }
@@ -219,3 +228,19 @@ movie-info-right-column{
   border: none;
 }
 
+
+.video-player{
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.youtube-player{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

@@ -17,6 +17,8 @@ class MovieDetails extends Component {
         }
 
         this.toggledFavorite = this.toggledFavorite.bind(this)
+
+        this.playVideo = this.playVideo.bind(this)
     }
 
     toggledFavorite = () => {
@@ -74,6 +76,11 @@ class MovieDetails extends Component {
         }
     }
 
+    playVideo = (movie) => {
+        // alert("playing movie " + movie.title)
+        this.props.playVideo(movie)
+    }
+
 
     render() {
         if (this.props.show === true) {
@@ -108,7 +115,8 @@ class MovieDetails extends Component {
                                          alt={this.props.movie.title || "Movie Cover"} className="movie-info-image"/>
                                     <a
                                         href="#"
-                                        className={"cover-button play-button " + ( !this.props.movie.hasVideo ? " hidden" : "")}
+                                        className={"cover-button play-button "}
+                                        onClick={(e) => this.playVideo(this.props.movie)}
                                     ><i className="fa fa-play fa-3x"></i></a>
                                 </figure>
                                 <div className="movie-rating clearfix">
@@ -159,7 +167,8 @@ class MovieDetails extends Component {
 MovieDetails.propTypes = {
     movie: PropTypes.instanceOf(Movie).isRequired,
     show: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
+    playVideo: PropTypes.func.isRequired
 
 }
 
