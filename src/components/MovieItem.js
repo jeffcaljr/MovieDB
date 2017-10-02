@@ -26,7 +26,7 @@ class MovieItem extends Component{
 
     render(){
         return (
-            <div className="movie-item-container-single col-6 col-sm-2 col-md-4 col-lg-3 col-xl-2">
+            <div className="movie-item-container-single col-6 col-sm-3 col-md-4 col-lg-3 col-xl-2">
                 <figure
                     className="movie-item image-btn-container"
                     onClick={() => this.props.openDetailModal()}>
