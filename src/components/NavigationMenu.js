@@ -32,9 +32,7 @@ class NavigationMenu extends Component{
         this.props.categories.map((category) => {
             let newCategory = <li><NavCategory
                 key={category.id} index={category.id}
-                name={category.name}
-                selected={this.state.selected == category.id}
-                onSelect={(index) => this.categorySelected(index)}></NavCategory></li>;
+                name={category.name}></NavCategory></li>;
             categories.push(newCategory);
         })
 

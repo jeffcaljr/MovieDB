@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
 
 import Movie, {MockMovie} from '../models/movie'
 import MovieItem from "./MovieItem";
@@ -7,7 +8,7 @@ import MovieDetails from "./MovieDetails";
 
 
 class MovieList extends Component {
-    constructor(){
+    constructor({movies, status}){
         super()
 
         this.toggleMovieDetail = this.toggleMovieDetail.bind(this)
@@ -65,7 +66,10 @@ class MovieList extends Component {
                 <div className="row">
                     {this.renderMovies(this.props.movies)}
                 </div>
-                <a href="#" className="btn text-white w-100 text-center" onClick={() => { if(this.props.loadMore != undefined){this.props.loadMore()}}}>Load More</a>
+
+                {this.props.movies.length > 0
+                    ?   <a href="#" className="btn text-white w-100 text-center" onClick={() => { if(this.props.loadMore != undefined){this.props.loadMore()}}}>Load More</a>
+                    : ""}
 
             </div>
         );
@@ -73,7 +77,7 @@ class MovieList extends Component {
 }
 
 MovieList.propTypes = {
-    movies: PropTypes.arrayOf(PropTypes.instanceOf(Movie)).isRequired,
+    // movies: PropTypes.arrayOf(PropTypes.instanceOf(Movie)).isRequired,
     className: PropTypes.string,
     playVideo: PropTypes.func.isRequired,
     loadMore: PropTypes.func
@@ -84,4 +88,11 @@ MovieList.defaultProps = {
     className: ""
 }
 
-export default MovieList;
+const mapStateToProps = (state) => {
+    return {
+        movies: state.movies,
+        status: state.status
+    }
+}
+
+export default  connect(mapStateToProps)(MovieList);

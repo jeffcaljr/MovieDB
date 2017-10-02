@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
+import {load} from "../actions/MovieList";
 
 
-let NavCategory = (props) => {
+const NavCategory = (props) => {
 
     let onSelected = (key) => {
         props.onSelect(key)
@@ -17,9 +19,23 @@ let NavCategory = (props) => {
 }
 
 NavCategory.propTypes = {
-    selected: PropTypes.bool.isRequired,
+    // selected: PropTypes.bool.isRequired,
     name: PropTypes.string.isRequired,
-    onSelect: PropTypes.func
+    onSelect: PropTypes.func,
+    index: PropTypes.number.isRequired
 }
 
-export default NavCategory
+const mapStateToProps = (state, ownProps) => {
+    return {
+        selected: state.lastGenreID === ownProps.index
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        onSelect: genreID => {
+            dispatch(load(genreID))
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(NavCategory);

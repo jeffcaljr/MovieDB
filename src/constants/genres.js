@@ -2,6 +2,11 @@
 //list was pre-fetched for convenience
 //An up-to-date list of genres can be retrieved by sending request to https://api.themoviedb.org/3/genre/movie/list?api_key=[YOUR_API_KEY]
 
+export const TRENDING_GENRE = {
+    "id": -1,
+    name: "Trending"
+}
+
 export const GENRES = [
     {
         "id":28,

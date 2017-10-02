@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'isomorphic-fetch'
+import {connect} from 'react-redux'
 
 import Movie, {MockMovie} from "./models/movie";
 import './App.css';
@@ -10,6 +11,7 @@ import DropdownWrapper from "./components/DropdownWrapper";
 import VideoPlayer from "./components/VideoPlayer";
 import config from "./config";
 import {GENRES} from "./constants/genres";
+import LoadingCover from "./components/LoadingCover";
 
 class App extends Component {
     constructor(){
@@ -77,7 +79,7 @@ class App extends Component {
     loadMoreMovies = () =>{
         this.loadTopMovies()
             .then((res) => {
-                alert(JSON.stringify(res.results))
+                // alert(JSON.stringify(res.results))
                 let moviesJSON = res.results;
                 let movies = []
                 moviesJSON.map( (newMovie) => {
@@ -110,6 +112,7 @@ class App extends Component {
     return (
 
       <div className="App">
+          <LoadingCover/>
 
           {this.state.videoPlaying != null ? <VideoPlayer movie={this.state.videoPlaying} toggleVideo={(movie) => this.toggleVideoPlayer(movie)}/>  : ""}
 
@@ -135,8 +138,20 @@ class App extends Component {
   }
 
   componentDidMount(){
-        this.loadMoreMovies()
+        // this.loadMoreMovies()
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
