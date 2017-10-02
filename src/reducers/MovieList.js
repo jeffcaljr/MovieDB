@@ -8,7 +8,7 @@ import {TRENDING_GENRE} from '../constants/genres'
 import config from "../config";
 import Movie from "../models/movie";
 
-const reducer = (state = {page: 1, movies: [], lastGenreID: TRENDING_GENRE.id, status: STATUS_NONE, error: null}, action) => {
+const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: STATUS_NONE, error: null}, action) => {
     switch(action.type){
         case LOAD:
 
