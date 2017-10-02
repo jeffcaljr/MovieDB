@@ -4,7 +4,9 @@
 # dependencies
 /node_modules
 
-/src/config.js
+
+#NOTE: Should not put config file in git repos; need to switch to environment variables to store keys!
+#/src/config.js
 
 # testing
 /coverage
