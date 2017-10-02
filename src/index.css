@@ -70,7 +70,7 @@ body {
 }
 
 
-.movie-img.container{
+.movie-img-container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,10 +78,6 @@ body {
 
 
 .movie-img{
-  width: 100%;
-}
-
-.movie-info-image{
   width: 100%;
 }
 

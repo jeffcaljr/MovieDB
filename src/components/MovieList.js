@@ -56,7 +56,7 @@ class MovieList extends Component {
                     movie={this.state.selectedMovie}
                     show={this.state.showModal}
                     onClick={this.toggleMovieDetail}/>
-                : ""}
+                : null}
 
                 <div className="row">
                     {this.renderMovies(this.props.movies)}

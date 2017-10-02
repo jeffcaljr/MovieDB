@@ -12,7 +12,6 @@ const VideoPlayerReducer = (state = {videoPlayerIsOpen: false, source: undefined
         case OPEN_VIDEO_PLAYER:
 
 
-
             //dont modify state if no video/improper argument passed in
             if( !action.video || !(action.video instanceof Movie)){
                 return state

@@ -7,6 +7,7 @@ import cover from '../images/default_movie_cover.jpg'
 import FavoriteButton from "./FavoriteButton";
 import DropdownWrapper from "./DropdownWrapper";
 import {openVideo} from "../actions/VideoPlayer";
+import MovieCover from "./MovieCover";
 
 class MovieDetails extends Component {
     constructor(props) {
@@ -81,15 +82,7 @@ class MovieDetails extends Component {
 
                         <div className="row movie-info-content">
                             <div className="col-md-4">
-                                <figure className="movie-img-container image-btn-container">
-                                    <img src={this.props.movie.getImage() || cover}
-                                         alt={this.props.movie.title || "Movie Cover"} className="movie-info-image"/>
-                                    <a
-                                        href="#"
-                                        className={"cover-button play-button "}
-                                        onClick={this.props.playVideo(this.props.movie)}
-                                    ><i className="fa fa-play fa-3x"></i></a>
-                                </figure>
+                                <MovieCover movie={this.props.movie} playVideo={(movie) => this.props.playVideo(movie)}/>
                                 <div className="movie-rating clearfix">
                                     <div className="rating-left pull-left">
                                         <span className="rating-img"><i className="fa fa-star text-white"></i></span>
