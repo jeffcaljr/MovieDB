@@ -12,28 +12,28 @@ class MovieList extends Component {
     constructor({movies, status}){
         super()
 
-        this.toggleMovieDetail = this.toggleMovieDetail.bind(this)
+        // this.toggleMovieDetail = this.toggleMovieDetail.bind(this)
         this.renderMovies = this.renderMovies.bind(this)
 
-        this.state = {
-            showModal: false,
-            selectedMovie: null
-        }
+        // this.state = {
+        //     showModal: false,
+        //     selectedMovie: null
+        // }
 
     }
 
-    toggleMovieDetail = (movie) => {
-        let isShown = !this.state.showModal;
-        let movieToShow = (isShown) ? movie : null
-        this.setState({showModal: isShown, selectedMovie: movieToShow})
-    }
+    // toggleMovieDetail = (movie) => {
+    //     let isShown = !this.state.showModal;
+    //     let movieToShow = (isShown) ? movie : null
+    //     this.setState({showModal: isShown, selectedMovie: movieToShow})
+    // }
 
     renderMovies = () => {
 
         if(this.props.movies.length > 0){
             let moviesJSX = [];
             this.props.movies.map((movie) => {
-                let movieJSX = <MovieItem movie={movie} onClick={(movie) => this.toggleMovieDetail(movie)}/>
+                let movieJSX = <MovieItem movie={movie}/>
                 moviesJSX.push(movieJSX);
             })
 
@@ -50,14 +50,14 @@ class MovieList extends Component {
 
     render(){
         return (
-            <div className={this.props.className + " " + ((this.state.showModal) ? " no-scroll-y " : " scroll-y ")}>
+            <div className={this.props.className + " " + ((this.props.modalIsShowing) ? " no-scroll-y " : " scroll-y ")}>
                 <div className="movie-items-container-content container-fluid">
-                    {this.state.selectedMovie
-                        ? <MovieDetails
-                            movie={this.state.selectedMovie}
-                            show={this.state.showModal}
-                            onClick={this.toggleMovieDetail}/>
-                        : null}
+                    {/*{this.state.selectedMovie*/}
+                        {/*? <MovieDetails*/}
+                            {/*movie={this.state.selectedMovie}*/}
+                            {/*show={this.state.showModal}*/}
+                            {/*onClick={this.toggleMovieDetail}/>*/}
+                        {/*: null}*/}
 
                     <div className="row">
                         {this.renderMovies(this.props.movies)}
@@ -87,7 +87,8 @@ MovieList.defaultProps = {
 const mapStateToProps = state => {
     return {
         movies: state.movieListReducer.movies,
-        status: state.movieListReducer.status
+        status: state.movieListReducer.status,
+        modalIsShowing: state.movieDetailModalReducer.showing
     }
 }
 

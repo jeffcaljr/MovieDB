@@ -8,6 +8,7 @@ import FavoriteButton from "./FavoriteButton";
 import DropdownWrapper from "./DropdownWrapper";
 import {openVideo} from "../actions/VideoPlayer";
 import MovieCover from "./MovieCover";
+import {hide} from "../actions/MovieDetailModal";
 
 class MovieDetails extends Component {
     constructor(props) {
@@ -55,7 +56,7 @@ class MovieDetails extends Component {
 
 
     render() {
-        if (this.props.show === true) {
+        if (this.props.showing) {
             return (
                 <div className="movie-detail-container container">
                     <div className="movie-info">
@@ -64,7 +65,7 @@ class MovieDetails extends Component {
                             <div className="col-1 close-btn-container text-center">
                                 <btn
                                     className=" btn btn-sm modal-close-button"
-                                    onClick={(e) => { this.props.onClick(e)}}>
+                                    onClick={() => { this.props.closeModal()}}>
                                     <i className="fa fa-close fa-2x text-white"></i>
                                 </btn>
                             </div>
@@ -130,15 +131,16 @@ class MovieDetails extends Component {
 }
 
 MovieDetails.propTypes = {
-    movie: PropTypes.instanceOf(Movie).isRequired,
-    show: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired,
+    // movie: PropTypes.instanceOf(Movie).isRequired,
+    // show: PropTypes.bool.isRequired,
+    // onClick: PropTypes.func.isRequired,
 
 }
 
 const mapStateToProps = state => {
     return {
-
+        movie: state.movieDetailModalReducer.movie,
+        showing: state.movieDetailModalReducer.showing
     }
 }
 
@@ -146,6 +148,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         playVideo: () => {
             dispatch(openVideo(ownProps.movie))
+        },
+        closeModal: () => {
+            dispatch(hide())
         }
     }
 }

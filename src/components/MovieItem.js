@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
 
 import Movie from '../models/movie'
 import cover from '../images/default_movie_cover.jpg'
 import FavoriteButton from "./FavoriteButton";
+import {show} from "../actions/MovieDetailModal";
+
 
 
 class MovieItem extends Component{
@@ -26,7 +29,7 @@ class MovieItem extends Component{
             <div className="movie-item-container-single col-6 col-sm-2 col-md-4 col-lg-3 col-xl-2">
                 <figure
                     className="movie-item image-btn-container"
-                    onClick={() => this.props.onClick(this.props.movie)}>
+                    onClick={() => this.props.openDetailModal()}>
                     <img src={this.props.movie.getImage() || cover} alt={this.props.movie.title || "Movie Cover"} className="movie-img"/>
 
                     <FavoriteButton isFavorite={this.props.movie.favorited} toggledFavorite={this.toggledFavorite}/>
@@ -41,7 +44,22 @@ class MovieItem extends Component{
 
 MovieItem.propTypes = {
     movie: PropTypes.instanceOf(Movie).isRequired,
-    onClick: PropTypes.func.isRequired
 }
 
-export default MovieItem;
+const mapStateToProps = state => {
+    return{
+
+    }
+}
+
+const mapDispatchToProps = (dispatch, ownprops) => {
+    return {
+
+        openDetailModal: () => {
+            dispatch(show(ownprops.movie))
+        }
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieItem);

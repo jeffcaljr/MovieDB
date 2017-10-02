@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/MovieDetailModal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/MovieDetailModal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieDetails.js" afterPath="$PROJECT_DIR$/src/components/MovieDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieItem.js" afterPath="$PROJECT_DIR$/src/components/MovieItem.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieList.js" afterPath="$PROJECT_DIR$/src/components/MovieList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/index.js" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,43 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VideoPlayer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/VideoPlayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movie.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/movie.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="63" lean-forward="true" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieList.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovieList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MovieList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+            <state relative-caret-position="514">
+              <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -65,16 +38,50 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+            <state relative-caret-position="495">
+              <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1506953543000" expanded="true" signature="744:1499" ph="..." />
-                <marker date="1506953543000" expanded="true" signature="945:1486" ph="..." />
-                <marker date="1506953543000" expanded="true" signature="981:1469" ph="..." />
-                <marker date="1506953543000" expanded="true" signature="1154:1463" ph="..." />
-                <marker date="1506953543000" expanded="true" signature="1332:1447" ph="..." />
+                <marker date="1506972672000" expanded="true" signature="766:1639" ph="..." />
+                <marker date="1506972672000" expanded="true" signature="1085:1626" ph="..." />
+                <marker date="1506972672000" expanded="true" signature="1121:1609" ph="..." />
+                <marker date="1506972672000" expanded="true" signature="1294:1603" ph="..." />
+                <marker date="1506972672000" expanded="true" signature="1472:1587" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieDetails.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieDetailModal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/MovieDetailModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,9 +124,9 @@
       <find>title</find>
       <find>movie-detail</find>
       <find>list</find>
-      <find>youtube</find>
       <find>detail</find>
       <find>vh</find>
+      <find>youtube</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -159,20 +166,22 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/actions/MovieList.js" />
         <option value="$PROJECT_DIR$/src/reducers/MovieList.js" />
-        <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/NavCategory.js" />
         <option value="$PROJECT_DIR$/src/actions/VideoPlayer.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/VideoPlayer.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieItem.js" />
         <option value="$PROJECT_DIR$/src/components/MovieCover.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenu.js" />
         <option value="$PROJECT_DIR$/src/config.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieDetails.js" />
         <option value="$PROJECT_DIR$/src/models/movie.js" />
         <option value="$PROJECT_DIR$/src/reducers/VideoPlayer.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/actions/MovieDetailModal.js" />
+        <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/reducers/MovieDetailModal.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/MovieList.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieItem.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieDetails.js" />
       </list>
     </option>
   </component>
@@ -224,13 +233,19 @@
               <item name="react_tutorial_learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="react_tutorial_learning" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react_tutorial_learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react_tutorial_learning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react_tutorial_learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="react_tutorial_learning" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -295,12 +310,12 @@
       <workItem from="1505485366875" duration="12799000" />
       <workItem from="1506128065236" duration="133000" />
       <workItem from="1506286689626" duration="654000" />
-      <workItem from="1506800911398" duration="64668000" />
+      <workItem from="1506800911398" duration="66175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78254000" />
+    <option name="totallyTimeSpent" value="79761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -345,26 +360,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/MovieList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -379,11 +374,11 @@
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1506953543000" expanded="true" signature="744:1499" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="945:1486" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="981:1469" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="1154:1463" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="1332:1447" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="766:1639" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1085:1626" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1121:1609" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1294:1603" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1472:1587" ph="..." />
           </folding>
         </state>
       </provider>
@@ -431,7 +426,7 @@
         <state relative-caret-position="90">
           <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding>
-            <element signature="e#0#38#0" expanded="false" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -442,11 +437,11 @@
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1506953543000" expanded="true" signature="744:1499" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="945:1486" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="981:1469" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="1154:1463" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="1332:1447" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="766:1639" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1085:1626" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1121:1609" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1294:1603" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1472:1587" ph="..." />
           </folding>
         </state>
       </provider>
@@ -486,7 +481,7 @@
         <state relative-caret-position="90">
           <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding>
-            <element signature="e#0#38#0" expanded="false" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -505,11 +500,11 @@
           <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1506953543000" expanded="true" signature="744:1499" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="945:1486" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="981:1469" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="1154:1463" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="1332:1447" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="766:1639" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1085:1626" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1121:1609" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1294:1603" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1472:1587" ph="..." />
           </folding>
         </state>
       </provider>
@@ -653,16 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/VideoPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -675,14 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21">
           <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -723,16 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/VideoPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -743,17 +710,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/movie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="63" lean-forward="true" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+        <state relative-caret-position="210">
+          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/VideoPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="299">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -761,33 +746,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
+    <entry file="file://$PROJECT_DIR$/src/reducers/MovieDetailModal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        <state relative-caret-position="495">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1506953543000" expanded="true" signature="744:1499" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="945:1486" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="981:1469" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="1154:1463" ph="..." />
-            <marker date="1506953543000" expanded="true" signature="1332:1447" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="766:1639" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1085:1626" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1121:1609" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1294:1603" ph="..." />
+            <marker date="1506972672000" expanded="true" signature="1472:1587" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MovieList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        <state relative-caret-position="514">
+          <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/MovieDetailModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>

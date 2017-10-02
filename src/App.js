@@ -7,7 +7,7 @@ import NavigationMenu from "./components/NavigationMenu";
 import MovieList from "./components/MovieList";
 import NavigationMenuCollapsed from "./components/NavigationMenuCollapsed";
 import VideoPlayer from "./components/VideoPlayer";
-import config from "./config";
+import MovieDetails from './components/MovieDetails'
 import {GENRES, TRENDING_GENRE} from "./constants/genres";
 import LoadingCover from "./components/LoadingCover";
 import {load} from "./actions/MovieList";
@@ -29,6 +29,12 @@ class App extends Component {
 
       <div className="App">
           <LoadingCover/>
+
+          {
+              this.props.modalIsShowing
+              ? <MovieDetails/>
+              : null
+          }
 
           {
               this.props.videoPlayerOpen
@@ -59,7 +65,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
     return {
-        videoPlayerOpen: state.videoPlayerReducer.videoPlayerIsOpen
+        videoPlayerOpen: state.videoPlayerReducer.videoPlayerIsOpen,
+        modalIsShowing: state.movieDetailModalReducer.showing
     }
 }
 
