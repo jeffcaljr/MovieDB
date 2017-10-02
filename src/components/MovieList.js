@@ -2,37 +2,17 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
-import Movie, {MockMovie} from '../models/movie'
 import MovieItem from "./MovieItem";
-import MovieDetails from "./MovieDetails";
 import {loadMore} from "../actions/MovieList";
 
 
-class MovieList extends Component {
-    constructor({movies, status}){
-        super()
+const MovieList = ({className, movies, modalIsShowing, loadNew}) =>{
 
-        // this.toggleMovieDetail = this.toggleMovieDetail.bind(this)
-        this.renderMovies = this.renderMovies.bind(this)
+    const renderMovies = () => {
 
-        // this.state = {
-        //     showModal: false,
-        //     selectedMovie: null
-        // }
-
-    }
-
-    // toggleMovieDetail = (movie) => {
-    //     let isShown = !this.state.showModal;
-    //     let movieToShow = (isShown) ? movie : null
-    //     this.setState({showModal: isShown, selectedMovie: movieToShow})
-    // }
-
-    renderMovies = () => {
-
-        if(this.props.movies.length > 0){
+        if(movies.length > 0){
             let moviesJSX = [];
-            this.props.movies.map((movie) => {
+            movies.map((movie) => {
                 let movieJSX = <MovieItem movie={movie}/>
                 moviesJSX.push(movieJSX);
             })
@@ -44,39 +24,32 @@ class MovieList extends Component {
                 <h2 className="text-center text-white">No Movies Found</h2>
             </div>
         }
-
     }
 
 
-    render(){
-        return (
-            <div className={this.props.className + " " + ((this.props.modalIsShowing) ? " no-scroll-y " : " scroll-y ")}>
-                <div className="movie-items-container-content container-fluid">
-                    {/*{this.state.selectedMovie*/}
-                        {/*? <MovieDetails*/}
-                            {/*movie={this.state.selectedMovie}*/}
-                            {/*show={this.state.showModal}*/}
-                            {/*onClick={this.toggleMovieDetail}/>*/}
-                        {/*: null}*/}
+    return (
+        <div className={className + " " + ((modalIsShowing) ? " no-scroll-y " : " scroll-y ")}>
+            <div className="movie-items-container-content container-fluid">
 
-                    <div className="row">
-                        {this.renderMovies(this.props.movies)}
-                    </div>
-
-                    {this.props.movies.length > 0
-                        ?   <a href="#" className="btn text-white w-100 text-center" onClick={() => { this.props.loadMore()}}>Load More</a>
-                        : ""}
+                <div className="row">
+                    {renderMovies(movies)}
                 </div>
 
+                {
+                    movies.length > 0
+                    ?   <a href="#" className="btn text-white w-100 text-center" onClick={() => { loadNew()}}>Load More</a>
+                    : <h1 className="text-white text-center w-100">Not Working!</h1>
+                }
+
             </div>
-        );
-    }
+
+        </div>
+    );
 
 }
 
 MovieList.propTypes = {
     className: PropTypes.string,
-    loadMore: PropTypes.func
 }
 
 MovieList.defaultProps = {
@@ -87,14 +60,13 @@ MovieList.defaultProps = {
 const mapStateToProps = state => {
     return {
         movies: state.movieListReducer.movies,
-        status: state.movieListReducer.status,
         modalIsShowing: state.movieDetailModalReducer.showing
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return{
-        loadMore: () =>{
+        loadNew: () => {
             dispatch(loadMore())
         }
     }
