@@ -30,7 +30,7 @@ const VideoPlayerReducer = (state = {videoPlayerIsOpen: false, source: undefined
                     const firstTrailerVideo = trailers.find((video) => {return video["site"] === "YouTube"})
                     //
                     if(firstTrailerVideo != undefined){
-                        let youtubeURL = `${BASE_YOUTUBE_URL}${firstTrailerVideo["key"]}`
+                        let youtubeURL = `${BASE_YOUTUBE_URL}${firstTrailerVideo["key"]}/?autoplay=1`
                         action.asyncDispatch(sourceLoaded(youtubeURL))
                     }
                     else{
