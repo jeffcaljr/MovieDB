@@ -137,8 +137,9 @@ body {
 }
 
 
-.nav-category-item[selected]{
-  color:red;
+
+.nav-category-item:hover{
+  cursor: pointer;
 }
 
 

@@ -60,49 +60,57 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: S
             const newPage = ++state.page;
 
             let movies = []
-            action.asyncDispatch(loading());
-            fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${newPage}`)
-                .then( (res) => res.json())
-                .then((res) => {
-                    let moviesJSON = res.results;
 
-                    moviesJSON.map( (newMovie) => {
-                        let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
-                        movies.push(movie)
-                    })
-                    action.asyncDispatch(done(movies))
-                })
-                .catch((err) => action.asyncDispatch(error(err)));
+            if(state.lastGenreID === TRENDING_GENRE.id){
+                action.asyncDispatch(loading());
+                fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${newPage}`)
+                    .then( (res) => res.json())
+                    .then((res) => {
+                        let moviesJSON = res.results;
 
-            return Object.assign({}, state, {page: newPage, lastGenreID: TRENDING_GENRE.id, movies: state.movies.concat(movies)})
-
-            switch(action.genreID){
-                case TRENDING_GENRE.id:
-
-                default:
-                    let movies = []
-                    action.asyncDispatch(loading());
-                    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&page=${newPage}&with_genres=${action.genreID}`)
-                        .then( (res) => res.json())
-                        .then((res) => {
-                            let moviesJSON = res.results;
-
-                            moviesJSON.map( (newMovie) => {
-                                let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
-                                movies.push(movie)
-                            })
-                            action.asyncDispatch(done(movies))
+                        moviesJSON.map( (newMovie) => {
+                            let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
+                            movies.push(movie)
                         })
-                        .catch((err) => action.asyncDispatch(error(err)))
-                    return Object.assign({}, state, {page: newPage, lastGenreID: action.genreID, movies: state.movies.concat(movies)})
+                        action.asyncDispatch(done(movies, true))
+                    })
+                    .catch((err) => action.asyncDispatch(error(err)));
 
+                return Object.assign({}, state, {page: newPage})
             }
+            else{
+                let movies = []
+                action.asyncDispatch(loading());
+                fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&page=${newPage}&with_genres=${state.lastGenreID}`)
+                    .then( (res) => res.json())
+                    .then((res) => {
+                        let moviesJSON = res.results;
+
+                        moviesJSON.map( (newMovie) => {
+                            let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
+                            movies.push(movie)
+                        })
+                        action.asyncDispatch(done(movies, true))
+                    })
+                    .catch((err) => action.asyncDispatch(error(err)))
+                return Object.assign({}, state, {page: newPage})
+            }
+
+
         case STATUS_LOADING:
             return Object.assign({}, state, {status: STATUS_LOADING});
         case STATUS_ERROR:
             return Object.assign({}, state, {status: STATUS_ERROR, error: action.error});
         case STATUS_NONE:
-            return Object.assign({}, state, {status: STATUS_NONE, movies: action.result, error: null})
+
+            if(action.didReset){
+                return Object.assign({}, state, {status: STATUS_NONE, movies: state.movies.concat(action.result), error: null})
+            }
+            else{
+                return Object.assign({}, state, {status: STATUS_NONE, movies: action.result, error: null})
+            }
+
+
         default:
             return state;
     }

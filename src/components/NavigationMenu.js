@@ -1,85 +1,68 @@
-import React, {Component} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
+
 import NavCategory from "./NavCategory";
 import DropdownWrapper from "./DropdownWrapper";
+import {load} from "../actions/MovieList";
+import {TRENDING_GENRE} from "../constants/genres";
 
-class NavigationMenu extends Component{
-    constructor(){
-        super();
-        this.categorySelected = this.categorySelected.bind(this);
-
-        this.state = {
-            selected: -1
-        }
-    }
+const NavigationMenu  = (props) => {
 
 
-    categorySelected(index){
-        this.setState(Object.assign({}, this.state, {selected: index}), this.filterSelected(index))
+    const renderCategories = () => {
 
-    }
+        let categoriesJSX = [];
 
-    filterSelected = (index) =>{
-        this.props.onFilterSelected(index)
-    }
-
-
-    generateCategories(n){
-
-        let categories = [];
-
-
-        this.props.categories.map((category) => {
+        props.categories.map((category) => {
             let newCategory = <li><NavCategory
                 key={category.id} index={category.id}
                 name={category.name}></NavCategory></li>;
-            categories.push(newCategory);
+            categoriesJSX.push(newCategory);
         })
 
-        // if(this.props.categories && this.props.categories.length > 0){
-        //     this.setState({selected: (this.props.categories[0]).id})
-        // }
-
-        return categories;
+        return categoriesJSX;
     }
 
 
-    render(){
+    return(
+        <div className={props.className}>
 
-        return(
-            <div className={this.props.className}>
+            <i className="fa fa-gear text-white pull-right" aria-hidden="false"></i>
 
-                <i className="fa fa-gear text-white pull-right" aria-hidden="false"></i>
+            <div className="nav-item input-group">
+                <form className="input-group">
+                    <input className="form-control" type="text" placeholder="Search"/>
+                    <div className="input-group-btn">
+                        <button className="btn btn-primary">
+                            <i className="fa fa-search text-white"></i>
+                        </button>
 
-                <div className="nav-item input-group">
-                    <form className="input-group">
-                        <input className="form-control" type="text" placeholder="Search"/>
-                        <div className="input-group-btn">
-                            <button className="btn btn-primary">
-                                <i className="fa fa-search text-white"></i>
-                            </button>
+                    </div>
 
-                        </div>
-
-                    </form>
-                </div>
-
-
-
-                <h3 className="text-white font-weight-bold">Trending</h3>
-                <DropdownWrapper title={"Categories"}
-                                 children={
-                                            <ul className="list-group categories-list">
-                                                {this.generateCategories(10)}
-
-                                            </ul>}
-                />
-
+                </form>
             </div>
 
 
-        );
-    }
+            <div className="nav-category-item"
+                 onClick={() => props.loadGenre(TRENDING_GENRE.id)}>
+                <h3 className="text-white font-weight-bold">Trending</h3>
+            </div>
+
+
+
+            <DropdownWrapper title={"Categories"}
+                             children={
+                                 <ul className="list-group categories-list">
+                                     {renderCategories()}
+
+                                 </ul>}
+            />
+
+        </div>
+
+
+    );
 
 }
 
@@ -90,7 +73,6 @@ NavigationMenu.propTypes = {
 
     })).isRequired,
     className: PropTypes.string,
-    onFilterSelected: PropTypes.func
 }
 
 NavigationMenu.defaultProps = {
@@ -98,4 +80,19 @@ NavigationMenu.defaultProps = {
     className: ""
 }
 
-export default NavigationMenu;
+const mapStateToProps = state => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        loadGenre: genreID => {
+            dispatch(load(genreID))
+        }
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavigationMenu);

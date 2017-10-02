@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import Movie, {MockMovie} from '../models/movie'
 import MovieItem from "./MovieItem";
 import MovieDetails from "./MovieDetails";
+import {loadMore} from "../actions/MovieList";
 
 
 class MovieList extends Component {
@@ -68,16 +69,16 @@ class MovieList extends Component {
                 </div>
 
                 {this.props.movies.length > 0
-                    ?   <a href="#" className="btn text-white w-100 text-center" onClick={() => { if(this.props.loadMore != undefined){this.props.loadMore()}}}>Load More</a>
+                    ?   <a href="#" className="btn text-white w-100 text-center" onClick={() => { this.props.loadMore()}}>Load More</a>
                     : ""}
 
             </div>
         );
     }
+
 }
 
 MovieList.propTypes = {
-    // movies: PropTypes.arrayOf(PropTypes.instanceOf(Movie)).isRequired,
     className: PropTypes.string,
     playVideo: PropTypes.func.isRequired,
     loadMore: PropTypes.func
@@ -88,11 +89,19 @@ MovieList.defaultProps = {
     className: ""
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         movies: state.movies,
         status: state.status
     }
 }
 
-export default  connect(mapStateToProps)(MovieList);
+const mapDispatchToProps = dispatch => {
+    return{
+        loadMore: () =>{
+            dispatch(loadMore())
+        }
+    }
+}
+
+export default  connect(mapStateToProps, mapDispatchToProps)(MovieList);

@@ -40,9 +40,10 @@ export const error = (err) => {
     }
 }
 
-export const done= (result = undefined) => {
+export const done= (result = undefined, didReset = false) => {
     return{
         type: STATUS_NONE,
+        didReset,
         result
     }
 }
