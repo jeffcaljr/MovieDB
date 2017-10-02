@@ -29,7 +29,7 @@ const MovieList = ({className, movies, modalIsShowing, loadNew}) =>{
 
     return (
         <div className={className + " " + ((modalIsShowing) ? " no-scroll-y " : " scroll-y ")}>
-            <div className="movie-items-container-content container-fluid">
+            <div className={"movie-items-container-content container-fluid" + ((modalIsShowing) ? " no-scroll-y " : " scroll-y ")}>
 
                 <div className="row">
                     {renderMovies(movies)}
