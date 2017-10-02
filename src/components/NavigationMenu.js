@@ -15,8 +15,12 @@ class NavigationMenu extends Component{
 
 
     categorySelected(index){
-        this.setState(Object.assign({}, this.state, {selected: index}))
+        this.setState(Object.assign({}, this.state, {selected: index}), this.filterSelected(index))
 
+    }
+
+    filterSelected = (index) =>{
+        this.props.onFilterSelected(index)
     }
 
 
@@ -87,7 +91,8 @@ NavigationMenu.propTypes = {
         name: PropTypes.string
 
     })).isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
+    onFilterSelected: PropTypes.func
 }
 
 NavigationMenu.defaultProps = {

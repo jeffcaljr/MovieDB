@@ -8,6 +8,8 @@ import MovieList from "./components/MovieList";
 import NavigationMenuCollapsed from "./components/NavigationMenuCollapsed";
 import DropdownWrapper from "./components/DropdownWrapper";
 import VideoPlayer from "./components/VideoPlayer";
+import config from "./config";
+import {GENRES} from "./constants/genres";
 
 class App extends Component {
     constructor(){
@@ -16,12 +18,12 @@ class App extends Component {
         this.state = {
             page: 1,
             movies: [],
-            categories: [],
-            videoPlaying: null
+            categories: GENRES,
+            videoPlaying: null,
+            lastQuery: ''
         }
 
         this.loadTopMovies = this.loadTopMovies.bind(this)
-        this.loadCategories = this.loadCategories.bind(this)
         this.toggleVideoPlayer = this.toggleVideoPlayer.bind(this)
         this.loadMoreMovies = this.loadMoreMovies.bind(this)
     }
@@ -29,7 +31,7 @@ class App extends Component {
     // movies = [MockMovie, MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie,MockMovie]
 
     loadTopMovies = (page = this.state.page) => {
-        return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=f3d495d80d7a7139830e3297dc3923e1&language=en-US&page=${page}`)
+        return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${page}`)
             .then( (res) => {
                 if(res.ok){
                     return res.json();
@@ -41,18 +43,17 @@ class App extends Component {
             .catch((err) => Promise.reject(err))
     }
 
-    loadCategories = () => {
-        return fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=f3d495d80d7a7139830e3297dc3923e1&language=en-US\n")
-            .then((res) => {
+    loadMoviesByCategory(genreID){
+        return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&page=1&with_genres=${genreID}`)
+            .then( (res) => {
                 if(res.ok){
                     return res.json();
                 }
                 else{
-                    return Promise.reject(new Error("Error Loading Categories"))
+                    return Promise.reject(new Error("Error"))
                 }
-
             })
-            .catch( (err) => Promise.reject(err))
+            .catch((err) => Promise.reject(err))
     }
 
 
@@ -76,11 +77,27 @@ class App extends Component {
     loadMoreMovies = () =>{
         this.loadTopMovies()
             .then((res) => {
+                alert(JSON.stringify(res.results))
+                let moviesJSON = res.results;
+                let movies = []
+                moviesJSON.map( (newMovie) => {
+                    let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
+                    movies.push(movie)
+                })
+                this.setState({movies: this.state.movies.concat(movies), page: ++this.state.page})
+            })
+            .catch((err) => alert(err))
+    }
+
+    loadMoreMoviesForCategory = (category) => {
+        // alert("loading movies for genre: " + category)
+        this.loadMoviesByCategory(category)
+            .then((res) => {
                 // alert(JSON.stringify(res.results))
                 let moviesJSON = res.results;
                 let movies = []
-                moviesJSON.map( (topMovie) => {
-                    let movie = new Movie(topMovie.id, topMovie.title, topMovie["release_date"], "", topMovie.overview, topMovie["vote_average"], topMovie["vote_count"], topMovie["genre_ids"], topMovie.video, topMovie["poster_path"])
+                moviesJSON.map( (newMovie) => {
+                    let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
                     movies.push(movie)
                 })
                 this.setState({movies: this.state.movies.concat(movies), page: ++this.state.page})
@@ -100,7 +117,11 @@ class App extends Component {
 
           <div className="container-fluid">
               <div className="row">
-                  <NavigationMenu className="navigation-container col-md-3 hidden-sm-down" categories={this.state.categories}/>
+                  <NavigationMenu
+                      className="navigation-container col-md-3 hidden-sm-down"
+                      categories={this.state.categories}
+                      onFilterSelected={(genreID) => {
+                          this.setState({page: 1, movies: []}, this.loadMoreMoviesForCategory(genreID))}}/>
                   <NavigationMenuCollapsed className=" navigation-container hidden-md-up col-12 navbar navbar-toggleable-md navbar-light bg-faded"/>
                   <MovieList
                       movies={this.state.movies}
@@ -115,9 +136,6 @@ class App extends Component {
 
   componentDidMount(){
         this.loadMoreMovies()
-        this.loadCategories()
-            .then( (res) => this.setState({categories: res.genres}))
-            .catch( (err) => alert(err))
   }
 }
 
