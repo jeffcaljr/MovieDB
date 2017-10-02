@@ -51,20 +51,22 @@ class MovieList extends Component {
     render(){
         return (
             <div className={this.props.className + " " + ((this.state.showModal) ? " no-scroll-y " : " scroll-y ")}>
-                {this.state.selectedMovie
-                    ? <MovieDetails
-                    movie={this.state.selectedMovie}
-                    show={this.state.showModal}
-                    onClick={this.toggleMovieDetail}/>
-                : null}
+                <div className="movie-items-container-content">
+                    {this.state.selectedMovie
+                        ? <MovieDetails
+                            movie={this.state.selectedMovie}
+                            show={this.state.showModal}
+                            onClick={this.toggleMovieDetail}/>
+                        : null}
 
-                <div className="row">
-                    {this.renderMovies(this.props.movies)}
+                    <div className="row">
+                        {this.renderMovies(this.props.movies)}
+                    </div>
+
+                    {this.props.movies.length > 0
+                        ?   <a href="#" className="btn text-white w-100 text-center" onClick={() => { this.props.loadMore()}}>Load More</a>
+                        : ""}
                 </div>
-
-                {this.props.movies.length > 0
-                    ?   <a href="#" className="btn text-white w-100 text-center" onClick={() => { this.props.loadMore()}}>Load More</a>
-                    : ""}
 
             </div>
         );

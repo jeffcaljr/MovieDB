@@ -11,7 +11,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   background: black;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 
@@ -22,13 +22,7 @@ body {
   height: 100vh;
 }
 
-.movie-items-container{
-  background: black;
-  padding-bottom: 16px;
-  padding-top: 16px;
-  height: 100vh;
-  overflow-y: scroll;
-}
+
 
 .category-name{
   font-size: 1.4rem;
@@ -51,6 +45,24 @@ body {
   .category-name{
     font-size: 1rem;
   }
+}
+
+
+.movie-items-container{
+  background: black;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.movie-items-container-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .movie-item-container-single{
