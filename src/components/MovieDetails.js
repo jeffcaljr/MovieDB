@@ -60,13 +60,6 @@ class MovieDetails extends Component {
                 <div className="movie-detail-container container">
                     <div className="movie-info">
                         <header className="row movie-detail-header">
-                            <div className="col-1 text-center">
-                                <FavoriteButton isFavorite={this.state.favorite}
-                                                toggledFavorite={this.toggledFavorite}/>
-                            </div>
-                            <div className="col-10 title-container text-center">
-                                <h3 className="title text-center text-white font-weight-bold">{this.props.movie.title}</h3>
-                            </div>
 
                             <div className="col-1 close-btn-container text-center">
                                 <btn
@@ -75,6 +68,17 @@ class MovieDetails extends Component {
                                     <i className="fa fa-close fa-2x text-white"></i>
                                 </btn>
                             </div>
+
+                            <div className="col-10 title-container text-center">
+                                <h3 className="title text-center text-white font-weight-bold">{this.props.movie.title}</h3>
+                            </div>
+
+                            <div className="col-1 text-center">
+                                <FavoriteButton isFavorite={this.state.favorite}
+                                                toggledFavorite={this.toggledFavorite}/>
+                            </div>
+
+
 
 
                         </header>
