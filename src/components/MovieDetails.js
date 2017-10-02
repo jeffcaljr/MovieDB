@@ -27,51 +27,26 @@ class MovieDetails extends Component {
 
     renderGenres = () => {
 
-        if (this.props.movie.genres.length > 0) {
-            let genres = [];
-            let sortedGenres = this.props.movie.genres.sort((first, second) => {
-                first < second
-            })
-            sortedGenres.map((genre) => {
+        let movieGenres = this.props.movie.getGenres();
+
+        if (movieGenres.length > 0) {
+            let genresJSX = [];
+            movieGenres.map((genre) => {
                 let genreJSX = <div className="genre">{genre.name}</div>
-                genres.push(genreJSX)
+                genresJSX.push(genreJSX)
             })
-
-            return genres
-        }
-        else {
-            //MOCK DATA
-
-            let mockGenres = <div className="genres-container">
-                <div className="genre">Drama</div>
-                <div className="genre">Comedy</div>
-                <div className="genre">Action</div>
-                <div className="genre">Horror</div>
-                <div className="genre">Documentary</div>
-                <div className="genre">Drama</div>
-                <div className="genre">Comedy</div>
-                <div className="genre">Action</div>
-                <div className="genre">Horror</div>
-                <div className="genre">Documentary</div>
-                <div className="genre">Drama</div>
-                <div className="genre">Comedy</div>
-                <div className="genre">Action</div>
-                <div className="genre">Horror</div>
-                <div className="genre">Documentary</div>
-                <div className="genre">Drama</div>
-                <div className="genre">Comedy</div>
-                <div className="genre">Action</div>
-                <div className="genre">Horror</div>
-                <div className="genre">Documentary</div>
-                <div className="genre">Drama</div>
-                <div className="genre">Comedy</div>
-                <div className="genre">Action</div>
-                <div className="genre">Horror</div>
-                <div className="genre">Documentary</div>
-            </div>
 
             return (
-                <DropdownWrapper title={"Genres"} children={mockGenres}/>
+                <DropdownWrapper title={"Genres"} children={genresJSX}/>
+            );
+        }
+        else {
+            //No genres found
+
+            let emptyGenres = <p className="text-muted">No genres found.</p>
+
+            return (
+                <DropdownWrapper title={"Genres"} children={emptyGenres}/>
             );
         }
     }
@@ -135,7 +110,7 @@ class MovieDetails extends Component {
                             <div className="col-md-8">
 
                                 <div className="tagline-container">
-                                    <h5 className="tagline text-white text-center font-italic">{this.props.movie.tagline || "\"No tagline available\""}</h5>
+                                    <h5 className="tagline text-white text-center font-italic">{this.props.movie.tagline || ""}</h5>
                                 </div>
 
                                 <div className="overview-container">

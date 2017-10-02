@@ -96,7 +96,7 @@ class App extends Component {
                 let moviesJSON = res.results;
                 let movies = []
                 moviesJSON.map( (topMovie) => {
-                    let movie = new Movie(topMovie.id, topMovie.title, topMovie["release_date"], "", topMovie.overview, topMovie["vote_average"], topMovie["vote_count"], [], topMovie.video, topMovie["poster_path"])
+                    let movie = new Movie(topMovie.id, topMovie.title, topMovie["release_date"], "", topMovie.overview, topMovie["vote_average"], topMovie["vote_count"], topMovie["genre_ids"], topMovie.video, topMovie["poster_path"])
                     movies.push(movie)
                 })
                 this.setState({movies: movies})

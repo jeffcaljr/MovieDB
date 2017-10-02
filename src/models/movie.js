@@ -1,5 +1,6 @@
 import 'isomorphic-fetch'
 import config from '../config'
+import {GENRES} from "../constants/genres";
 
 const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
 const BASE_VIDEOS_URL_PREFIX = "https://api.themoviedb.org/3/movie/";
@@ -7,7 +8,7 @@ const BASE_VIDEOS_URL_SUFFIX = `/videos?language=en-US&api_key=${config.MOVIEDB_
 export const BASE_YOUTUBE_URL = "https://www.youtube.com/embed/"
 
 class Movie{
-    constructor(id, title = "", releaseDate = -1, tagline = "", overview = "", voteAverage = 0.0, voteCount = 0, genres = [], hasVideo = false, imagePath = "", favorited = false){
+    constructor(id, title = "", releaseDate = -1, tagline = "", overview = "", voteAverage = 0.0, voteCount = 0, genreIDs = [], hasVideo = false, imagePath = "", favorited = false){
         this.id = id;
         this.title = title;
         this.releaseDate = releaseDate;
@@ -15,7 +16,7 @@ class Movie{
         this.overview = overview;
         this.voteAverage = voteAverage;
         this.voteCount = voteCount;
-        this.genres = genres;
+        this.genreIDS = genreIDs;
         this.hasVideo = hasVideo;
         this.imagePath = imagePath;
         this.favorited = favorited;
@@ -54,6 +55,22 @@ class Movie{
             .catch((err) => {
                 return reject(err)
             })
+    }
+
+    getGenres = () => {
+
+        let genres = [];
+
+        this.genreIDS.map((genreID) => {
+            let genre = GENRES.find((genre) => {return genreID == genre.id})
+            genres.push(genre)
+        })
+
+        // alert("genres: " + JSON.stringify(genres))
+
+        return genres.sort((first, second) => {
+            first < second
+        })
     }
 }
 

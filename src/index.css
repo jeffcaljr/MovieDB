@@ -70,6 +70,12 @@ body {
 }
 
 
+.movie-img.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .movie-img{
   width: 100%;
@@ -84,6 +90,10 @@ body {
     width: 70%;
     margin: 0 auto;
   }
+}
+
+.movie-img-container{
+  text-align: center;
 }
 
 

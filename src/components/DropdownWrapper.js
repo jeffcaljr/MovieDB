@@ -30,10 +30,15 @@ class DropdownWrapper extends Component{
                     </a>
                 </div>
 
-                <div className={"dropdown-content " + (this.state.expanded ? " expanded " : " hidden ")}>
+                <div className={"dropdown-content-container " + (this.state.expanded ? " expanded " : " hidden ")}>
                     <hr className="dropdown-divider"/>
-                    {this.props.children}
+                    <div className={"dropdown-content "}>
+                        {this.props.children}
+                    </div>
+
                 </div>
+
+
 
             </div>
         );
