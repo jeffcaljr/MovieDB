@@ -1,14 +1,14 @@
 import "isomorphic-fetch"
 
 import {
-    LOAD, LOAD_MORE, STATUS_LOADING, STATUS_ERROR, STATUS_NONE, loadMore, error, done,
+    LOAD, LOAD_MORE, STATUS_LOADING, STATUS_ERROR, STATUS_NONE, MOVIE_TOGGLE_LIKED, error, done,
     loading
 } from '../actions/MovieList'
 import {TRENDING_GENRE} from '../constants/genres'
 import config from "../config";
 import Movie from "../models/movie";
 
-const movieListReducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: STATUS_NONE, error: null}, action) => {
+const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: STATUS_NONE, error: null}, action) => {
     switch(action.type){
         case LOAD:
 
@@ -99,10 +99,11 @@ const movieListReducer = (state = {page: 1, movies: [], lastGenreID: undefined, 
 
         case STATUS_LOADING:
             return Object.assign({}, state, {status: STATUS_LOADING});
+
         case STATUS_ERROR:
             return Object.assign({}, state, {status: STATUS_ERROR, error: action.error});
-        case STATUS_NONE:
 
+        case STATUS_NONE:
             if(action.didReset){
                 return Object.assign({}, state, {status: STATUS_NONE, movies: state.movies.concat(action.result), error: null})
             }
@@ -110,10 +111,25 @@ const movieListReducer = (state = {page: 1, movies: [], lastGenreID: undefined, 
                 return Object.assign({}, state, {status: STATUS_NONE, movies: action.result, error: null})
             }
 
+        case MOVIE_TOGGLE_LIKED:
+
+
+
+            const movieToggledIndex = state.movies.findIndex( movie => {return movie.id === action.movie.id})
+
+            let moviesCopy = state.movies.slice()
+
+            const modifiedMovie = Object.assign({}, moviesCopy[movieToggledIndex], {favorited: !moviesCopy[movieToggledIndex].favorited})
+
+            moviesCopy[movieToggledIndex] = modifiedMovie
+
+
+            return Object.assign({}, state, {movies: moviesCopy})
+
 
         default:
             return state;
     }
 }
 
-export default movieListReducer;
+export default reducer;

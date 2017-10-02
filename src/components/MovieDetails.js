@@ -2,13 +2,13 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
-import Movie from '../models/movie'
-import cover from '../images/default_movie_cover.jpg'
+
 import FavoriteButton from "./FavoriteButton";
 import DropdownWrapper from "./DropdownWrapper";
 import {openVideo} from "../actions/VideoPlayer";
 import MovieCover from "./MovieCover";
 import {hide} from "../actions/MovieDetailModal";
+import {toggleLiked} from "../actions/MovieList";
 
 class MovieDetails extends Component {
     constructor(props) {
@@ -75,8 +75,8 @@ class MovieDetails extends Component {
                             </div>
 
                             <div className="col-1 text-center">
-                                <FavoriteButton isFavorite={this.state.favorite}
-                                                toggledFavorite={this.toggledFavorite}/>
+                                <FavoriteButton isFavorite={this.props.thisMovieInStore.favorited}
+                                                toggledFavorite={() => this.props.toggleFavorite(this.props.thisMovieInStore)}/>
                             </div>
 
 
@@ -130,27 +130,27 @@ class MovieDetails extends Component {
 
 }
 
-MovieDetails.propTypes = {
-    // movie: PropTypes.instanceOf(Movie).isRequired,
-    // show: PropTypes.bool.isRequired,
-    // onClick: PropTypes.func.isRequired,
-
-}
 
 const mapStateToProps = state => {
+
+
     return {
         movie: state.movieDetailModalReducer.movie,
-        showing: state.movieDetailModalReducer.showing
+        showing: state.movieDetailModalReducer.showing,
+        thisMovieInStore: state.movieListReducer.movies.find( movie => {return movie.id === state.movieDetailModalReducer.movie.id})
     }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        playVideo: () => {
-            dispatch(openVideo(ownProps.movie))
+        playVideo: movie => {
+            dispatch(openVideo(movie))
         },
         closeModal: () => {
             dispatch(hide())
+        },
+        toggleFavorite: (movie) =>{
+            dispatch(toggleLiked(movie))
         }
     }
 }

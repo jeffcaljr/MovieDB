@@ -6,6 +6,7 @@ import Movie from '../models/movie'
 import cover from '../images/default_movie_cover.jpg'
 import FavoriteButton from "./FavoriteButton";
 import {show} from "../actions/MovieDetailModal";
+import {toggleLiked} from "../actions/MovieList";
 
 
 
@@ -32,7 +33,7 @@ class MovieItem extends Component{
                     onClick={() => this.props.openDetailModal()}>
                     <img src={this.props.movie.getImage() || cover} alt={this.props.movie.title || "Movie Cover"} className="movie-img"/>
 
-                    <FavoriteButton isFavorite={this.props.movie.favorited} toggledFavorite={this.toggledFavorite}/>
+                    <FavoriteButton isFavorite={this.props.isFavorite} toggledFavorite={() => this.props.toggleFavorite()}/>
 
                 </figure>
 
@@ -46,17 +47,22 @@ MovieItem.propTypes = {
     movie: PropTypes.instanceOf(Movie).isRequired,
 }
 
-const mapStateToProps = state => {
-    return{
+const mapStateToProps = (state, ownProps) => {
 
+    let thisMovieInStore = state.movieListReducer.movies.find( movie => {return movie.id === ownProps.movie.id});
+    return{
+        isFavorite: thisMovieInStore.favorited
     }
 }
 
-const mapDispatchToProps = (dispatch, ownprops) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
 
         openDetailModal: () => {
-            dispatch(show(ownprops.movie))
+            dispatch(show(ownProps.movie))
+        },
+        toggleFavorite: () =>{
+            dispatch(toggleLiked(ownProps.movie))
         }
 
     }

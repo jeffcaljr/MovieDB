@@ -3,37 +3,45 @@ export const LOAD_MORE = "LOAD_MORE";
 export const STATUS_LOADING = "STATUS_LOADING";
 export const STATUS_ERROR = "STATUS_ERROR";
 export const STATUS_NONE = "STATUS_NONE";
+export const MOVIE_TOGGLE_LIKED = "MOVIE_TOGGLE_LIKED";
 
 
+
+export const toggleLiked = movie => {
+    return {
+        type: MOVIE_TOGGLE_LIKED,
+        movie
+    }
+}
 
 export const load = (genreID) => {
-    return{
+    return {
         type: LOAD,
         genreID: genreID
     }
 }
 
 export const loadMore = () => {
-    return{
+    return {
         type: LOAD_MORE
     }
 }
 
 export const loading = () => {
-    return{
+    return {
         type: STATUS_LOADING
     }
 }
 
 export const error = (err) => {
-    return{
+    return {
         type: STATUS_ERROR,
         error: err
     }
 }
 
 export const done= (result = undefined, didReset = false) => {
-    return{
+    return {
         type: STATUS_NONE,
         didReset,
         result
