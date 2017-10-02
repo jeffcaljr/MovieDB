@@ -81,6 +81,10 @@ body {
   width: 100%;
 }
 
+.movie-detail-header > div{
+  padding: 0;
+}
+
 @media (min-width: 960px){
   .movie-info-image{
     width: 70%;

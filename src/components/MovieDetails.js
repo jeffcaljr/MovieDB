@@ -59,8 +59,8 @@ class MovieDetails extends Component {
             return (
                 <div className="movie-detail-container container">
                     <div className="movie-info">
-                        <header className="row">
-                            <div className="col-1">
+                        <header className="row movie-detail-header">
+                            <div className="col-1 text-center">
                                 <FavoriteButton isFavorite={this.state.favorite}
                                                 toggledFavorite={this.toggledFavorite}/>
                             </div>
@@ -71,8 +71,8 @@ class MovieDetails extends Component {
                             <div className="col-1 close-btn-container text-center">
                                 <btn
                                     className=" btn btn-sm modal-close-button"
-                                    onClick={(e) => {e.stopPropagation(); this.props.onClick}}>
-                                    <i className="fa fa-close text-white fa-2x"></i>
+                                    onClick={(e) => { this.props.onClick(e)}}>
+                                    <i className="fa fa-close fa-2x text-white"></i>
                                 </btn>
                             </div>
 

@@ -15,8 +15,8 @@ const NavigationMenu  = (props) => {
         let categoriesJSX = [];
 
         props.categories.map((category) => {
-            let newCategory = <li><NavCategory
-                key={category.id} index={category.id}
+            let newCategory = <li key={category.id}><NavCategory
+                index={category.id}
                 name={category.name}></NavCategory></li>;
             categoriesJSX.push(newCategory);
         })
@@ -46,7 +46,7 @@ const NavigationMenu  = (props) => {
 
             <div className="nav-category-item"
                  onClick={() => props.loadGenre(TRENDING_GENRE.id)}>
-                <h3 className="text-white font-weight-bold">Trending</h3>
+                <h3 className="text-white">Trending</h3>
             </div>
 
 
