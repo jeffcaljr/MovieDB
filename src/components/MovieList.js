@@ -13,7 +13,7 @@ const MovieList = ({className, movies, modalIsShowing, loadNew}) =>{
         if(movies.length > 0){
             let moviesJSX = [];
             movies.map((movie) => {
-                let movieJSX = <MovieItem movie={movie}/>
+                let movieJSX = <MovieItem key={movie.id} movie={movie}/>
                 moviesJSX.push(movieJSX);
             })
 

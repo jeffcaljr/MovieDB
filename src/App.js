@@ -10,6 +10,7 @@ import MovieDetails from './components/MovieDetails'
 import {GENRES, TRENDING_GENRE} from "./constants/genres";
 import LoadingCover from "./components/LoadingCover";
 import {load} from "./actions/MovieList";
+import ErrorDisplay from './components/ErrorsDisplay'
 
 class App extends Component {
     constructor(){
@@ -38,7 +39,7 @@ class App extends Component {
           {
               this.props.videoPlayerOpen
               ? <VideoPlayer/>
-              : <LoadingCover/>
+              :  null
           }
 
 
@@ -53,6 +54,8 @@ class App extends Component {
                       className="movie-items-container col-md-9 "/>
               </div>
           </div>
+
+          <ErrorDisplay/>
       </div>
     );
   }
@@ -65,7 +68,8 @@ class App extends Component {
 const mapStateToProps = state => {
     return {
         videoPlayerOpen: state.videoPlayerReducer.videoPlayerIsOpen,
-        modalIsShowing: state.movieDetailModalReducer.showing
+        modalIsShowing: state.movieDetailModalReducer.showing,
+        errors: state.errorReducer.errors
     }
 }
 

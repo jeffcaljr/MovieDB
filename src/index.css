@@ -293,3 +293,63 @@ movie-info-right-column{
   align-items: center;
   z-index: 50;
 }
+
+.error-display{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  max-width: 50%;
+  min-height: 1rem;
+  padding: 16px;
+  display: flex;
+  /*background: rgba(0,0,0, 0.75);*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  overflow-y: scroll;
+  z-index: 6;
+}
+
+@media (max-width: 959px){
+  .error-display{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.error-box{
+  color: white;
+  border-radius: 6px;
+  background: #F44336;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  -webkit-box-shadow: 4px 4px 2px 2px rgba(0,0,0,0.7);
+  -moz-box-shadow:    4px 4px 2px 2px rgba(0,0,0,0.7);
+  box-shadow:         4px 4px 2px 2px rgba(0,0,0,0.7);
+
+}
+
+.error-box-header{
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-box-content{
+  height: 100%;
+  color: white;
+  font-size: 0.8rem;
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
