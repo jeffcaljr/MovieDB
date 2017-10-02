@@ -52,7 +52,10 @@ body {
   background: black;
   padding-bottom: 16px;
   padding-top: 16px;
+  margin-left: 0;
+  margin-right: 0;
   height: 100vh;
+  width: 100%;
   overflow-y: scroll;
 }
 
