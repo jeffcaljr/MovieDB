@@ -2,6 +2,7 @@ import 'isomorphic-fetch'
 
 import {
     OPEN_VIDEO_PLAYER, CLOSE_VIDEO_PLAYER, VIDEO_PLAYER_ERROR, VIDEO_PLAYER_SOURCE_LOADED, error, sourceLoaded} from "../actions/VideoPlayer";
+import {addError} from '../actions/ErrorDisplay'
 import Movie, {BASE_VIDEOS_URL_PREFIX, BASE_VIDEOS_URL_SUFFIX, BASE_YOUTUBE_URL} from "../models/movie";
 
 
@@ -51,6 +52,7 @@ const VideoPlayerReducer = (state = {videoPlayerIsOpen: false, source: undefined
             return Object.assign({}, state, {videoPlayerIsOpen: true, video: action.video, error: undefined});
 
         case VIDEO_PLAYER_ERROR:
+            action.asyncDispatch(addError(action.error))
             return Object.assign({}, state, {source: undefined, error: action.error})
 
         default:

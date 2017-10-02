@@ -7,6 +7,7 @@ import {
 import {TRENDING_GENRE} from '../constants/genres'
 import config from "../config";
 import Movie from "../models/movie";
+import {addError} from "../actions/ErrorDisplay";
 
 const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: STATUS_NONE, error: null}, action) => {
     switch(action.type){
@@ -101,6 +102,7 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: S
             return Object.assign({}, state, {status: STATUS_LOADING});
 
         case STATUS_ERROR:
+            action.asyncDispatch(addError(action.error))
             return Object.assign({}, state, {status: STATUS_ERROR, error: action.error});
 
         case STATUS_NONE:
