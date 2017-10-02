@@ -27,7 +27,7 @@ NavCategory.propTypes = {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        selected: state.lastGenreID === ownProps.index
+        selected: state.movieListReducer.lastGenreID === ownProps.index
     }
 }
 

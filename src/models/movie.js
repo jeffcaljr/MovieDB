@@ -2,9 +2,9 @@ import 'isomorphic-fetch'
 import config from '../config'
 import {GENRES} from "../constants/genres";
 
-const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
-const BASE_VIDEOS_URL_PREFIX = "https://api.themoviedb.org/3/movie/";
-const BASE_VIDEOS_URL_SUFFIX = `/videos?language=en-US&api_key=${config.MOVIEDB_KEY}`;
+export const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
+export const BASE_VIDEOS_URL_PREFIX = "https://api.themoviedb.org/3/movie/";
+export const BASE_VIDEOS_URL_SUFFIX = `/videos?language=en-US&api_key=${config.MOVIEDB_KEY}`;
 export const BASE_YOUTUBE_URL = "https://www.youtube.com/embed/"
 
 class Movie{
@@ -37,25 +37,25 @@ class Movie{
         this.favorited = !this.favorited;
     }
 
-    loadYouTubeTrailerURL = (resolve, reject) => {
-        const url = `${BASE_VIDEOS_URL_PREFIX}${this.id}${BASE_VIDEOS_URL_SUFFIX}`
-        // alert(url)
-
-
-
-        return fetch(url)
-            .then( (res) => {
-                if(res.ok){
-                    return res.json()
-                }
-                else{
-                    return reject(new Error("Error loading videos"))
-                }
-            })
-            .catch((err) => {
-                return reject(err)
-            })
-    }
+    // loadYouTubeTrailerURL = (resolve, reject) => {
+    //     const url = `${BASE_VIDEOS_URL_PREFIX}${this.id}${BASE_VIDEOS_URL_SUFFIX}`
+    //     // alert(url)
+    //
+    //
+    //
+    //     return fetch(url)
+    //         .then( (res) => {
+    //             if(res.ok){
+    //                 return res.json()
+    //             }
+    //             else{
+    //                 return reject(new Error("Error loading videos"))
+    //             }
+    //         })
+    //         .catch((err) => {
+    //             return reject(err)
+    //         })
+    // }
 
     getGenres = () => {
 

@@ -1,62 +1,55 @@
 import React, {Component} from "react"
-import PropTypes from 'prop-types'
-import Movie, {BASE_YOUTUBE_URL} from "../models/movie";
+import {connect} from 'react-redux'
+
+import {closeVideo} from "../actions/VideoPlayer";
 
 
-class VideoPlayer extends Component{
-    constructor(){
-        super()
 
-        let state = {
-            source: undefined
-        }
+const VideoPlayer = ({movie, closeVideo}) =>{
+
+
+    const closeWindow = () => {
+        closeVideo()
     }
 
-    loadVideo = () => {
-        let src = this.props.movie.loadYouTubeTrailerURL()
-            .then((res) => {
+    return (
+        <div className="video-player">
 
-                const results = res.results;
-                const trailers = results.filter((video) => {return video.type === "Trailer"})
-                const firstTrailerVideo = trailers.find((video) => {return video["site"] === "YouTube"})
-                //
-                if(firstTrailerVideo != undefined){
-                    let youtubeURL = `${BASE_YOUTUBE_URL}${firstTrailerVideo["key"]}`
-                    // alert(youtubeURL)
-                    this.setState({source: youtubeURL})
-                }
-                else{
-                    alert("No Youtube Videos Found")
-                }
-            })
-            .catch((err) => { alert(err)})
-    }
+            <div className="header w-100 text-right">
+                <a
+                    href="#"
+                    className="btn"
+                    onClick={closeWindow}>
+                    <i className="fa fa-close text-white"></i>
+                </a>
+            </div>
 
+            <iframe
+                width="500"
+                height="500"
+                src={movie}
+                className="youtube-player"
+                controls
+                allowFullScreen={true}></iframe>
+        </div>
+    );
 
-    render(){
-
-        if(this.state){
-            return (
-                <div className="video-player">
-                    <iframe width="500" height="500" src={this.state.source} frameborder="0" className="youtube-player" controls></iframe>
-                </div>
-            );
-        }
-        else{
-            return null
-        }
-
-    }
-
-    componentDidMount(){
-        this.loadVideo()
-    }
-}
-
-VideoPlayer.propTypes = {
-    movie: PropTypes.instanceOf(Movie).isRequired
 }
 
 
-export default VideoPlayer
+const mapStateToProps = state => {
+    return {
+        movie: state.videoPlayerReducer.video
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        closeVideo: () => {
+            dispatch(closeVideo())
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(VideoPlayer)
 

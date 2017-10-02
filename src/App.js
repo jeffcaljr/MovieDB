@@ -17,28 +17,11 @@ class App extends Component {
         super();
 
         this.state = {
-            videoPlaying: null,
             categories: GENRES
         }
 
-        this.toggleVideoPlayer = this.toggleVideoPlayer.bind(this)
     }
-
-
-    toggleVideoPlayer = (movie) => {
-
-        if(this.state.videoPlaying != null){
-            //stop the video
-            alert("hiding movie")
-            this.setState({playingVideo: null})
-
-        }
-        else{
-            //play a video when none was playing before
-            this.setState({videoPlaying: movie})
-        }
-
-    }
+    
 
 
   render() {
@@ -47,7 +30,11 @@ class App extends Component {
       <div className="App">
           <LoadingCover/>
 
-          {this.state.videoPlaying != null ? <VideoPlayer movie={this.state.videoPlaying} toggleVideo={(movie) => this.toggleVideoPlayer(movie)}/>  : ""}
+          {
+              this.props.videoPlayerOpen
+              ? <VideoPlayer/>
+              : <LoadingCover/>
+          }
 
 
           <div className="container-fluid">
@@ -58,8 +45,7 @@ class App extends Component {
                   <NavigationMenuCollapsed className=" navigation-container hidden-md-up col-12 navbar navbar-toggleable-md navbar-light bg-faded"/>
                   <MovieList
                       movies={this.state.movies}
-                      className="movie-items-container col-md-9 "
-                      playVideo={(movie) => this.toggleVideoPlayer(movie)}/>
+                      className="movie-items-container col-md-9 "/>
               </div>
           </div>
       </div>
@@ -73,7 +59,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
     return {
-
+        videoPlayerOpen: state.videoPlayerReducer.videoPlayerIsOpen
     }
 }
 

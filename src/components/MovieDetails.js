@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
 
 import Movie from '../models/movie'
 import cover from '../images/default_movie_cover.jpg'
 import FavoriteButton from "./FavoriteButton";
 import DropdownWrapper from "./DropdownWrapper";
+import {openVideo} from "../actions/VideoPlayer";
 
 class MovieDetails extends Component {
     constructor(props) {
@@ -17,8 +19,6 @@ class MovieDetails extends Component {
         }
 
         this.toggledFavorite = this.toggledFavorite.bind(this)
-
-        this.playVideo = this.playVideo.bind(this)
     }
 
     toggledFavorite = () => {
@@ -51,10 +51,6 @@ class MovieDetails extends Component {
         }
     }
 
-    playVideo = (movie) => {
-        // alert("playing movie " + movie.title)
-        this.props.playVideo(movie)
-    }
 
 
     render() {
@@ -74,7 +70,7 @@ class MovieDetails extends Component {
                             <div className="col-1 close-btn-container text-center">
                                 <btn
                                     className=" btn btn-sm modal-close-button"
-                                    onClick={this.props.onClick}>
+                                    onClick={(e) => {e.stopPropagation(); this.props.onClick}}>
                                     <i className="fa fa-close text-white fa-2x"></i>
                                 </btn>
                             </div>
@@ -91,7 +87,7 @@ class MovieDetails extends Component {
                                     <a
                                         href="#"
                                         className={"cover-button play-button "}
-                                        onClick={(e) => this.playVideo(this.props.movie)}
+                                        onClick={this.props.playVideo(this.props.movie)}
                                     ><i className="fa fa-play fa-3x"></i></a>
                                 </figure>
                                 <div className="movie-rating clearfix">
@@ -140,8 +136,21 @@ MovieDetails.propTypes = {
     movie: PropTypes.instanceOf(Movie).isRequired,
     show: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
-    playVideo: PropTypes.func.isRequired
 
 }
 
-export default MovieDetails;
+const mapStateToProps = state => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        playVideo: () => {
+            dispatch(openVideo(ownProps.movie))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieDetails);
