@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import 'isomorphic-fetch'
 import {connect} from 'react-redux'
 
-import './App.css';
 import NavigationMenu from "./components/NavigationMenu";
 import MovieList from "./components/MovieList";
 import NavigationMenuCollapsed from "./components/NavigationMenuCollapsed";
