@@ -45,7 +45,9 @@ class App extends Component {
                   <NavigationMenu
                       className="navigation-container col-md-3 hidden-sm-down"
                       children={<MenuContent categories={GENRES}/>}/>
-                  <NavigationMenuCollapsed className="hidden-md-up col-12 navbar navbar-toggleable-md"/>
+                  <NavigationMenuCollapsed
+                      className="hidden-md-up col-12 navbar navbar-toggleable-md"
+                      children={<MenuContent categories={GENRES}/>}/>
                   <MovieList
                       className="movie-items-container col-md-9 "/>
               </div>

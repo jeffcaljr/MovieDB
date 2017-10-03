@@ -6,6 +6,7 @@ import NavCategory from "./NavCategory";
 import DropdownWrapper from "./DropdownWrapper";
 import {load} from "../actions/MovieList";
 import {TRENDING_GENRE} from "../constants/genres";
+import SearchBar from './SearchBar'
 
 const NavigationMenu  = (props) => {
 
@@ -14,18 +15,7 @@ const NavigationMenu  = (props) => {
 
             <i className="fa fa-gear text-white pull-right" aria-hidden="false"></i>
 
-            <div className="nav-item input-group">
-                <form className="input-group">
-                    <input className="form-control" type="text" placeholder="Search"/>
-                    <div className="input-group-btn">
-                        <button className="btn btn-primary">
-                            <i className="fa fa-search text-white"></i>
-                        </button>
-
-                    </div>
-
-                </form>
-            </div>
+            <SearchBar/>
 
             {props.children}
 
