@@ -7,21 +7,22 @@ class DropdownWrapper extends Component{
         super()
 
         this.state = {
-            expanded: false
+            expanded: undefined,
+            userSetExpanded: false
         }
 
         this.toggleExpanded = this.toggleExpanded.bind(this)
     }
 
     toggleExpanded(){
-        this.setState({expanded: !this.state.expanded})
+        this.setState({expanded: !this.state.expanded, userSetExpanded: true})
     }
 
     render(){
         return (
             <div className="dropdown-wrapper">
                 <div className="dropdown-header">
-                    <h3 className="title d-inline-block text-white">{this.props.title}</h3>
+                    <h3 className="title d-inline-block text-white typeface-serif ">{this.props.title}</h3>
                     <a
                         className="btn dropdown-toggle-btn d-inline-block borderless"
                         onClick={this.toggleExpanded}>
@@ -30,7 +31,7 @@ class DropdownWrapper extends Component{
                     </a>
                 </div>
 
-                <div className={"dropdown-content-container " + (this.state.expanded ? " expand " : " contract ")}>
+                <div className={"dropdown-content-container " + (this.state.expanded ? " expand " : (( (this.state.userSetExpanded)) ? " contract " : " hidden "))}>
                     <hr className="dropdown-divider"/>
                     <div className={"dropdown-content "}>
                         {this.props.children}

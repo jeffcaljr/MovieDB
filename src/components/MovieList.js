@@ -37,7 +37,7 @@ const MovieList = ({className, movies, modalIsShowing, loadNew}) =>{
 
                 {
                     movies.length > 0
-                    ?   <a href="#" className="btn text-white w-100 text-center" onClick={(e) => { e.preventDefault(); loadNew()}}>Load More</a>
+                    ?   <a href="#" className="btn text-white w-100 text-center typeface-serif text-uppercase" onClick={(e) => { e.preventDefault(); loadNew()}}>Load More</a>
                     : <h1 className="text-white text-center w-100">Not Working!</h1>
                 }
 

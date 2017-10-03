@@ -30,7 +30,6 @@ const VideoPlayer = ({className, movie, closeVideo}) =>{
                 height="500"
                 src={movie}
                 className="youtube-player"
-                controls
                 allowFullScreen={true}></iframe>
         </div>
     );

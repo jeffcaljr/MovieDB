@@ -34,7 +34,7 @@ class MovieDetails extends Component {
         if (movieGenres.length > 0) {
             let genresJSX = [];
             movieGenres.map((genre) => {
-                let genreJSX = <div className="genre">{genre.name}</div>
+                let genreJSX = <div className="genre typeface-serif font-weight-bold">{genre.name}</div>
                 genresJSX.push(genreJSX)
             })
 
@@ -71,7 +71,7 @@ class MovieDetails extends Component {
                             </div>
 
                             <div className="col-10 title-container text-center">
-                                <h3 className="title text-center text-white font-weight-bold">{this.props.movie.title}</h3>
+                                <h3 className="title text-center text-white font-weight-bold typeface-serif text-uppercase">{this.props.movie.title}</h3>
                             </div>
 
                             <div className="col-1 text-center">
@@ -91,24 +91,24 @@ class MovieDetails extends Component {
                                 <div className="movie-rating clearfix">
                                     <div className="rating-left pull-left">
                                         <span className="rating-img"><i className="fa fa-star text-white"></i></span>
-                                        <span className="rating-value text-white">{this.props.movie.voteAverage}</span>
+                                        <span className="rating-value text-white typeface-serif">{this.props.movie.voteAverage}</span>
                                     </div>
 
                                     <span
-                                        className="rating-votes text-white pull-right">({this.props.movie.voteCount})</span>
+                                        className="rating-votes text-white pull-right typeface-sans-serif text-secondary">({this.props.movie.voteCount})</span>
                                 </div>
                                 <div className="realese-date">
-                                    <p className="text-white">Released: {this.props.movie.releaseDate.substr(0, 4)}</p>
+                                    <p className="text-white"> <span className="typeface-serif text-uppercase small text-info ">Released:</span> {this.props.movie.releaseDate.substr(0, 4)}</p>
                                 </div>
                             </div>
                             <div className="col-md-8">
 
                                 <div className="tagline-container">
-                                    <h5 className="tagline text-white text-center font-italic">{this.props.movie.tagline || ""}</h5>
+                                    <h5 className="tagline text-white text-center font-italic typeface-sans-serif">{this.props.movie.tagline || ""}</h5>
                                 </div>
 
                                 <div className="overview-container">
-                                    <p className="overview text-white">
+                                    <p className="overview text-white typeface-sans-serif">
                                         {this.props.movie.overview || "No overview available"}
                                     </p>
                                 </div>

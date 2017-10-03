@@ -33,7 +33,7 @@ const NavigationMenu  = (props) => {
                 <h5 className="selected-genre-title text-white">
                     {
                         getLastGenre() != ""
-                            ? (<span><span className="text-muted">Viewing: </span> {getLastGenre()}</span>)
+                            ? (<span ><span className="text-muted typeface-serif text-uppercase small text-info">Viewing: </span> <span className="current-genre typeface-serif text-uppercase">{getLastGenre()}</span></span>)
                         : ""
                     }
                 </h5>

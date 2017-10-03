@@ -37,7 +37,7 @@ class App extends Component {
 
           {
               this.props.videoPlayerOpen
-              ? <VideoPlayer className={((this.props.videoPlayerOpen ? " modal-showing " : " modal-hidden "))}/>
+              ? <VideoPlayer className={((""))}/>
               :  null
           }
 

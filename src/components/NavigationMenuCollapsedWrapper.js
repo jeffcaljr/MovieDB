@@ -78,7 +78,7 @@ class NavigationMenuCollapsed extends Component{
                     <div className="collapsed-menu-header">
 
                         <div className="selected-genre-title-container">
-                            <h5 className="selected-genre-title text-white">{this.getLastGenre()}</h5>
+                            <h5 className="selected-genre-title text-white typeface-serif text-uppercase">{this.getLastGenre()}</h5>
                         </div>
 
                         <span className="nav-open-btn" onClick={() => this.openNav()}><i className="fa fa-bars text-white"></i></span>

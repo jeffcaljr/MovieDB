@@ -37,7 +37,7 @@ class MovieItem extends Component{
                         <FavoriteButton isFavorite={this.props.isFavorite} toggledFavorite={() => this.props.toggleFavorite()}/>
                         <div className={"scroll-left"}
                              ref={(scrollLeft) => this.scrollLeft = scrollLeft}>
-                            <p className={"movie-item-details-title " + (this.state.hasOverflow ? " scrolling-title w-100 " : " no-scrolling-title ")} ref={(scrollText) => this.scrollText = scrollText}>{this.props.movie.title}</p>
+                            <p className={"movie-item-details-title typeface-sans-serif" + (this.state.hasOverflow ? " scrolling-title w-100 " : " no-scrolling-title ")} ref={(scrollText) => this.scrollText = scrollText}>{this.props.movie.title}</p>
 
                         </div>
                     </div>
