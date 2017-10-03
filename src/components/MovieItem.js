@@ -29,21 +29,21 @@ class MovieItem extends Component{
         return (
             <div className="movie-item-container-single col-6 col-sm-3 col-md-4 col-lg-3 col-xl-2">
                 <figure
-                    className="movie-item image-btn-container"
+                    className="movie-item image-btn-container w-100"
                     onClick={() => this.props.showDetailModal()}>
                     <img src={this.props.movie.getImage() || cover} alt={this.props.movie.title || "Movie Cover"} className="movie-img"/>
 
+                    <div className="text-white text-center movie-item-details">
+                        <FavoriteButton isFavorite={this.props.isFavorite} toggledFavorite={() => this.props.toggleFavorite()}/>
+                        <div className={"scroll-left"}
+                             ref={(scrollLeft) => this.scrollLeft = scrollLeft}>
+                            <p className={"movie-item-details-title " + (this.state.hasOverflow ? " scrolling-title w-100 " : " no-scrolling-title ")} ref={(scrollText) => this.scrollText = scrollText}>{this.props.movie.title}</p>
 
+                        </div>
+                    </div>
 
                 </figure>
-                <div className="text-white text-center w-100 movie-item-details">
-                    <FavoriteButton isFavorite={this.props.isFavorite} toggledFavorite={() => this.props.toggleFavorite()}/>
-                    <div className={"scroll-left"}
-                         ref={(scrollLeft) => this.scrollLeft = scrollLeft}>
-                        <p className={"movie-item-details-title " + (this.state.hasOverflow ? " scrolling-title w-100 " : " ")} ref={(scrollText) => this.scrollText = scrollText}>{this.props.movie.title}</p>
 
-                    </div>
-                </div>
 
             </div>
         );

@@ -104,8 +104,8 @@ body {
   padding: 0;
 }
 
-@media (min-width: 960px){
-  .movie-info-image{
+@media (max-width: 719px){
+  .movie-detail-container .movie-img{
     width: 70%;
     margin: 0 auto;
   }
@@ -537,6 +537,9 @@ movie-info-right-column{
   /*background: yellow;*/
   /*color: orange;*/
   /*border: 1px solid orange;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .scroll-left .movie-item-details-title {
   position: absolute;
@@ -558,6 +561,11 @@ movie-info-right-column{
   -moz-animation: scroll-left 8s ease-out infinite;
   -webkit-animation: scroll-left 8s ease-out infinite;
   animation: scroll-left 8s ease-out infinite;
+  font-size: 0.8rem;
+}
+
+.no-scrolling-title{
+  font-size: 0.8rem;
 }
 
 
