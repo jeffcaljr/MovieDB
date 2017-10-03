@@ -274,11 +274,11 @@ movie-info-right-column{
 }
 
 .modal-showing{
-  animation: modal-show 350ms ease-in-out forwards;
+  animation: modal-show 150ms ease-in-out forwards;
 }
 
 .modal-hidden{
-  animation: modal-show 350ms ease-in-out forwards;
+  animation: modal-show 150ms ease-in-out forwards;
 }
 
 
