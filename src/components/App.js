@@ -29,13 +29,13 @@ class App extends Component {
 
           {
               this.props.modalIsShowing
-              ? <MovieDetails/>
+              ? <MovieDetails className={(this.props.modalIsShowing ? " modal-showing " : " modal-hidden ")}/>
               : null
           }
 
           {
               this.props.videoPlayerOpen
-              ? <VideoPlayer/>
+              ? <VideoPlayer className={((this.props.videoPlayerOpen ? " modal-showing " : " modal-hidden "))}/>
               :  null
           }
 

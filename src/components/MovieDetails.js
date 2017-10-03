@@ -58,7 +58,7 @@ class MovieDetails extends Component {
     render() {
         if (this.props.showing) {
             return (
-                <div className="movie-detail-container container">
+                <div className={this.props.className + "movie-detail-container container" + " " +  ((this.props.showing ? " modal-showing " : " modal-hidden "))}>
                     <div className="movie-info">
                         <header className="row movie-detail-header">
 
@@ -129,6 +129,15 @@ class MovieDetails extends Component {
     }
 
 }
+
+MovieDetails.propTypes = {
+    className: PropTypes.string
+}
+
+MovieDetails.defaultProps = {
+    className: ""
+}
+
 
 
 const mapStateToProps = state => {

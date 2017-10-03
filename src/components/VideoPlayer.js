@@ -1,11 +1,12 @@
 import React, {Component} from "react"
 import {connect} from 'react-redux'
+import PropTypes from 'prop-types'
 
 import {closeVideo} from "../actions/VideoPlayer";
 
 
 
-const VideoPlayer = ({movie, closeVideo}) =>{
+const VideoPlayer = ({className, movie, closeVideo}) =>{
 
 
     const closeWindow = () => {
@@ -13,7 +14,7 @@ const VideoPlayer = ({movie, closeVideo}) =>{
     }
 
     return (
-        <div className="video-player">
+        <div className={className + " video-player "}>
 
             <div className="header w-100 text-right">
                 <a
@@ -34,6 +35,14 @@ const VideoPlayer = ({movie, closeVideo}) =>{
         </div>
     );
 
+}
+
+VideoPlayer.propTypes = {
+    className: PropTypes.string
+}
+
+VideoPlayer.defaultProps = {
+    className: ""
 }
 
 

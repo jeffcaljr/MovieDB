@@ -273,6 +273,14 @@ movie-info-right-column{
   animation: lift-up 250ms ease-in-out forwards;
 }
 
+.modal-showing{
+  animation: modal-show 350ms ease-in-out forwards;
+}
+
+.modal-hidden{
+  animation: modal-show 350ms ease-in-out forwards;
+}
+
 
 .video-player{
   background: black;
@@ -591,7 +599,6 @@ movie-info-right-column{
   to {top:0; opacity: 1;}
 }
 
-/* Drop-down animation*/
 @-moz-keyframes lift-up {
   from {top:0; opacity: 1;}
   to {top:-3rem; opacity: 0; visibility: collapse}
@@ -604,5 +611,98 @@ movie-info-right-column{
 @-webkit-keyframes lift-up {
   from {top:0; opacity: 1;}
   to {top:-3rem; opacity: 0; visibility: collapse}
+}
+
+/*Modal animations*/
+@-moz-keyframes modal-show {
+  0%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes modal-show {
+  0%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes modal-show {
+  0%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+}
+
+@-moz-keyframes modal-hide {
+  0%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  100%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    visibility: hidden;
+  }
+}
+@keyframes modal-hide {
+  0%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  100%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes modal-hide {
+  0%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  100%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    visibility: hidden;
+  }
 }
 
