@@ -21,7 +21,8 @@ body {
 
 .navigation-container{
   background: #212121;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   text-align: center;
   height: 100vh;
 }
