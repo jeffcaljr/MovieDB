@@ -47,7 +47,7 @@ body {
   }
 
   .category-name{
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -555,9 +555,9 @@ movie-info-right-column{
   -webkit-transform:translateX(100%);
   transform:translateX(100%);
   /* Apply animation to this element */
-  -moz-animation: scroll-left 6s ease-out infinite;
-  -webkit-animation: scroll-left 6s ease-out infinite;
-  animation: scroll-left 6s ease-out infinite;
+  -moz-animation: scroll-left 8s ease-out infinite;
+  -webkit-animation: scroll-left 8s ease-out infinite;
+  animation: scroll-left 8s ease-out infinite;
 }
 
 
@@ -704,5 +704,15 @@ movie-info-right-column{
     transform: scale(0);
     visibility: hidden;
   }
+}
+
+.message{
+  position: fixed;
+  top: 5%;
+  right: 50%;
+  color: red;
+  font-size: 3em;
+  background: rgba(0,0,0, 0.6);
+  z-index: 8;
 }
 
