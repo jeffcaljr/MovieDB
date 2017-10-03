@@ -54,9 +54,6 @@ class MovieItem extends Component{
         this.setState({ hasOverflow: this.hasOverflow()}, () => {console.log("setting state")})
     }
 
-    componentDidUpdate(){
-        console.log("updated")
-    }
 
 }
 

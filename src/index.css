@@ -243,9 +243,11 @@ movie-info-right-column{
 
 .dropdown-header{
   padding-bottom: 0;
+  /*background: blue;*/
+  z-index: 2;
 }
 
-.dropdown .title{
+.dropdown-wrapper .title{
   margin: 0;
 }
 
@@ -256,6 +258,19 @@ movie-info-right-column{
 
 .borderless{
   border: none;
+}
+
+.dropdown-content-container{
+  position: relative;
+  z-index: 1;
+}
+
+.expand{
+  animation: drop-down 250ms ease-in-out forwards;
+}
+
+.contract{
+  animation: lift-up 250ms ease-in-out forwards;
 }
 
 
@@ -532,12 +547,14 @@ movie-info-right-column{
   -webkit-transform:translateX(100%);
   transform:translateX(100%);
   /* Apply animation to this element */
-  -moz-animation: scroll-left 6s linear infinite;
-  -webkit-animation: scroll-left 6s linear infinite;
-  animation: scroll-left 6s linear infinite;
+  -moz-animation: scroll-left 6s ease-out infinite;
+  -webkit-animation: scroll-left 6s ease-out infinite;
+  animation: scroll-left 6s ease-out infinite;
 }
 
-/* Move it (define the animation) */
+
+
+/* Scroll left animation*/
 @-moz-keyframes scroll-left {
   0%   { -moz-transform: translateX(100%); }
   100% { -moz-transform: translateX(-100%); }
@@ -553,8 +570,39 @@ movie-info-right-column{
     transform: translateX(100%);
   }
   100% {
-    -moz-transform: translateX(-100%); /* Browser bug fix */
-    -webkit-transform: translateX(-100%); /* Browser bug fix */
-    transform: translateX(-100%);
+    -moz-transform: translateX(-120%); /* Browser bug fix */
+    -webkit-transform: translateX(-120%); /* Browser bug fix */
+    transform: translateX(-120%);
   }
 }
+
+/* Drop-down animation*/
+@-moz-keyframes drop-down {
+  from {top:-3rem; opacity: 0;}
+  to {top:0; opacity: 1;}
+}
+@keyframes drop-down {
+  from {top:-3rem; opacity: 0;}
+  to {top:0; opacity: 1;}
+}
+
+@-webkit-keyframes drop-down {
+  from {top:-3rem; opacity: 0;}
+  to {top:0; opacity: 1;}
+}
+
+/* Drop-down animation*/
+@-moz-keyframes lift-up {
+  from {top:0; opacity: 1;}
+  to {top:-3rem; opacity: 0; visibility: collapse}
+}
+@keyframes lift-up {
+  from {top:0; opacity: 1;}
+  to {top:-3rem; opacity: 0; visibility: collapse}
+}
+
+@-webkit-keyframes lift-up {
+  from {top:0; opacity: 1;}
+  to {top:-3rem; opacity: 0; visibility: collapse}
+}
+

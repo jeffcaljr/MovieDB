@@ -11,9 +11,9 @@ const NavCategory = (props) => {
     }
 
     return(
-        <div className="nav-category-item " onClick={() => onSelected(props.index)}>
+        <div className="nav-category-item d-flex flex-row justify-content-start align-items-center" onClick={() => onSelected(props.index)}>
             <span className={"selected-indicator " + (!props.selected ? "hidden " : "d-inline-block ")}></span>
-            <p className={"category-name d-inline-block " + (props.selected ? "text-white " : "text-secondary ")}>{props.name}</p>
+            <span className={"category-name d-inline-block " + (props.selected ? "text-white " : "text-secondary ")}>{props.name}</span>
         </div>
     );
 }

@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import 'isomorphic-fetch'
 import {connect} from 'react-redux'
 
-import NavigationMenu from "./components/NavigationMenuWrapper";
-import MovieList from "./components/MovieList";
-import NavigationMenuCollapsed from "./components/NavigationMenuCollapsedWrapper";
-import VideoPlayer from "./components/VideoPlayer";
-import MovieDetails from './components/MovieDetails'
-import {GENRES, TRENDING_GENRE} from "./constants/genres";
-import LoadingCover from "./components/LoadingCover";
-import {load} from "./actions/MovieList";
-import ErrorDisplay from './components/ErrorsDisplay'
-import MenuContent from './components/MenuContent'
+import NavigationMenu from "./NavigationMenuWrapper";
+import MovieList from "./MovieList";
+import NavigationMenuCollapsed from "./NavigationMenuCollapsedWrapper";
+import VideoPlayer from "./VideoPlayer";
+import MovieDetails from './MovieDetails'
+import {GENRES, TRENDING_GENRE} from "../constants/genres";
+import LoadingCover from "./LoadingCover";
+import {load} from "../actions/MovieList";
+import ErrorDisplay from './ErrorsDisplay'
+import MenuContent from './MenuContent'
 
 class App extends Component {
     constructor(){

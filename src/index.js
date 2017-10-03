@@ -7,7 +7,7 @@ import {createStore, applyMiddleware} from 'redux'
 import reducer from './reducers/index'
 import asyncMiddleware from './middleware/AsyncMiddleware'
 import './index.css';
-import App from './App';
+import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 let store = createStore(reducer,  applyMiddleware(asyncMiddleware));
