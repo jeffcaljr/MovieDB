@@ -2,23 +2,20 @@ import React, { Component } from 'react';
 import 'isomorphic-fetch'
 import {connect} from 'react-redux'
 
-import NavigationMenu from "./components/NavigationMenu";
+import NavigationMenu from "./components/NavigationMenuWrapper";
 import MovieList from "./components/MovieList";
-import NavigationMenuCollapsed from "./components/NavigationMenuCollapsed";
+import NavigationMenuCollapsed from "./components/NavigationMenuCollapsedWrapper";
 import VideoPlayer from "./components/VideoPlayer";
 import MovieDetails from './components/MovieDetails'
 import {GENRES, TRENDING_GENRE} from "./constants/genres";
 import LoadingCover from "./components/LoadingCover";
 import {load} from "./actions/MovieList";
 import ErrorDisplay from './components/ErrorsDisplay'
+import MenuContent from './components/MenuContent'
 
 class App extends Component {
     constructor(){
         super();
-
-        this.state = {
-            categories: GENRES
-        }
 
     }
     
@@ -27,7 +24,7 @@ class App extends Component {
   render() {
     return (
 
-      <div className="App">
+      <div className="App" id="main">
           <LoadingCover/>
 
           {
@@ -47,10 +44,9 @@ class App extends Component {
               <div className="row">
                   <NavigationMenu
                       className="navigation-container col-md-3 hidden-sm-down"
-                      categories={this.state.categories}/>
-                  <NavigationMenuCollapsed className=" navigation-container hidden-md-up col-12 navbar navbar-toggleable-md navbar-light bg-faded"/>
+                      children={<MenuContent categories={GENRES}/>}/>
+                  <NavigationMenuCollapsed className="hidden-md-up col-12 navbar navbar-toggleable-md"/>
                   <MovieList
-                      movies={this.state.movies}
                       className="movie-items-container col-md-9 "/>
               </div>
           </div>

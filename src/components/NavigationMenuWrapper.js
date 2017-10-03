@@ -9,22 +9,6 @@ import {TRENDING_GENRE} from "../constants/genres";
 
 const NavigationMenu  = (props) => {
 
-
-    const renderCategories = () => {
-
-        let categoriesJSX = [];
-
-        props.categories.map((category) => {
-            let newCategory = <li key={category.id}><NavCategory
-                index={category.id}
-                name={category.name}></NavCategory></li>;
-            categoriesJSX.push(newCategory);
-        })
-
-        return categoriesJSX;
-    }
-
-
     return(
         <div className={props.className}>
 
@@ -43,21 +27,7 @@ const NavigationMenu  = (props) => {
                 </form>
             </div>
 
-
-            <div className="nav-category-item"
-                 onClick={() => props.loadGenre(TRENDING_GENRE.id)}>
-                <h3 className="text-white">Trending</h3>
-            </div>
-
-
-
-            <DropdownWrapper title={"Categories"}
-                             children={
-                                 <ul className="list-group categories-list">
-                                     {renderCategories()}
-
-                                 </ul>}
-            />
+            {props.children}
 
         </div>
 
@@ -67,16 +37,12 @@ const NavigationMenu  = (props) => {
 }
 
 NavigationMenu.propTypes = {
-    categories: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number,
-        name: PropTypes.string
 
-    })).isRequired,
     className: PropTypes.string,
+    children: PropTypes.node
 }
 
 NavigationMenu.defaultProps = {
-    categories: [],
     className: ""
 }
 
