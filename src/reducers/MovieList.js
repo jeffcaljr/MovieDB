@@ -36,7 +36,6 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: S
                         })
                         .catch((err) => action.asyncDispatch(error(err)));
 
-
                     return Object.assign({}, state, {page: defaultPage, lastGenreID: TRENDING_GENRE.id})
 
                 default:
@@ -106,6 +105,7 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: S
             return Object.assign({}, state, {status: STATUS_ERROR, error: action.error});
 
         case STATUS_NONE:
+
             if(action.didReset){
                 return Object.assign({}, state, {status: STATUS_NONE, movies: state.movies.concat(action.result), error: null})
             }

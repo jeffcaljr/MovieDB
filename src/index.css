@@ -366,7 +366,7 @@ movie-info-right-column{
   left: 0;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 16px; /* Place content 60px from the top */
+  padding-top: 8px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -434,19 +434,12 @@ movie-info-right-column{
 }
 
 .sidenav-header{
-  /*position: sticky;*/
-  /*top: 0;*/
-  /*left: 0;*/
-  /*width: 100%;*/
-  /*height: auto;*/
-  /*overflow: hidden;*/
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /*background: yellow;*/
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0 1rem;
 }
 
 .sidenav-content{
@@ -456,9 +449,22 @@ movie-info-right-column{
 
 .collapsed-menu-header{
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 16px 0px 16px 8px;
+  padding:4px 0px;
+}
+
+.collapsed-menu-header .selected-genre-title-container{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.collapsed-menu-header .selected-genre-title{
+  margin-bottom: 0px !important;
 }
 
 .nav-open-btn{

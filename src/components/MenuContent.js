@@ -25,14 +25,9 @@ const MenuContent = ({categories, loadGenre}) => {
 
     return (
         <div className="menu-content">
-            <div className="nav-category-item"
-                 onClick={() => loadGenre(TRENDING_GENRE.id)}>
-                <h3 className="text-white">Trending</h3>
-            </div>
-
-
 
             <DropdownWrapper title={"Categories"}
+                             expandedDefault={true}
                              children={
                                  <ul className="list-group categories-list">
                                      {renderCategories()}

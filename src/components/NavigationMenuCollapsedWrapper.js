@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import {connect } from 'react-redux'
 import NavCategory from "./NavCategory";
 import SearchBar from './SearchBar'
+import {GENRES} from "../constants/genres";
 
 class NavigationMenuCollapsed extends Component{
     constructor(){
@@ -25,6 +27,17 @@ class NavigationMenuCollapsed extends Component{
 
     closeNav = () => {
         this.setState({navOpen: false})
+    }
+
+    getLastGenre = () =>{
+        const lastGenre = GENRES.find( (genre) => {return genre.id === this.props.lastGenreID})
+        if(lastGenre){
+            return lastGenre.name
+        }
+        else{
+            return ""
+        }
+
     }
 
 
@@ -63,6 +76,11 @@ class NavigationMenuCollapsed extends Component{
                     </div>
 
                     <div className="collapsed-menu-header">
+
+                        <div className="selected-genre-title-container">
+                            <h5 className="selected-genre-title text-white">{this.getLastGenre()}</h5>
+                        </div>
+
                         <span className="nav-open-btn" onClick={() => this.openNav()}><i className="fa fa-bars text-white"></i></span>
 
                     </div>
@@ -85,4 +103,17 @@ NavigationMenuCollapsed.defaultProps = {
     className: ""
 }
 
-export default NavigationMenuCollapsed;
+const mapStateToProps = state => {
+
+    return {
+        lastGenreID: state.movieListReducer.lastGenreID
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavigationMenuCollapsed);

@@ -43,11 +43,20 @@ class DropdownWrapper extends Component{
             </div>
         );
     }
+
+    componentDidMount(){
+        this.setState({expanded: this.props.expandedDefault})
+    }
 }
 
 DropdownWrapper.propTypes = {
     title: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    expandedDefault: PropTypes.bool
+}
+
+DropdownWrapper.defaultProps = {
+    expandedDefault: false
 }
 
 

@@ -7,7 +7,7 @@ export const TRENDING_GENRE = {
     name: "Trending"
 }
 
-export const GENRES = [
+const MOVIE_DB_GENRES = [
     {
         "id":28,
         "name":"Action"
@@ -85,3 +85,7 @@ export const GENRES = [
         "name":"Western"
     }
 ]
+
+let ALL_GENRES = MOVIE_DB_GENRES;
+ALL_GENRES.unshift(TRENDING_GENRE)
+export const GENRES = ALL_GENRES
