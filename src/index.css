@@ -113,6 +113,10 @@ body {
   width: 100%;
 }
 
+.movie-detail-container .movie-img{
+  width: 60%;
+}
+
 .movie-detail-header > div{
   padding: 0;
 }

@@ -16,7 +16,7 @@ const VideoPlayer = ({className, movie, closeVideo}) =>{
     return (
         <div className={className + " video-player "}>
 
-            <div className="header w-100 text-right">
+            <div className="header w-100 text-left">
                 <a
                     href="#"
                     className="btn"
