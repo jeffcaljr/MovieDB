@@ -90,7 +90,7 @@ class MovieDetails extends Component {
 
                             <div className="col-1 text-center">
                                 {/*<FavoriteButton isFavorite={this.props.thisMovieInStore.favorited}*/}
-                                                // toggledFavorite={() => this.props.toggleFavorite(this.props.thisMovieInStore)}/>
+                                                {/*toggledFavorite={() => this.props.toggleFavorite(this.props.thisMovieInStore)}/>*/}
                             </div>
 
 

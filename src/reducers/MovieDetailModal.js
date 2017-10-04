@@ -14,7 +14,6 @@ const MovieDetailReducer = (state = {showing: false, movie: null}, action) => {
             //handle case where modal is already showing, but user clicked similar movie item to show modal for that movie
 
             if(state.showing && (action.movie.id !== state.movie.id)){
-                alert("loading similar movies")
                 action.asyncDispatch(loadSimilarMovies(action.movie.id))
             }
 
