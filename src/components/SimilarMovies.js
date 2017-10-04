@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
 import {connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -8,12 +9,16 @@ import DropdownWrapper from "./DropdownWrapper";
 import {loadSimilarMovies} from "../actions/SimilarMovies";
 
 
-const SimilarMovies = ({similarMovies, loading, loadSimilarMovies}) => {
+class SimilarMovies extends Component{
+    constructor(){
+        super()
+        this.renderMovies = this.renderMovies.bind(this)
+    }
 
-    const renderMovies = () => {
+    renderMovies = () => {
 
         let moviesJSX = [];
-        similarMovies.map((movie) => {
+        this.props.similarMovies.map((movie) => {
             let movieJSX =
                 <MovieItem
                     key={movie.id}
@@ -26,46 +31,40 @@ const SimilarMovies = ({similarMovies, loading, loadSimilarMovies}) => {
 
     }
 
-    let moviesRendered = <div className="similar-movies container-fluid">
-        <div className="row">
-            {renderMovies()}
-        </div>
 
-    </div>
+    render(){
+        return(
+            <div>
+                <DropdownWrapper title={"Similar Titles"}
+                                 children={( (this.props.loading)
+                                         ? <div className="loading w-100 d-flex justify-content-center align-items-center">
+                                             <img src={loadingSpinner} alt="loading" className="img-fluid w-25 p-2"/>
+                                         </div>
+                                         : (
+                                             this.props.similarMovies.length < 1
+                                                 ? <div className="w-100 d-flex justify-content-center align-items-center p-5">
+                                                     <h3 className="text-muted">No Similar movies found</h3>
+                                                 </div>
+                                                 :  <div className="similar-movies container-fluid">
+                                                     <div className="row">
+                                                         {this.renderMovies()}
+                                                     </div>
 
-    let loadingRendered = <div className="loading w-100 d-flex justify-content-center align-items-center">
-        <img src={loadingSpinner} alt="loading" className="img-fluid w-25 p-2"/>
-    </div>
+                                                 </div>
+                                         )
+                                 )}
+                                 onExpand={() => this.props.loadSimilarMovies()}
+                />
 
 
-    let noSimilarMoviesDisplay = <div className="w-100 d-flex justify-content-center align-items-center p-5">
-        <h3 className="text-muted">No Similar movies found</h3>
-    </div>
+            </div>
 
-    let children;
-
-    if(loading){
-        children = loadingRendered;
+        );
     }
-    else if(similarMovies.length < 1){
-        children = noSimilarMoviesDisplay;
+
+    componentDidMount(){
+        ReactDOM.findDOMNode(this).scrollTop = 0
     }
-    else{
-        children = moviesRendered
-    }
-
-
-    return(
-        <div>
-            <DropdownWrapper title={"Similar Titles"}
-                             children={children}
-                             onExpand={() => loadSimilarMovies()}
-            />
-
-
-        </div>
-
-    );
 }
 
 SimilarMovies.propTypes = {
