@@ -15,7 +15,14 @@ class DropdownWrapper extends Component{
     }
 
     toggleExpanded(){
-        this.setState({expanded: !this.state.expanded, userSetExpanded: true})
+
+        this.setState({expanded: !this.state.expanded, userSetExpanded: true}, () => {
+            if(this.state.expanded){
+                if(this.props.onExpand){
+                    this.props.onExpand()
+                }
+            }
+        })
     }
 
     render(){
@@ -54,7 +61,8 @@ class DropdownWrapper extends Component{
 DropdownWrapper.propTypes = {
     title: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
-    expandedDefault: PropTypes.bool
+    expandedDefault: PropTypes.bool,
+    onExpand: PropTypes.func
 }
 
 DropdownWrapper.defaultProps = {

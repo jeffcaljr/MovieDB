@@ -57,7 +57,7 @@ class MovieDetails extends Component {
 
     renderSimilarMovies = () => {
         return (
-            <SimilarMovies/>
+            <SimilarMovies movieID={this.props.movie.id}/>
         );
     }
 

@@ -13,9 +13,9 @@ import Movie, {
 import {addError} from "../actions/ErrorDisplay";
 
 const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQueryString: undefined, status: STATUS_NONE, error: null}, action) => {
+
     switch(action.type){
         case LOAD:
-
             //if the last category fetched is the same as the new request, do nothing
             if(action.genreID === state.lastGenreID){
                 return state

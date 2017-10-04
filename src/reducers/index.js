@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux'
 
+import similarMoviesReducer from './SimilarMovies'
 import movieListReducer from './MovieList'
 import videoPlayerReducer from './VideoPlayer'
 import movieDetailModalReducer from './MovieDetailModal'
@@ -12,6 +13,7 @@ const reducer = combineReducers({
     videoPlayerReducer,
     movieDetailModalReducer,
     mobileNavReducer,
+    similarMoviesReducer,
     errorReducer
 })
 

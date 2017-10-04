@@ -60,11 +60,20 @@ class MovieItem extends Component{
 
 MovieItem.propTypes = {
     movie: PropTypes.instanceOf(Movie).isRequired,
+    similarMovie: PropTypes.bool
 }
 
 const mapStateToProps = (state, ownProps) => {
 
-    let thisMovieInStore = state.movieListReducer.movies.find( movie => {return movie.id === ownProps.movie.id});
+    let thisMovieInStore;
+    if( ownProps.similarMovie === true){
+        thisMovieInStore = state.similarMoviesReducer.similarMovies.find( movie => {return movie.id === ownProps.movie.id});
+    }
+    else{
+        thisMovieInStore = state.movieListReducer.movies.find( movie => {return movie.id === ownProps.movie.id});
+    }
+
+
     return{
         isFavorite: thisMovieInStore.favorited
     }

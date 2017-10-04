@@ -5,12 +5,13 @@ import {GENRES} from "../constants/genres";
 export const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
 export const BASE_VIDEOS_URL_PREFIX = "https://api.themoviedb.org/3/movie/";
 export const BASE_VIDEOS_URL_SUFFIX = `/videos?language=en-US&api_key=${config.MOVIEDB_KEY}`;
-export const BASE_YOUTUBE_URL = "https://www.youtube.com/embed/"
-// https://api.themoviedb.org/3/search/movie?api_key=f3d495d80d7a7139830e3297dc3923e1&language=en-US&query=hidden%20figures&page=1&include_adult=false
-export const BASE_SEARCH_URL_PREFIX = `https://api.themoviedb.org/3/search/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&query=`
+export const BASE_YOUTUBE_URL = "https://www.youtube.com/embed/";
+export const BASE_SEARCH_URL_PREFIX = `https://api.themoviedb.org/3/search/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&query=`;
 export const BASE_SEARCH_URL_SUFFIX = "&include_adult=false&page=";
-export const BASE_UPCOMING_MOVIES_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${config.MOVIEDB_KEY}&language=en-US&page=`
-export const BASE_NOW_PLAYING_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${config.MOVIEDB_KEY}&language=en-US&page=`
+export const BASE_UPCOMING_MOVIES_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${config.MOVIEDB_KEY}&language=en-US&page=`;
+export const BASE_NOW_PLAYING_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${config.MOVIEDB_KEY}&language=en-US&page=`;
+export const BASE_SIMILAR_MOVIES_URL_PREFIX= "https://api.themoviedb.org/3/movie/";
+export const BASE_SIMILAR_MOVIES_URL_SUFFIX = `/similar?api_key=${config.MOVIEDB_KEY}&language=en-US&page=`;
 
 class Movie{
     constructor(id, title = "", releaseDate = -1, tagline = "", overview = "", voteAverage = 0.0, voteCount = 0, genreIDs = [], hasVideo = false, imagePath = "", favorited = false){
