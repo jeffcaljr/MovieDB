@@ -257,7 +257,7 @@ movie-info-right-column{
 }
 
 .dropdown-toggle-btn{
-  margin-bottom: 1.1rem;
+  margin: 0;
 }
 
 .dropdown-header{
@@ -267,7 +267,7 @@ movie-info-right-column{
 }
 
 .dropdown-wrapper .title{
-  margin: 0;
+  margin-bottom: 0;
 }
 
 .dropdown-content{

@@ -21,14 +21,15 @@ class DropdownWrapper extends Component{
     render(){
         return (
             <div className="dropdown-wrapper">
-                <div className="dropdown-header">
-                    <h3 className="title d-inline-block text-white typeface-serif ">{this.props.title}</h3>
-                    <a
-                        className="btn dropdown-toggle-btn d-inline-block borderless"
+                <div className="dropdown-header ">
+                    <div
+                        className="dropdown-header-content d-flex flex-row justify-content-center align-items-center"
                         onClick={this.toggleExpanded}>
-
-                        <i className={"text-white fa " + (this.state.expanded ? " fa-caret-down " : " fa-caret-right ")}></i>
-                    </a>
+                        <h3 className="title text-white typeface-serif ">{this.props.title}</h3>
+                        <div className="dropdown-toggle-btn p-2 m-0">
+                            <i className={"text-white fa " + (this.state.expanded ? " fa-caret-down " : " fa-caret-right ")}></i>
+                        </div>
+                    </div>
                 </div>
 
                 <div className={"dropdown-content-container " + (this.state.expanded ? " expand " : (( (this.state.userSetExpanded)) ? " contract " : " hidden "))}>
