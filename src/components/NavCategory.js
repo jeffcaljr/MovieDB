@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {load} from "../actions/MovieList";
+import {menuItemChosen} from "../actions/MobileNav";
 
 
 const NavCategory = (props) => {
@@ -35,6 +36,7 @@ const mapDispatchToProps = dispatch => {
     return{
         onSelect: genreID => {
             dispatch(load(genreID))
+            dispatch(menuItemChosen())
         }
     }
 }

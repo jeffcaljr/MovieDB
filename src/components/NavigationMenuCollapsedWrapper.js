@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import {connect } from 'react-redux'
 import NavCategory from "./NavCategory";
 import SearchBar from './SearchBar'
-import {GENRES} from "../constants/genres";
+import {ALL_POSSIBLE_GENRES, GENRES} from "../constants/genres";
+import {contractNav, expandNav} from "../actions/MobileNav";
 
 class NavigationMenuCollapsed extends Component{
     constructor(){
@@ -12,7 +13,6 @@ class NavigationMenuCollapsed extends Component{
 
         this.state = {
             selected: 0,
-            navOpen: false
         }
     }
 
@@ -21,16 +21,8 @@ class NavigationMenuCollapsed extends Component{
         this.setState(Object.assign({}, this.state, {selected: index}))
     }
 
-    openNav = () => {
-        this.setState({navOpen: true})
-    }
-
-    closeNav = () => {
-        this.setState({navOpen: false})
-    }
-
     getLastGenre = () =>{
-        const lastGenre = GENRES.find( (genre) => {return genre.id === this.props.lastGenreID})
+        const lastGenre = ALL_POSSIBLE_GENRES.find( (genre) => {return genre.id === this.props.lastGenreID})
         if(lastGenre){
             return lastGenre.name
         }
@@ -48,7 +40,7 @@ class NavigationMenuCollapsed extends Component{
 
                 <div className={this.props.className}>
 
-                    <div className={"sidenav " + (this.state.navOpen ? " w-100 " : " w-0 ") }>
+                    <div className={"sidenav " + (this.props.navOpen ? " w-100 " : " w-0 ") }>
 
                         <div className="sidenav-elements">
                             <div className="sidenav-header">
@@ -61,7 +53,7 @@ class NavigationMenuCollapsed extends Component{
                                 <a
                                     href="javascript:void(0)"
                                     className="closebtn"
-                                    onClick={() => this.closeNav()}>
+                                    onClick={() => this.props.closeNav()}>
                                     &times;
                                 </a>
                             </div>
@@ -81,7 +73,7 @@ class NavigationMenuCollapsed extends Component{
                             <h5 className="selected-genre-title text-white typeface-serif text-uppercase">{this.getLastGenre()}</h5>
                         </div>
 
-                        <span className="nav-open-btn" onClick={() => this.openNav()}><i className="fa fa-bars text-white"></i></span>
+                        <span className="nav-open-btn" onClick={() => this.props.openNav()}><i className="fa fa-bars text-white"></i></span>
 
                     </div>
 
@@ -106,13 +98,19 @@ NavigationMenuCollapsed.defaultProps = {
 const mapStateToProps = state => {
 
     return {
-        lastGenreID: state.movieListReducer.lastGenreID
+        lastGenreID: state.movieListReducer.lastGenreID,
+        navOpen: state.mobileNavReducer.expanded
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return{
-
+        openNav: () => {
+            dispatch(expandNav())
+        },
+        closeNav: () => {
+            dispatch(contractNav())
+        }
     }
 }
 

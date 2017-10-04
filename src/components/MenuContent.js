@@ -17,7 +17,7 @@ const MenuContent = ({categories, loadGenre}) => {
             let newCategory = <li key={category.id}><NavCategory
                 index={category.id}
                 name={category.name}></NavCategory></li>;
-            categoriesJSX.push(newCategory);
+                categoriesJSX.push(newCategory);
         })
 
         return categoriesJSX;

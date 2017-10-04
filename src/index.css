@@ -746,9 +746,6 @@ movie-info-right-column{
 
 
 /*stop auto-zoom when focusing inputs on mobile devices*/
-
-156
-down vote
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   select:focus,
   textarea:focus,

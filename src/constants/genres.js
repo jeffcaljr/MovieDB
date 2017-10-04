@@ -2,19 +2,13 @@
 //list was pre-fetched for convenience
 //An up-to-date list of genres can be retrieved by sending request to https://api.themoviedb.org/3/genre/movie/list?api_key=[YOUR_API_KEY]
 
-let initialID = -1;
-
-const generateCustomID = () => {
-
-    return initialID--;
-}
 
 export const SEARCHED = {
-    "id:": generateCustomID(),
+    "id:": -1,
     "name": "Results"
 }
 export const TRENDING_GENRE = {
-    "id": generateCustomID(),
+    "id": -2,
     name: "Trending"
 }
 
@@ -98,14 +92,14 @@ const MOVIE_DB_GENRES = [
 ]
 
 //ALL_GENRES is displayed in nav, and shoudlnt list some custom genres, like search results
-let ALL_GENRES = MOVIE_DB_GENRES;
+let ALL_GENRES = MOVIE_DB_GENRES.slice();
 ALL_GENRES.unshift(TRENDING_GENRE)
 // ALL_GENRES.unshift(SEARCHED)
 export const GENRES = ALL_GENRES
 
 
 //GENRE_OPTIONS_ALL includes every possible genre category, and should not be used for display
-let GENRE_OPTIONS_ALL = MOVIE_DB_GENRES
+let GENRE_OPTIONS_ALL = MOVIE_DB_GENRES.slice()
 GENRE_OPTIONS_ALL.unshift(TRENDING_GENRE)
 GENRE_OPTIONS_ALL.unshift(SEARCHED)
 export const ALL_POSSIBLE_GENRES = GENRE_OPTIONS_ALL

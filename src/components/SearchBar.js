@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {searchMovies} from "../actions/MovieList";
+import {menuItemChosen} from "../actions/MobileNav";
 
 class SearchBar extends Component{
     constructor(){
@@ -82,6 +83,7 @@ const mapDispatchToProps = dispatch => {
     return {
         search: queryString => {
             dispatch(searchMovies(queryString))
+            dispatch(menuItemChosen())
         }
     }
 }
