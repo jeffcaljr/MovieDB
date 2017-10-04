@@ -17,8 +17,13 @@ export const NEW_RELEASES = {
     name: "New Releases"
 }
 
-export const UPCOMING = {
+export const NOW_PLAYING = {
     "id": -4,
+    name: "In Theaters"
+}
+
+export const UPCOMING = {
+    "id": -5,
     name: "Upcoming"
 }
 
@@ -104,6 +109,7 @@ const MOVIE_DB_GENRES = [
 //ALL_GENRES is displayed in nav, and shoudlnt list some custom genres, like search results
 let ALL_GENRES = MOVIE_DB_GENRES.slice();
 ALL_GENRES.unshift(UPCOMING)
+ALL_GENRES.unshift(NOW_PLAYING)
 ALL_GENRES.unshift(NEW_RELEASES)
 ALL_GENRES.unshift(TRENDING_GENRE)
 export const GENRES = ALL_GENRES

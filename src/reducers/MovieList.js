@@ -4,9 +4,9 @@ import {
     LOAD, LOAD_MORE, STATUS_LOADING, STATUS_ERROR, STATUS_NONE, MOVIE_TOGGLE_LIKED, error, done,
     loading, SEARCH_MOVIES
 } from '../actions/MovieList'
-import {SEARCHED, TRENDING_GENRE} from '../constants/genres'
+import {ALL_POSSIBLE_GENRES, NEW_RELEASES, NOW_PLAYING, SEARCHED, TRENDING_GENRE, UPCOMING} from '../constants/genres'
 import config from "../config";
-import Movie, {BASE_SEARCH_URL_PREFIX, BASE_SEARCH_URL_SUFFIX} from "../models/movie";
+import Movie, {BASE_SEARCH_URL_PREFIX, BASE_SEARCH_URL_SUFFIX, BASE_UPCOMING_MOVIES_URL} from "../models/movie";
 import {addError} from "../actions/ErrorDisplay";
 
 const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQueryString: undefined, status: STATUS_NONE, error: null}, action) => {
@@ -18,118 +18,97 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQuery
                 return state
             }
 
-            const defaultPage = 1;
+            let loadedURL = ""
+            let loadedGenreID;
 
-            switch (action.genreID){
+            switch(action.genreID){
                 case TRENDING_GENRE.id:
-                    action.asyncDispatch(loading());
-                    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${defaultPage}`)
-                        .then( (res) => res.json())
-                        .then((res) => {
-                            let moviesJSON = res.results;
-                            let movies = []
-                            moviesJSON.map( (newMovie) => {
-                                let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
-                                movies.push(movie)
-                            })
-                            action.asyncDispatch(done(movies))
-                        })
-                        .catch((err) => action.asyncDispatch(error(err)));
-
-                    return Object.assign({}, state, {page: defaultPage, lastGenreID: TRENDING_GENRE.id})
-
+                    loadedURL = `https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${1}`;
+                    loadedGenreID = TRENDING_GENRE.id
+                    break;
+                case NEW_RELEASES.id:
+                    loadedGenreID = NEW_RELEASES.id
+                    break;
+                case NOW_PLAYING.id:
+                    loadedGenreID = NOW_PLAYING.id
+                    break;
+                case UPCOMING.id:
+                    loadedURL = `${BASE_UPCOMING_MOVIES_URL}${1}`;
+                    loadedGenreID = UPCOMING.id
+                    break;
                 default:
-                    action.asyncDispatch(loading());
-                    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&page=${defaultPage}&with_genres=${action.genreID}`)
-                        .then( (res) => res.json())
-                        .then((res) => {
-                            let moviesJSON = res.results;
-                            let movies = []
-                            moviesJSON.map( (newMovie) => {
-                                let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
-                                movies.push(movie)
-                            })
-                            action.asyncDispatch(done(movies))
-                        })
-                        .catch((err) => action.asyncDispatch(error(err)))
-                    return Object.assign({}, state, {page: defaultPage, lastGenreID: action.genreID})
+                    loadedURL = `https://api.themoviedb.org/3/discover/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&page=${1}&with_genres=${action.genreID}`;
+                    loadedGenreID = action.genreID;
             }
+
+            action.asyncDispatch(loading());
+            fetch(loadedURL)
+                .then( (res) => res.json())
+                .then( (res) => {
+                    let moviesJSON = res.results;
+                    let movies = []
+                    moviesJSON.map( (newMovie) => {
+                        let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
+                        movies.push(movie)
+                    })
+                    action.asyncDispatch(done(movies, false))
+
+                })
+                .catch((err) => action.asyncDispatch(error(err)));
+
+            return Object.assign({}, state, {lastGenreID: loadedGenreID, page: 1});
 
 
         case LOAD_MORE:
             const newPage = ++state.page;
 
-            let movies = []
 
-            if(state.lastGenreID === TRENDING_GENRE.id){
-                action.asyncDispatch(loading());
-                fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${newPage}`)
-                    .then( (res) => res.json())
-                    .then((res) => {
-                        let moviesJSON = res.results;
+            let loadMoreURL = ""
+            let loadMoreGenreID;
 
-                        moviesJSON.map( (newMovie) => {
-                            let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
-                            movies.push(movie)
-                        })
-                        action.asyncDispatch(done(movies, true))
-                    })
-                    .catch((err) => action.asyncDispatch(error(err)));
-
-                return Object.assign({}, state, {page: newPage})
-            }
-
-            else if(state.lastGenreID === SEARCHED.id){
-
-                // alert("should load more results of custom search")
-
-                if( !state.lastQueryString){
-                    action.asyncDispatch(error(new Error("Couldn't load more movies")))
-                    return state
-                }
-
-                let newPage = ++state.page;
-
-                action.asyncDispatch(loading());
-                let url = `${BASE_SEARCH_URL_PREFIX}${state.lastQueryString}${BASE_SEARCH_URL_SUFFIX}${newPage}`
-                fetch(url)
-                    .then( (res) => {
-                        if(res.ok) { return res.json()}
-                        else{ return Promise.reject(new Error("Error loading movies"))}
-                    })
-                    .then((res) => {
-                        let moviesJSON = res.results;
-                        let movies = []
-                        moviesJSON.map( (newMovie) => {
-                            let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
-                            movies.push(movie)
-                        })
-                        action.asyncDispatch(done(movies, true))
-                    })
-                    .catch((err) => action.asyncDispatch(error(err)));
-
-                return Object.assign({}, state, {page: newPage, lastGenreID: SEARCHED.id})
-
+            switch(state.lastGenreID){
+                case TRENDING_GENRE.id:
+                    loadMoreURL = `https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${newPage}`;
+                    loadMoreGenreID = TRENDING_GENRE.id
+                    break;
+                case NEW_RELEASES.id:
+                    loadMoreGenreID = NEW_RELEASES.id
+                    break;
+                case NOW_PLAYING.id:
+                    loadMoreGenreID = NOW_PLAYING.id
+                    break;
+                case UPCOMING.id:
+                    loadMoreURL = `${BASE_UPCOMING_MOVIES_URL}${newPage}`;
+                    loadMoreGenreID = UPCOMING.id
+                    break;
+                case SEARCHED.id:
+                    loadMoreURL = `${BASE_SEARCH_URL_PREFIX}${state.lastQueryString}${BASE_SEARCH_URL_SUFFIX}${newPage}`;
+                    loadMoreGenreID = SEARCHED.id
+                    break;
+                default:
+                    loadMoreURL = `https://api.themoviedb.org/3/discover/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&page=${newPage}&with_genres=${action.genreID}`;
             }
 
 
-            else{
-                let movies = []
-                action.asyncDispatch(loading());
-                fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&page=${newPage}&with_genres=${state.lastGenreID}`)
-                    .then( (res) => res.json())
-                    .then((res) => {
-                        let moviesJSON = res.results;
+            action.asyncDispatch(loading());
+            fetch(loadMoreURL)
+                .then( (res) => {return res.json()})
+                .then((res) => {
+                    let moviesJSON = res.results;
 
-                        moviesJSON.map( (newMovie) => {
-                            let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
-                            movies.push(movie)
-                        })
-                        action.asyncDispatch(done(movies, true))
+
+                    let newMovies = []
+
+                    moviesJSON.map( (newMovie) => {
+                        let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
+                        newMovies.push(movie)
                     })
-                    .catch((err) => action.asyncDispatch(error(err)))
-                return Object.assign({}, state, {page: newPage})
-            }
+
+                    action.asyncDispatch(done(newMovies, true))
+                })
+                .catch((err) => action.asyncDispatch(error(err)));
+
+            return Object.assign({}, state, {page: newPage, lastGenreID: loadMoreGenreID})
 
 
         case SEARCH_MOVIES:
@@ -139,9 +118,6 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQuery
 
             let queryString = action.queryString;
 
-            // alert("query string was: " + queryString);
-
-            // console.log("search url: " + url)
 
             action.asyncDispatch(loading());
             let url = `${BASE_SEARCH_URL_PREFIX}${queryString}${BASE_SEARCH_URL_SUFFIX}${1}`
@@ -172,6 +148,7 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQuery
             return Object.assign({}, state, {status: STATUS_ERROR, error: action.error});
 
         case STATUS_NONE:
+
 
             if(action.didReset){
                 return Object.assign({}, state, {status: STATUS_NONE, movies: state.movies.concat(action.result), error: null})
