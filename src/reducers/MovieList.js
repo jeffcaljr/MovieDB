@@ -108,9 +108,8 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQuery
                     })
                     .catch((err) => action.asyncDispatch(error(err)));
 
-                return Object.assign({}, state, {page: 1, lastGenreID: SEARCHED.id})
+                return Object.assign({}, state, {page: newPage, lastGenreID: SEARCHED.id})
 
-                return Object.assign({}, state, {page: newPage})
             }
 
 

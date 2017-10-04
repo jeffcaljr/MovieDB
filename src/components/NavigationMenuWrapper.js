@@ -5,13 +5,13 @@ import {connect } from 'react-redux'
 import NavCategory from "./NavCategory";
 import DropdownWrapper from "./DropdownWrapper";
 import {load} from "../actions/MovieList";
-import {GENRES, TRENDING_GENRE} from "../constants/genres";
+import {ALL_POSSIBLE_GENRES, GENRES, TRENDING_GENRE} from "../constants/genres";
 import SearchBar from './SearchBar'
 
 const NavigationMenu  = (props) => {
 
     const getLastGenre = () =>{
-        const lastGenre = GENRES.find( (genre) => {return genre.id === props.lastGenreID})
+        const lastGenre = ALL_POSSIBLE_GENRES.find( (genre) => {return genre.id === props.lastGenreID})
         if(lastGenre){
             return lastGenre.name
         }
