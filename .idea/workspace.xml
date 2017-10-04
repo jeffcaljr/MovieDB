@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavCategory.js" afterPath="$PROJECT_DIR$/src/components/NavCategory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constants/genres.js" afterPath="$PROJECT_DIR$/src/constants/genres.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,11 +19,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="527" column="17" lean-forward="false" selection-start-line="527" selection-start-column="17" selection-end-line="527" selection-end-column="17" />
+            <state relative-caret-position="757">
+              <caret line="763" column="15" lean-forward="false" selection-start-line="763" selection-start-column="15" selection-end-line="763" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genres.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/constants/genres.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="106" column="32" lean-forward="false" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavCategory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/NavCategory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -51,7 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>animation</find>
       <find>movie-im</find>
       <find>movie-info-image</find>
       <find>container-s</find>
@@ -81,6 +102,7 @@
       <find>navO</find>
       <find>bars</find>
       <find>alert(JSON</find>
+      <find>.sear</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -143,14 +165,14 @@
         <option value="$PROJECT_DIR$/src/reducers/MovieList.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenuWrapper.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/components/NavCategory.js" />
         <option value="$PROJECT_DIR$/src/actions/MobileNav.js" />
         <option value="$PROJECT_DIR$/src/components/SearchBar.js" />
-        <option value="$PROJECT_DIR$/src/constants/genres.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
         <option value="$PROJECT_DIR$/src/components/MenuContent.js" />
         <option value="$PROJECT_DIR$/src/reducers/MobileNav.js" />
+        <option value="$PROJECT_DIR$/src/components/NavCategory.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/constants/genres.js" />
       </list>
     </option>
   </component>
@@ -298,7 +320,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129893000" />
+    <option name="totallyTimeSpent" value="131201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -667,22 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/genres.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="101" column="46" lean-forward="false" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NavCategory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="37" lean-forward="false" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/MobileNav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -717,10 +723,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NavCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="527" column="17" lean-forward="false" selection-start-line="527" selection-start-column="17" selection-end-line="527" selection-end-column="17" />
+        <state relative-caret-position="757">
+          <caret line="763" column="15" lean-forward="false" selection-start-line="763" selection-start-column="15" selection-end-line="763" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/genres.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="106" column="32" lean-forward="false" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
           <folding />
         </state>
       </provider>

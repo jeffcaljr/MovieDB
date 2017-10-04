@@ -754,3 +754,12 @@ movie-info-right-column{
     background: #eee;
   }
 }
+
+.custom-category-selected{
+  color: rgba(244, 67, 54, 0.8)
+}
+
+
+.custom-category{
+  color: rgb(229, 115, 115)
+}

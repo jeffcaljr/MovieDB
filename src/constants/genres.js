@@ -12,6 +12,16 @@ export const TRENDING_GENRE = {
     name: "Trending"
 }
 
+export const NEW_RELEASES = {
+    "id": -3,
+    name: "New Releases"
+}
+
+export const UPCOMING = {
+    "id": -4,
+    name: "Upcoming"
+}
+
 const MOVIE_DB_GENRES = [
     {
         "id":28,
@@ -93,13 +103,14 @@ const MOVIE_DB_GENRES = [
 
 //ALL_GENRES is displayed in nav, and shoudlnt list some custom genres, like search results
 let ALL_GENRES = MOVIE_DB_GENRES.slice();
+ALL_GENRES.unshift(UPCOMING)
+ALL_GENRES.unshift(NEW_RELEASES)
 ALL_GENRES.unshift(TRENDING_GENRE)
-// ALL_GENRES.unshift(SEARCHED)
 export const GENRES = ALL_GENRES
 
 
 //GENRE_OPTIONS_ALL includes every possible genre category, and should not be used for display
-let GENRE_OPTIONS_ALL = MOVIE_DB_GENRES.slice()
-GENRE_OPTIONS_ALL.unshift(TRENDING_GENRE)
+let GENRE_OPTIONS_ALL = ALL_GENRES.slice()
 GENRE_OPTIONS_ALL.unshift(SEARCHED)
+
 export const ALL_POSSIBLE_GENRES = GENRE_OPTIONS_ALL
