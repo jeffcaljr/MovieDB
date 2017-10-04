@@ -2,7 +2,7 @@ import "isomorphic-fetch"
 
 import {
     LOAD, LOAD_MORE, STATUS_LOADING, STATUS_ERROR, STATUS_NONE, MOVIE_TOGGLE_LIKED, error, done,
-    loading
+    loading, SEARCH_MOVIES
 } from '../actions/MovieList'
 import {TRENDING_GENRE} from '../constants/genres'
 import config from "../config";
@@ -96,6 +96,15 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: S
                 return Object.assign({}, state, {page: newPage})
             }
 
+        case SEARCH_MOVIES:
+            if( !action.queryString ){
+                return state;
+            }
+            let queryString = action.queryString;
+
+            alert("query string was: " + queryString);
+
+            return state;
 
         case STATUS_LOADING:
             return Object.assign({}, state, {status: STATUS_LOADING});

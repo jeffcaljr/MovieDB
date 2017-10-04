@@ -2,8 +2,19 @@
 //list was pre-fetched for convenience
 //An up-to-date list of genres can be retrieved by sending request to https://api.themoviedb.org/3/genre/movie/list?api_key=[YOUR_API_KEY]
 
+let initialID = -1;
+
+const generateCustomID = () => {
+
+    return initialID--;
+}
+
+export const SEARCHED = {
+    "id:": generateCustomID(),
+    name: "Search Results"
+}
 export const TRENDING_GENRE = {
-    "id": -1,
+    "id": generateCustomID(),
     name: "Trending"
 }
 
@@ -88,4 +99,5 @@ const MOVIE_DB_GENRES = [
 
 let ALL_GENRES = MOVIE_DB_GENRES;
 ALL_GENRES.unshift(TRENDING_GENRE)
+ALL_GENRES.unshift(SEARCHED)
 export const GENRES = ALL_GENRES

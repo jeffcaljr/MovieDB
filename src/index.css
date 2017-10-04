@@ -241,12 +241,6 @@ movie-info-right-column{
   margin-bottom: 0.4rem;
 }
 
-.empty-movies-list{
-  margin-top: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 
 .dropdown-divider{
@@ -736,13 +730,10 @@ movie-info-right-column{
   }
 }
 
-.message{
-  position: fixed;
-  top: 5%;
-  right: 50%;
-  color: red;
-  font-size: 3em;
-  background: rgba(0,0,0, 0.6);
-  z-index: 8;
+
+
+.empty-list-view{
+  width: 100%;
+  height: 100%;
 }
 

@@ -6,6 +6,9 @@ export const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
 export const BASE_VIDEOS_URL_PREFIX = "https://api.themoviedb.org/3/movie/";
 export const BASE_VIDEOS_URL_SUFFIX = `/videos?language=en-US&api_key=${config.MOVIEDB_KEY}`;
 export const BASE_YOUTUBE_URL = "https://www.youtube.com/embed/"
+// https://api.themoviedb.org/3/search/movie?api_key=f3d495d80d7a7139830e3297dc3923e1&language=en-US&query=hidden%20figures&page=1&include_adult=false
+export const BASE_SEARCH_URL_PREFIX = `https://api.themoviedb.org/3/search/movie?api_key=f${config.MOVIEDB_KEY}&language=en-US&query=hidden%20figures`
+export const BASE_SEARCH_URL_SUFFIX = "&page=1&include_adult=false";
 
 class Movie{
     constructor(id, title = "", releaseDate = -1, tagline = "", overview = "", voteAverage = 0.0, voteCount = 0, genreIDs = [], hasVideo = false, imagePath = "", favorited = false){
