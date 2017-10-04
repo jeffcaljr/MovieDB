@@ -121,10 +121,18 @@ body {
   padding: 0;
 }
 
+.similar-movies .movie-img{
+  width: 100%;
+}
+
 @media (max-width: 719px){
   .movie-detail-container .movie-img{
     width: 70%;
     margin: 0 auto;
+  }
+
+  .similar-movies .movie-img{
+    width: 100%;
   }
 }
 
@@ -217,6 +225,13 @@ scroll-y{
   margin: 0rem;
 }
 
+@media (max-width: 719px) {
+  .movie-detail-container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .modal-close-button:hover{
   cursor: pointer;
 }
@@ -260,13 +275,14 @@ movie-info-right-column{
   z-index: 2;
 }
 
+
 .dropdown-wrapper .title{
   margin-bottom: 0;
 }
 
 .dropdown-content{
-  padding-left: 8%;
-  padding-right: 5%;
+  /*padding-left: 8%;*/
+  /*padding-right: 5%;*/
 }
 
 .borderless{
@@ -631,16 +647,16 @@ movie-info-right-column{
 
 @-moz-keyframes lift-up {
   from {top:0; opacity: 1;}
-  to {top:-3rem; opacity: 0; visibility: collapse}
+  to {top:-3rem; opacity: 0; visibility: hidden; display: none}
 }
 @keyframes lift-up {
   from {top:0; opacity: 1;}
-  to {top:-3rem; opacity: 0; visibility: collapse}
+  to {top:-3rem; opacity: 0; visibility: hidden; display: none}
 }
 
 @-webkit-keyframes lift-up {
   from {top:0; opacity: 1;}
-  to {top:-3rem; opacity: 0; visibility: collapse}
+  to {top:-3rem; opacity: 0; visibility: hidden; display: none}
 }
 
 /*Modal animations*/
@@ -762,4 +778,10 @@ movie-info-right-column{
 
 .custom-category{
   color: rgb(229, 115, 115)
+}
+
+.similar-movies{
+  max-height: 400px;
+  /*background: red;*/
+  overflow-y: scroll;
 }

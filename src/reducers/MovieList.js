@@ -4,7 +4,7 @@ import {
     LOAD, LOAD_MORE, STATUS_LOADING, STATUS_ERROR, STATUS_NONE, MOVIE_TOGGLE_LIKED, error, done,
     loading, SEARCH_MOVIES
 } from '../actions/MovieList'
-import {ALL_POSSIBLE_GENRES, NEW_RELEASES, NOW_PLAYING, SEARCHED, TRENDING_GENRE, UPCOMING} from '../constants/genres'
+import {NOW_PLAYING, SEARCHED, TRENDING_GENRE, UPCOMING} from '../constants/genres'
 import config from "../config";
 import Movie, {
     BASE_NOW_PLAYING_URL, BASE_SEARCH_URL_PREFIX, BASE_SEARCH_URL_SUFFIX,
@@ -28,9 +28,6 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQuery
                 case TRENDING_GENRE.id:
                     loadedURL = `https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${1}`;
                     loadedGenreID = TRENDING_GENRE.id
-                    break;
-                case NEW_RELEASES.id:
-                    loadedGenreID = NEW_RELEASES.id
                     break;
                 case NOW_PLAYING.id:
                     loadedURL = `${BASE_NOW_PLAYING_URL}${1}`
@@ -74,9 +71,6 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQuery
                 case TRENDING_GENRE.id:
                     loadMoreURL = `https://api.themoviedb.org/3/movie/popular?api_key=${config.MOVIEDB_KEY}&language=en-US&page=${newPage}`;
                     loadMoreGenreID = TRENDING_GENRE.id
-                    break;
-                case NEW_RELEASES.id:
-                    loadMoreGenreID = NEW_RELEASES.id
                     break;
                 case NOW_PLAYING.id:
                     loadMoreURL = `${BASE_NOW_PLAYING_URL}${newPage}`

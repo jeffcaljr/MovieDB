@@ -12,18 +12,13 @@ export const TRENDING_GENRE = {
     name: "Trending"
 }
 
-export const NEW_RELEASES = {
-    "id": -3,
-    name: "New Releases"
-}
-
 export const NOW_PLAYING = {
-    "id": -4,
+    "id": -3,
     name: "In Theaters"
 }
 
 export const UPCOMING = {
-    "id": -5,
+    "id": -4,
     name: "Upcoming"
 }
 
@@ -110,7 +105,6 @@ const MOVIE_DB_GENRES = [
 let ALL_GENRES = MOVIE_DB_GENRES.slice();
 ALL_GENRES.unshift(UPCOMING)
 ALL_GENRES.unshift(NOW_PLAYING)
-ALL_GENRES.unshift(NEW_RELEASES)
 ALL_GENRES.unshift(TRENDING_GENRE)
 export const GENRES = ALL_GENRES
 

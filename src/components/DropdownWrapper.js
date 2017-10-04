@@ -23,7 +23,7 @@ class DropdownWrapper extends Component{
             <div className="dropdown-wrapper">
                 <div className="dropdown-header ">
                     <div
-                        className="dropdown-header-content d-flex flex-row justify-content-center align-items-center"
+                        className="dropdown-header-content d-flex flex-row justify-content-start align-items-center"
                         onClick={this.toggleExpanded}>
                         <h3 className="title text-white typeface-serif ">{this.props.title}</h3>
                         <div className="dropdown-toggle-btn p-2 m-0">

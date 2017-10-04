@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
-
+import SimilarMovies from './SimilarMovies'
+import Reviews from './Reviews'
 import FavoriteButton from "./FavoriteButton";
 import DropdownWrapper from "./DropdownWrapper";
 import {openVideo} from "../actions/VideoPlayer";
@@ -14,13 +15,14 @@ class MovieDetails extends Component {
     constructor(props) {
         super(props)
 
-        this.renderGenres = this.renderGenres.bind(this)
-
         this.state = {
             favorite: props.movie.favorited
         }
 
-        this.toggledFavorite = this.toggledFavorite.bind(this)
+        this.renderGenres = this.renderGenres.bind(this);
+        this.renderSimilarMovies = this.renderSimilarMovies.bind(this);
+        this.renderReviews = this.renderReviews.bind(this);
+        this.toggledFavorite = this.toggledFavorite.bind(this);
     }
 
     toggledFavorite = () => {
@@ -39,7 +41,7 @@ class MovieDetails extends Component {
             })
 
             return (
-                <DropdownWrapper title={"Genres"} children={genresJSX}/>
+                <DropdownWrapper title={"Genres"} children={genresJSX} expandedDefault={true}/>
             );
         }
         else {
@@ -51,6 +53,18 @@ class MovieDetails extends Component {
                 <DropdownWrapper title={"Genres"} children={emptyGenres}/>
             );
         }
+    }
+
+    renderSimilarMovies = () => {
+        return (
+            <SimilarMovies/>
+        );
+    }
+
+    renderReviews = () => {
+        return(
+            <Reviews/>
+        );
     }
 
 
@@ -115,6 +129,12 @@ class MovieDetails extends Component {
 
                                 <div className="genres-container">
                                     {this.renderGenres()}
+                                </div>
+                                <div className="similar-movies-container">
+                                    {this.renderSimilarMovies()}
+                                </div>
+                                <div className="reviews-container">
+                                    {this.renderReviews()}
                                 </div>
                             </div>
                         </div>
