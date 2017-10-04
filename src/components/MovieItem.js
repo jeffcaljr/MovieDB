@@ -31,7 +31,7 @@ class MovieItem extends Component{
                 <figure
                     className="movie-item image-btn-container w-100"
                     onClick={() => this.props.showDetailModal()}>
-                    <img src={this.props.movie.getImage() || cover} alt={this.props.movie.title || "Movie Cover"} className="movie-img"/>
+                    <img src={ this.props.movie.getImage() || cover} alt={this.props.movie.title || "Movie Cover"} className="movie-img"/>
 
                     <div className="text-white text-center movie-item-details">
                         <FavoriteButton isFavorite={this.props.isFavorite} toggledFavorite={() => this.props.toggleFavorite()}/>

@@ -29,7 +29,7 @@ class Movie{
     }
 
     getImage = (width = 500) => {
-        if(this.imagePath == ""){
+        if(!this.imagePath){
             return undefined
         }
         else{
