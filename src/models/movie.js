@@ -10,6 +10,7 @@ export const BASE_YOUTUBE_URL = "https://www.youtube.com/embed/"
 export const BASE_SEARCH_URL_PREFIX = `https://api.themoviedb.org/3/search/movie?api_key=${config.MOVIEDB_KEY}&language=en-US&query=`
 export const BASE_SEARCH_URL_SUFFIX = "&include_adult=false&page=";
 export const BASE_UPCOMING_MOVIES_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${config.MOVIEDB_KEY}&language=en-US&page=`
+export const BASE_NOW_PLAYING_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${config.MOVIEDB_KEY}&language=en-US&page=`
 
 class Movie{
     constructor(id, title = "", releaseDate = -1, tagline = "", overview = "", voteAverage = 0.0, voteCount = 0, genreIDs = [], hasVideo = false, imagePath = "", favorited = false){

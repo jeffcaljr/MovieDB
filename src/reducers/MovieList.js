@@ -6,7 +6,10 @@ import {
 } from '../actions/MovieList'
 import {ALL_POSSIBLE_GENRES, NEW_RELEASES, NOW_PLAYING, SEARCHED, TRENDING_GENRE, UPCOMING} from '../constants/genres'
 import config from "../config";
-import Movie, {BASE_SEARCH_URL_PREFIX, BASE_SEARCH_URL_SUFFIX, BASE_UPCOMING_MOVIES_URL} from "../models/movie";
+import Movie, {
+    BASE_NOW_PLAYING_URL, BASE_SEARCH_URL_PREFIX, BASE_SEARCH_URL_SUFFIX,
+    BASE_UPCOMING_MOVIES_URL
+} from "../models/movie";
 import {addError} from "../actions/ErrorDisplay";
 
 const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQueryString: undefined, status: STATUS_NONE, error: null}, action) => {
@@ -30,6 +33,7 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQuery
                     loadedGenreID = NEW_RELEASES.id
                     break;
                 case NOW_PLAYING.id:
+                    loadedURL = `${BASE_NOW_PLAYING_URL}${1}`
                     loadedGenreID = NOW_PLAYING.id
                     break;
                 case UPCOMING.id:
@@ -75,6 +79,7 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQuery
                     loadMoreGenreID = NEW_RELEASES.id
                     break;
                 case NOW_PLAYING.id:
+                    loadMoreURL = `${BASE_NOW_PLAYING_URL}${newPage}`
                     loadMoreGenreID = NOW_PLAYING.id
                     break;
                 case UPCOMING.id:
