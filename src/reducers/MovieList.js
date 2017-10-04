@@ -4,12 +4,12 @@ import {
     LOAD, LOAD_MORE, STATUS_LOADING, STATUS_ERROR, STATUS_NONE, MOVIE_TOGGLE_LIKED, error, done,
     loading, SEARCH_MOVIES
 } from '../actions/MovieList'
-import {TRENDING_GENRE} from '../constants/genres'
+import {SEARCHED, TRENDING_GENRE} from '../constants/genres'
 import config from "../config";
-import Movie from "../models/movie";
+import Movie, {BASE_SEARCH_URL_PREFIX, BASE_SEARCH_URL_SUFFIX} from "../models/movie";
 import {addError} from "../actions/ErrorDisplay";
 
-const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: STATUS_NONE, error: null}, action) => {
+const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQueryString: undefined, status: STATUS_NONE, error: null}, action) => {
     switch(action.type){
         case LOAD:
 
@@ -78,6 +78,42 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: S
 
                 return Object.assign({}, state, {page: newPage})
             }
+
+            else if(state.lastGenreID === SEARCHED.id){
+
+                // alert("should load more results of custom search")
+
+                if( !state.lastQueryString){
+                    action.asyncDispatch(error(new Error("Couldn't load more movies")))
+                    return state
+                }
+
+                let newPage = ++state.page;
+
+                action.asyncDispatch(loading());
+                let url = `${BASE_SEARCH_URL_PREFIX}${state.lastQueryString}${BASE_SEARCH_URL_SUFFIX}${newPage}`
+                fetch(url)
+                    .then( (res) => {
+                        if(res.ok) { return res.json()}
+                        else{ return Promise.reject(new Error("Error loading movies"))}
+                    })
+                    .then((res) => {
+                        let moviesJSON = res.results;
+                        let movies = []
+                        moviesJSON.map( (newMovie) => {
+                            let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
+                            movies.push(movie)
+                        })
+                        action.asyncDispatch(done(movies, true))
+                    })
+                    .catch((err) => action.asyncDispatch(error(err)));
+
+                return Object.assign({}, state, {page: 1, lastGenreID: SEARCHED.id})
+
+                return Object.assign({}, state, {page: newPage})
+            }
+
+
             else{
                 let movies = []
                 action.asyncDispatch(loading());
@@ -96,15 +132,38 @@ const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, status: S
                 return Object.assign({}, state, {page: newPage})
             }
 
+
         case SEARCH_MOVIES:
             if( !action.queryString ){
                 return state;
             }
+
             let queryString = action.queryString;
 
-            alert("query string was: " + queryString);
+            // alert("query string was: " + queryString);
 
-            return state;
+            // console.log("search url: " + url)
+
+            action.asyncDispatch(loading());
+            let url = `${BASE_SEARCH_URL_PREFIX}${queryString}${BASE_SEARCH_URL_SUFFIX}${1}`
+            fetch(url)
+                .then( (res) => {
+                    if(res.ok) { return res.json()}
+                    else{ return Promise.reject(new Error("Error loading movies"))}
+                })
+                .then((res) => {
+                    let moviesJSON = res.results;
+                    let movies = []
+                    moviesJSON.map( (newMovie) => {
+                        let movie = new Movie(newMovie.id, newMovie.title, newMovie["release_date"], "", newMovie.overview, newMovie["vote_average"], newMovie["vote_count"], newMovie["genre_ids"], newMovie.video, newMovie["poster_path"])
+                        movies.push(movie)
+                    })
+                    action.asyncDispatch(done(movies, false))
+                })
+                .catch((err) => action.asyncDispatch(error(err)));
+
+            return Object.assign({}, state, {page: 1, lastGenreID: SEARCHED.id, lastQueryString: queryString})
+
 
         case STATUS_LOADING:
             return Object.assign({}, state, {status: STATUS_LOADING});

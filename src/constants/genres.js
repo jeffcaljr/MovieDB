@@ -11,7 +11,7 @@ const generateCustomID = () => {
 
 export const SEARCHED = {
     "id:": generateCustomID(),
-    name: "Search Results"
+    "name": "Search Results"
 }
 export const TRENDING_GENRE = {
     "id": generateCustomID(),

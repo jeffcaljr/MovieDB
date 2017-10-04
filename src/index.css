@@ -523,6 +523,13 @@ movie-info-right-column{
 
 }
 
+.searchbar{
+  /*color: red;*/
+  font-size: 0.8rem !important;
+
+
+}
+
 .movie-item-details{
   background: rgba(255,255,255,0.1);
   height: 2rem;

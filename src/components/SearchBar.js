@@ -16,7 +16,27 @@ class SearchBar extends Component{
     searchSubmit = e => {
 
         e.preventDefault()
-        alert("text: " + this.state.searchQuery)
+
+        //trim extraneous spaces
+        let query = this.state.searchQuery;
+        query = query.trim();
+
+        //separate query terms by comma to parse individually
+        //be sure to, handle cases where query items seperated by comma AND space
+        query = query.split(", ").join(",")
+        let queryItems = query.split(",")
+
+        //remove spaces from each individual query term
+        let parsedTerms = queryItems.map((queryItem) => {
+            queryItem.trim();
+            return queryItem.replace(" ", "%20")
+        })
+
+        //join all parsed terms into new query string
+        let parsedQuery = parsedTerms.join(",")
+
+        this.props.search(parsedQuery)
+
     }
 
     searchQueryChanged = e => {
@@ -33,8 +53,8 @@ class SearchBar extends Component{
                     <div className="input-group search-form">
                         <input
                             type="text"
-                            className="form-control p-1 typeface-sans-serif"
-                            placeholder="Search for..."
+                            className="searchbar form-control p-1 typeface-sans-serif"
+                            placeholder="Separate terms with `,`"
                             value={this.state.searchQuery}
                             onChange={(e) => this.searchQueryChanged(e)}/>
                         <span className="input-group-btn">
