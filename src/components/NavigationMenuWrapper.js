@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect } from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import NavCategory from "./NavCategory";
 import DropdownWrapper from "./DropdownWrapper";
@@ -24,7 +25,14 @@ const NavigationMenu  = (props) => {
     return(
         <div className={props.className}>
 
-            <i className="fa fa-gear text-white pull-right" aria-hidden="false"></i>
+            <div className="header w-100 d-flex justify-content-between align-items-center p-2">
+                <Link to="/logout">
+                    <i className="fa fa-sign-out text-white" aria-hidden="false"></i>
+                </Link>
+                <i className="fa fa-gear text-white" aria-hidden="false"></i>
+
+
+            </div>
 
 
             <SearchBar/>
