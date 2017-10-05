@@ -12,6 +12,7 @@ import LoadingCover from "./LoadingCover";
 import {load} from "../actions/MovieList";
 import ErrorDisplay from './ErrorsDisplay'
 import MenuContent from './MenuContent'
+import HomePage from './HomePage'
 
 class App extends Component {
     constructor(){
@@ -27,35 +28,36 @@ class App extends Component {
     return (
 
       <div className="App" id="main">
-          <LoadingCover/>
+          <HomePage/>
+          {/*<LoadingCover/>*/}
 
-          {
-              this.props.modalIsShowing
-              ? <MovieDetails className={(this.props.modalIsShowing ? " modal-showing " : " modal-hidden ")}/>
-              : null
-          }
+          {/*{*/}
+              {/*this.props.modalIsShowing*/}
+              {/*? <MovieDetails className={(this.props.modalIsShowing ? " modal-showing " : " modal-hidden ")}/>*/}
+              {/*: null*/}
+          {/*}*/}
 
-          {
-              this.props.videoPlayerOpen
-              ? <VideoPlayer className={((""))}/>
-              :  null
-          }
+          {/*{*/}
+              {/*this.props.videoPlayerOpen*/}
+              {/*? <VideoPlayer className={((""))}/>*/}
+              {/*:  null*/}
+          {/*}*/}
 
 
-          <div className="container-fluid">
-              <div className="row">
-                  <NavigationMenu
-                      className="navigation-container col-md-3 hidden-sm-down"
-                      children={<MenuContent categories={GENRES}/>}/>
-                  <NavigationMenuCollapsed
-                      className="hidden-md-up col-12 navbar navbar-toggleable-md"
-                      children={<MenuContent categories={GENRES}/>}/>
-                  <MovieList
-                      className="movie-items-container col-md-9 "/>
-              </div>
-          </div>
+          {/*<div className="container-fluid">*/}
+              {/*<div className="row">*/}
+                  {/*<NavigationMenu*/}
+                      {/*className="navigation-container col-md-3 hidden-sm-down"*/}
+                      {/*children={<MenuContent categories={GENRES}/>}/>*/}
+                  {/*<NavigationMenuCollapsed*/}
+                      {/*className="hidden-md-up col-12 navbar navbar-toggleable-md"*/}
+                      {/*children={<MenuContent categories={GENRES}/>}/>*/}
+                  {/*<MovieList*/}
+                      {/*className="movie-items-container col-md-9 "/>*/}
+              {/*</div>*/}
+          {/*</div>*/}
 
-          <ErrorDisplay/>
+          {/*<ErrorDisplay/>*/}
       </div>
     );
   }

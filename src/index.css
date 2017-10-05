@@ -777,7 +777,7 @@ movie-info-right-column{
 
 
 .custom-category{
-  color: rgb(229, 115, 115)
+  color: #B71C1C;
 }
 
 .similar-movies{
@@ -785,3 +785,88 @@ movie-info-right-column{
   /*background: red;*/
   overflow-y: scroll;
 }
+
+
+/*HomePage*/
+
+.serif{
+  font-family: 'Playfair Display', serif;
+}
+
+.sans-serif{
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+}
+
+.root{
+  background: orange;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.background{
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: url("./images/homepage-background.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.75)
+}
+
+.content{
+  position: fixed;
+  /*   background: blue; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  padding-top: 6rem;
+
+}
+
+/* @media (max-width: 719px){
+  .start-button{
+  box-shadow: 2px 2px 2px 2px #000;
+   position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+} */
+
+.red-border{
+  border: 2px solid #F44336;
+}
+
+.transparent{
+  background: rgba(0,0,0,0) !important;
+  /*   border: 2px solid #F44336; */
+}
+
+/*End Homeage*/

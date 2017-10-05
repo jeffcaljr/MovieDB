@@ -63,7 +63,8 @@ class SimilarMovies extends Component{
     }
 
     componentDidMount(){
-        ReactDOM.findDOMNode(this).scrollTop = 0
+        // ReactDOM.findDOMNode(this).scrollTop = 0
+        window.scrollTo(0,0)
     }
 }
 
