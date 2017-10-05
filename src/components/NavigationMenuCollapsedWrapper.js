@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect } from 'react-redux'
+import {Link} from 'react-router-dom'
+
 import NavCategory from "./NavCategory";
 import SearchBar from './SearchBar'
 import {ALL_POSSIBLE_GENRES, GENRES} from "../constants/genres";
@@ -43,12 +45,18 @@ class NavigationMenuCollapsed extends Component{
                     <div className={"sidenav " + (this.props.navOpen ? " w-100 " : " w-0 ") }>
 
                         <div className="sidenav-elements">
+
                             <div className="sidenav-header">
-                                <a
-                                    href="#"
-                                    className="settings-btn btn">
-                                    <i className="fa fa-gear text-white" aria-hidden="false"></i>
-                                </a>
+                                <div className="nav-action-buttons d-flex align-items-center justify-content-between w-25">
+                                    <Link to="/logout" className="p-0">
+                                        <i className="fa fa-sign-out text-white" aria-hidden="false"></i>
+                                    </Link>
+                                    <a
+                                        href="#"
+                                        className="settings-btn btn">
+                                        <i className="fa fa-gear text-white" aria-hidden="false"></i>
+                                    </a>
+                                </div>
 
                                 <a
                                     href="javascript:void(0)"

@@ -901,3 +901,11 @@ body{
 }
 
 /*End Homeage*/
+
+.nav-action-buttons{
+  padding: 20px auto;
+}
+
+nav-action-buttons > *{
+  padding-right: 24px;
+}
