@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import {connect } from 'react-redux'
 import {Link} from 'react-router-dom'
@@ -40,16 +41,19 @@ class NavigationMenuCollapsed extends Component{
 
         return(
 
-                <div className={this.props.className}>
+                <div
+                    className={this.props.className}
+                    ref={(navMenu) => this.navMenu = navMenu}
+                >
 
                     <div className={"sidenav " + (this.props.navOpen ? " w-100 " : " w-0 ") }>
 
                         <div className="sidenav-elements">
 
                             <div className="sidenav-header">
-                                <div className="nav-action-buttons d-flex align-items-center justify-content-between w-25">
-                                    <Link to="/logout" className="p-0">
-                                        <i className="fa fa-sign-out text-white" aria-hidden="false"></i>
+                                <div className="nav-action-buttons d-flex align-items-center justify-content-between">
+                                    <Link to="/logout" className="p-1">
+                                        <i className="fa fa-sign-out text-white p-1" aria-hidden="false"></i>
                                     </Link>
                                     <a
                                         href="#"
@@ -86,10 +90,17 @@ class NavigationMenuCollapsed extends Component{
                     </div>
 
 
-
                 </div>
 
         );
+    }
+
+    componentDidUpdate(){
+
+        if(this.props.navOpen === true){
+            alert("should scroll to top");
+            this.navMenu.scrollTop = 0;
+        }
     }
 
 }
@@ -112,6 +123,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
+
     return{
         openNav: () => {
             dispatch(expandNav())
