@@ -8,7 +8,6 @@ import reducer from './reducers/index'
 import asyncMiddleware from './middleware/AsyncMiddleware'
 import './index.css';
 import Routes from './Routes'
-import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 let store = createStore(reducer,  applyMiddleware(asyncMiddleware));

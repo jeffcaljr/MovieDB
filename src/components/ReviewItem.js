@@ -31,7 +31,7 @@ const ReviewItem = (props) => {
 }
 
 ReviewItem.propTypes = {
-    reviewID: PropTypes.number.isRequired,
+    reviewID: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired

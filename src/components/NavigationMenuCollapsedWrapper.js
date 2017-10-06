@@ -98,7 +98,7 @@ class NavigationMenuCollapsed extends Component{
     componentDidUpdate(){
 
         if(this.props.navOpen === true){
-            alert("should scroll to top");
+            // alert("should scroll to top");
             this.navMenu.scrollTop = 0;
         }
     }

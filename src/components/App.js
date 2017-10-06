@@ -14,14 +14,6 @@ import ErrorDisplay from './ErrorsDisplay'
 import MenuContent from './MenuContent'
 
 class App extends Component {
-    constructor(){
-        super();
-
-
-
-    }
-    
-
 
   render() {
     return (

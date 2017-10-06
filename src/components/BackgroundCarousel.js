@@ -50,7 +50,7 @@ class BackgroundCarousel extends Component{
 
     componentWillUnmount(){
 
-        alert("unmounting")
+        // alert("unmounting")
         clearInterval(this.looper)
 
 

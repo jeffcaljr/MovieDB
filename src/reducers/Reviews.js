@@ -12,7 +12,7 @@ const ReviewsReducer = (state = {movieID: undefined, loading: false, reviews: []
             //dont attempt to load reviews if action doesnt contain movie id, or the reviews
             //for the given id have already been loaded
 
-            if(action.movieID == undefined || action.movieID === state.movieID){
+            if(action.movieID === undefined || action.movieID === state.movieID){
                 return state;
             }
 
