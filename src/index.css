@@ -1024,9 +1024,25 @@ body{
 /* Movie Reviews */
 
 .review-item{
-  border: 1px solid red;
-  padding: 0.5rem 4px;
+  /*border: 1px solid red;*/
+  padding: 2rem 1rem;
   margin-bottom: 8px;
+}
+
+.review-item-author{
+  color: #F44336;
+  font-size: 1.1rem;
+  font-weight: bold !important;
+}
+
+.review-item-content-text{
+  text-wrap: normal;
+  font-size: 0.8rem;
+  text-indent: 10%;
+}
+
+.review-link-text{
+  margin-bottom: 0 !important;
 }
 
 /* End Movie Reviews*/

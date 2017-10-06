@@ -8,22 +8,22 @@ const ReviewItem = (props) => {
         <div className="review-item d-flex flex-column justify-content-start align-items-center w-100">
 
             <h4
-                className='text-left text-secondary small align-self-start'>
+                className='review-item-author align-self-start typeface-serif'>
                 @{props.author}
                 </h4>
             <p
-                className="text-white text-white font-italic">
+                className="review-item-content-text text-white font-italic typeface-sans-serif">
                 { (props.content.length < 278)
-                    ? props.content
-                    : props.content.substr(0, 275).concat("...")
+                    ? "\"" + props.content + "\""
+                    : "\"" +  props.content.substr(0, 275).concat("...") + "\""
                 }
 
             </p>
             <a
                 href={props.url}
-                className="btn review-link align-self-end text-white btn-primary"
+                className="review-link  align-self-end text-white underline font-italic"
                 target="_blank">
-                <p className="review-link-text">Go to Review</p>
+                <u><p className="review-link-text mr-0 typeface-sans-serif small">Go to Review</p></u>
             </a>
         </div>
     );

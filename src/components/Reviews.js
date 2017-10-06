@@ -44,9 +44,22 @@ const Reviews= ({movieID, reviews, loading, loadReviews}) => {
                                                  <h3 className="text-muted">No reviews found</h3>
                                              </div>
                                              :  <div className="similar-movies container-fluid">
-                                                 <div className="row">
+                                                 <div className="row w-100">
                                                      {renderReviews()}
+
+                                                     <div className="text-center w-100">
+                                                         <u>
+                                                             <a
+                                                                 href="#"
+                                                                 className=" small text-white text-center w-100 font-italic">
+                                                                 See More
+                                                             </a>
+                                                         </u>
+                                                     </div>
+
+
                                                  </div>
+
 
                                              </div>
                                      )
