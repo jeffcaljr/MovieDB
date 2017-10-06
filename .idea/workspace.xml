@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bg-2.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bg-3.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bg-4.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bg-5.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/BackgroundCarousel.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/images/default_movie_cover.jpg" afterPath="$PROJECT_DIR$/src/images/default-movie-cover.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/images/homepage-background.jpeg" afterPath="$PROJECT_DIR$/src/images/bg-1.jpeg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ErrorBox.js" afterPath="$PROJECT_DIR$/src/components/ErrorBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage.js" afterPath="$PROJECT_DIR$/src/components/HomePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieCover.js" afterPath="$PROJECT_DIR$/src/components/MovieCover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieItem.js" afterPath="$PROJECT_DIR$/src/components/MovieItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DropdownWrapper.js" afterPath="$PROJECT_DIR$/src/components/DropdownWrapper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,53 +21,19 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="1003" column="0" lean-forward="true" selection-start-line="1003" selection-start-column="0" selection-end-line="1003" selection-end-column="0" />
+            <state relative-caret-position="317">
+              <caret line="658" column="48" lean-forward="false" selection-start-line="658" selection-start-column="48" selection-end-line="658" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorBox.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ErrorBox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="133" lean-forward="false" selection-start-line="20" selection-start-column="133" selection-end-line="20" selection-end-column="133" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ErrorDisplay.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/reducers/ErrorDisplay.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackgroundCarousel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/BackgroundCarousel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="46" column="65" lean-forward="false" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/HomePage.js">
+      <file leaf-file-name="DropdownWrapper.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/DropdownWrapper.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="765">
-              <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+              <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,10 +50,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.favorited</find>
-      <find>movieinstore.f</find>
-      <find>loadNew</find>
-      <find>addErr</find>
       <find>addError(</find>
       <find>MovieItem</find>
       <find>addERRor(</find>
@@ -124,6 +76,10 @@
       <find>animation</find>
       <find>opacity: 0</find>
       <find>opacity:</find>
+      <find>dropdown-content-container</find>
+      <find>max-height</find>
+      <find>dropdown-</find>
+      <find>lift-</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -174,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/components/Reviews.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/models/movie.js" />
-        <option value="$PROJECT_DIR$/src/components/DropdownWrapper.js" />
         <option value="$PROJECT_DIR$/src/components/MovieList.js" />
         <option value="$PROJECT_DIR$/src/components/SimilarMovieItem.js" />
         <option value="$PROJECT_DIR$/src/actions/SimilarMovies.js" />
@@ -193,9 +148,10 @@
         <option value="$PROJECT_DIR$/src/components/Route404.js" />
         <option value="$PROJECT_DIR$/src/components/HomePage.js" />
         <option value="$PROJECT_DIR$/src/components/BackgroundCarousel.js" />
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/ErrorBox.js" />
         <option value="$PROJECT_DIR$/src/reducers/ErrorDisplay.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/components/DropdownWrapper.js" />
       </list>
     </option>
   </component>
@@ -332,7 +288,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165502000" />
+    <option name="totallyTimeSpent" value="166375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -566,14 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DropdownWrapper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/MovieList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -748,22 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="1003" column="0" lean-forward="true" selection-start-line="1003" selection-start-column="0" selection-end-line="1003" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ErrorBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="133" lean-forward="false" selection-start-line="20" selection-start-column="133" selection-end-line="20" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HomePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -778,6 +710,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ErrorBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="133" lean-forward="false" selection-start-line="20" selection-start-column="133" selection-end-line="20" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="658" column="48" lean-forward="false" selection-start-line="658" selection-start-column="48" selection-end-line="658" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DropdownWrapper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
           <folding />
         </state>
       </provider>

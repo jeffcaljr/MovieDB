@@ -790,7 +790,8 @@ movie-info-right-column{
 }
 
 .similar-movies{
-  max-height: 400px;
+  /*max-height: 400px;*/
+  height: auto;
   /*background: red;*/
   overflow-y: scroll;
 }
