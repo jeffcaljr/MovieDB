@@ -656,16 +656,16 @@ movie-info-right-column{
 
 @-moz-keyframes lift-up {
   from {top:0; opacity: 1;}
-  to {top:-3rem; opacity: 0; visibility: hidden; display: none}
+  to {top:-3rem; opacity: 0; visibility: hidden;}
 }
 @keyframes lift-up {
   from {top:0; opacity: 1;}
-  to {top:-3rem; opacity: 0; visibility: hidden; display: none}
+  to {top:-3rem; opacity: 0; visibility: hidden;}
 }
 
 @-webkit-keyframes lift-up {
   from {top:0; opacity: 1;}
-  to {top:-3rem; opacity: 0; visibility: hidden; display: none}
+  to {top:-3rem; opacity: 0; visibility: hidden;}
 }
 
 /*Modal animations*/
@@ -1018,3 +1018,15 @@ body{
   to{opacity: 0}
 }
 /*End error animations*/
+
+
+
+/* Movie Reviews */
+
+.review-item{
+  border: 1px solid red;
+  padding: 0.5rem 4px;
+  margin-bottom: 8px;
+}
+
+/* End Movie Reviews*/

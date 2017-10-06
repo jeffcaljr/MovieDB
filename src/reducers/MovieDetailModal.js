@@ -1,5 +1,5 @@
 import {SHOW_MODAL, HIDE_MODAL} from '../actions/MovieDetailModal'
-import Movie from "../models/movie";
+import Movie from "../models/Movie";
 import {loadSimilarMovies} from "../actions/SimilarMovies";
 
 

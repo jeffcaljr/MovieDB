@@ -3,9 +3,9 @@ import {LOAD_SIMILAR_MOVIES, LOADING_SIMILAR_MOVIES, SIMILAR_MOVIES_LOADED, load
 import {
     BASE_SEARCH_URL_PREFIX, BASE_SEARCH_URL_SUFFIX, BASE_SIMILAR_MOVIES_URL_PREFIX,
     BASE_SIMILAR_MOVIES_URL_SUFFIX
-} from "../models/movie";
+} from "../models/Movie";
 import {addError} from "../actions/ErrorDisplay";
-import Movie from "../models/movie";
+import Movie from "../models/Movie";
 
 const SimilarMoviesReducer = (state = {movieID: undefined, loading: false, similarMovies: [], page: 1}, action) =>{
 
@@ -19,13 +19,11 @@ const SimilarMoviesReducer = (state = {movieID: undefined, loading: false, simil
                 return state;
             }
 
-            // alert("loading similar movies")
 
             action.asyncDispatch(loading());
 
             let url = `${BASE_SIMILAR_MOVIES_URL_PREFIX}${action.movieID}${BASE_SIMILAR_MOVIES_URL_SUFFIX}${1}`;
 
-            console.log("similar movies url: " + url);
 
             fetch(url)
                 .then( (res) => {return res.json()})

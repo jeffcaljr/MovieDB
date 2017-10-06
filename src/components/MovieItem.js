@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
-import Movie from '../models/movie'
+import Movie from '../models/Movie'
 import cover from '../images/default-movie-cover.jpg'
 import FavoriteButton from "./FavoriteButton";
 import {show} from "../actions/MovieDetailModal";

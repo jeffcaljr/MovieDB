@@ -63,7 +63,7 @@ class MovieDetails extends Component {
 
     renderReviews = () => {
         return(
-            <Reviews/>
+            <Reviews movieID={this.props.movie.id}/>
         );
     }
 

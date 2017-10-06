@@ -9,7 +9,7 @@ import config from "../config";
 import Movie, {
     BASE_NOW_PLAYING_URL, BASE_SEARCH_URL_PREFIX, BASE_SEARCH_URL_SUFFIX,
     BASE_UPCOMING_MOVIES_URL
-} from "../models/movie";
+} from "../models/Movie";
 import {addError} from "../actions/ErrorDisplay";
 
 const reducer = (state = {page: 1, movies: [], lastGenreID: undefined, lastQueryString: undefined, status: STATUS_NONE, error: null}, action) => {

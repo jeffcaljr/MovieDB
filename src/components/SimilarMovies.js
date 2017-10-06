@@ -43,7 +43,7 @@ class SimilarMovies extends Component{
                                          : (
                                              this.props.similarMovies.length < 1
                                                  ? <div className="w-100 d-flex justify-content-center align-items-center p-5">
-                                                     <h3 className="text-muted">No Similar movies found</h3>
+                                                     <h3 className="text-muted">No similar movies found</h3>
                                                  </div>
                                                  :  <div className="similar-movies container-fluid">
                                                      <div className="row">
