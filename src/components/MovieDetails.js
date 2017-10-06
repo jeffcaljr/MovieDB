@@ -36,12 +36,14 @@ class MovieDetails extends Component {
         if (movieGenres.length > 0) {
             let genresJSX = [];
             movieGenres.map((genre) => {
-                let genreJSX = <div className="genre typeface-serif font-weight-bold">{genre.name}</div>
+                let genreJSX = <div className="genre typeface-serif font-weight-bold ">{genre.name}</div>
                 genresJSX.push(genreJSX)
             })
 
             return (
-                <DropdownWrapper title={"Genres"} children={genresJSX} expandedDefault={true}/>
+                <div className="genres-container d-flex flex-wrap">
+                    {genresJSX}
+                </div>
             );
         }
         else {
