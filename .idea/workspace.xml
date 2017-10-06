@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieDetails.js" afterPath="$PROJECT_DIR$/src/components/MovieDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/MovieDetailModal.js" afterPath="$PROJECT_DIR$/src/reducers/MovieDetailModal.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieDetails.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovieDetails.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimilarMovies.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/SimilarMovies.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -71,6 +80,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MovieItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieDetailModal.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/reducers/MovieDetailModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="18" column="65" lean-forward="false" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -83,7 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>show(</find>
       <find>loadSimil</find>
       <find>toggledFavorite</find>
       <find>similar movies</find>
@@ -113,6 +141,7 @@
       <find>load</find>
       <find>lift-</find>
       <find>this.props.</find>
+      <find>loadSimilarMovies</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -163,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/reducers/MovieList.js" />
         <option value="$PROJECT_DIR$/src/reducers/VideoPlayer.js" />
         <option value="$PROJECT_DIR$/src/components/MovieItem.js" />
-        <option value="$PROJECT_DIR$/src/reducers/MovieDetailModal.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Routes.js" />
@@ -185,6 +213,7 @@
         <option value="$PROJECT_DIR$/src/components/Reviews.js" />
         <option value="$PROJECT_DIR$/src/components/ReviewItem.js" />
         <option value="$PROJECT_DIR$/src/components/MovieDetails.js" />
+        <option value="$PROJECT_DIR$/src/reducers/MovieDetailModal.js" />
       </list>
     </option>
   </component>
@@ -321,7 +350,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169962000" />
+    <option name="totallyTimeSpent" value="170145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -552,26 +581,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/MovieDetailModal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/MovieDetailModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="72" lean-forward="false" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -715,14 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/SimilarMovies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Review.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -791,6 +796,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/SimilarMovies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/MovieDetailModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="65" lean-forward="false" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
           <folding />
         </state>
       </provider>

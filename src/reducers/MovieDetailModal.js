@@ -1,6 +1,7 @@
 import {SHOW_MODAL, HIDE_MODAL} from '../actions/MovieDetailModal'
 import Movie from "../models/Movie";
 import {loadSimilarMovies} from "../actions/SimilarMovies";
+import {loadReviews} from "../actions/Reviews";
 
 
 const MovieDetailReducer = (state = {showing: false, movie: null}, action) => {
@@ -15,6 +16,7 @@ const MovieDetailReducer = (state = {showing: false, movie: null}, action) => {
 
             if(state.showing && (action.movie.id !== state.movie.id)){
                 action.asyncDispatch(loadSimilarMovies(action.movie.id))
+                action.asyncDispatch(loadReviews(action.movie.id))
             }
 
             return Object.assign({}, state, {showing: true, movie: action.movie})
