@@ -6,7 +6,7 @@ import {removeError} from "../actions/ErrorDisplay";
 const ErrorBox = ({error, index, removeError}) => {
 
     return (
-        <div className="error-box">
+        <div className="error-box error-fade-in" ref={(errorBox) => this.errorBox = errorBox}>
 
             <div className="error-box-content">
                 <div className="error-text">
@@ -18,7 +18,7 @@ const ErrorBox = ({error, index, removeError}) => {
                 <a
                     href="#"
                     className="btn"
-                    onClick={() => removeError(index)}
+                    onClick={() => {this.errorBox.className = "error-box error-fade-out"; setTimeout( () => {removeError(index)}, 300 )}}
                 >
                     <i className="fa fa-close text-white"></i>
                 </a>

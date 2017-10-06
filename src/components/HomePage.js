@@ -1,59 +1,58 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import moviedb_logo from '../images/themoviedb_logo.png'
+import BackgroundCarousel from "./BackgroundCarousel";
 
 
 const HomePage = () => {
 
     return (
-        <div className="root red-border">
-            <div className="background">
-                <div className="overlay">
-                    <div className="content ">
+        <div className="root">
+            <BackgroundCarousel children={
+                <div className="content ">
 
-                        <div className="homepage-content-info w-100 text-white text-center">
-                            <div className="homepage-content-scroll-area-outer">
-                                <div className="homepage-content-scroll-area-inner">
+                    <div className="homepage-content-info w-100 text-white text-center">
+                        <div className="homepage-content-scroll-area-outer">
+                            <div className="homepage-content-scroll-area-inner">
 
-                                    <h1 className="display-3 serif">
-                                        Jefflix
-                                    </h1>
-                                    <p className="lead sans-serif p-4">
-                                        Discover &middot; Search &middot; Share
-                                    </p>
-                                    <hr className="my-4"/>
-                                    <img className="w-25 img-fluid "
-                                         src={moviedb_logo}
-                                         alt="Powered by TMDB"/>
-                                    <p className="sans-serif text-muted small">
-                                        This product uses the TMDb API but is not endorsed or certified by TMDb.
-                                    </p>
-
-                                </div>
+                                <h1 className="display-3 serif">
+                                    Jefflix
+                                </h1>
+                                <p className="lead sans-serif p-4">
+                                    Discover &middot; Search &middot; Share
+                                </p>
+                                <hr className="my-4"/>
+                                <img className="w-25 img-fluid "
+                                     src={moviedb_logo}
+                                     alt="Powered by TMDB"/>
+                                <p className="sans-serif text-muted small">
+                                    This product uses the TMDb API but is not endorsed or certified by TMDb.
+                                </p>
 
                             </div>
 
                         </div>
 
-                        <div className="homepage-content-footer  w-100 text-right text-md-center">
+                    </div>
 
-                            <Link to="/home">
-                                <a className="btn btn-primary button-lg start-button sans-serif text-white" role="button">
+                    <div className="homepage-content-footer  w-100 text-right text-md-center">
 
-                                    Go to App
-                                </a>
-                            </Link>
+                        <Link to="/home">
+                            <a className="btn btn-primary button-lg start-button sans-serif text-white" role="button">
 
-                        </div>
-
-
-
+                                Go to App
+                            </a>
+                        </Link>
 
                     </div>
 
-                </div>
 
-            </div>
+
+
+                </div>
+            }>
+
+            </BackgroundCarousel>
         </div>
     );
 

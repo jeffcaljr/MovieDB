@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Movie from "../models/movie";
-import cover from '../images/default_movie_cover.jpg'
+import cover from '../images/default-movie-cover.jpg'
 
 const MovieCover = ({movie, playVideo, children}) => {
 

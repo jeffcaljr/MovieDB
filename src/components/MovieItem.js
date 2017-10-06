@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
 import Movie from '../models/movie'
-import cover from '../images/default_movie_cover.jpg'
+import cover from '../images/default-movie-cover.jpg'
 import FavoriteButton from "./FavoriteButton";
 import {show} from "../actions/MovieDetailModal";
 import {error, toggleLiked} from "../actions/MovieList";
