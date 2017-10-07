@@ -19,7 +19,7 @@ const MovieItem = ({movie, similarMovie, isFavorite, toggleFavorite, showDetailM
             <figure
                 className="movie-item image-btn-container w-100"
                 onClick={() => showDetailModal()}>
-                <img src={ movie.getImage() || cover} alt={movie.title || "Movie Cover"} className="movie-img"/>
+                <img src={ cover && movie.getImage() } alt={movie.title || "Movie Cover"} className="movie-img"/>
 
                 <div className="text-white text-center movie-item-details">
                     <FavoriteButton isFavorite={isFavorite} toggledFavorite={() => toggleFavorite()}/>

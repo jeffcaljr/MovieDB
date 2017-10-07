@@ -47,15 +47,15 @@ const Reviews= ({movieID, reviews, loading, loadReviews}) => {
                                                  <div className="row w-100">
                                                      {renderReviews()}
 
-                                                     <div className="text-center w-100">
-                                                         <u>
-                                                             <a
-                                                                 href="#"
-                                                                 className=" small text-white text-center w-100 font-italic">
-                                                                 See More
-                                                             </a>
-                                                         </u>
-                                                     </div>
+                                                     {/*<div className="text-center w-100">*/}
+                                                         {/*<u>*/}
+                                                             {/*<a*/}
+                                                                 {/*href="#"*/}
+                                                                 {/*className=" small text-white text-center w-100 font-italic">*/}
+                                                                 {/*See More*/}
+                                                             {/*</a>*/}
+                                                         {/*</u>*/}
+                                                     {/*</div>*/}
 
 
                                                  </div>

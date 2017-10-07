@@ -50,16 +50,16 @@ class SimilarMovies extends Component{
                                                          {this.renderMovies()}
                                                      </div>
 
-                                                 <div className="text-center w-100">
-                                                     <u>
-                                                         <a
-                                                             href="#"
-                                                             className="small text-white text-center w-100 font-italic underline">
-                                                             See More
-                                                         </a>
-                                                     </u>
+                                                 {/*<div className="text-center w-100">*/}
+                                                     {/*<u>*/}
+                                                         {/*<a*/}
+                                                             {/*href="#"*/}
+                                                             {/*className="small text-white text-center w-100 font-italic underline">*/}
+                                                             {/*See More*/}
+                                                         {/*</a>*/}
+                                                     {/*</u>*/}
 
-                                                 </div>
+                                                 {/*</div>*/}
 
 
 
