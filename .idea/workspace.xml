@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MenuContent.js" afterPath="$PROJECT_DIR$/src/components/MenuContent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavCategory.js" afterPath="$PROJECT_DIR$/src/components/NavCategory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" afterPath="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -55,8 +52,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="1075" column="26" lean-forward="true" selection-start-line="1075" selection-start-column="26" selection-end-line="1075" selection-end-column="26" />
+            <state relative-caret-position="791">
+              <caret line="1015" column="0" lean-forward="false" selection-start-line="1015" selection-start-column="0" selection-end-line="1015" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,7 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rgb</find>
       <find>#</find>
       <find>red-border</find>
       <find>overl</find>
@@ -134,6 +130,7 @@
       <find>sidenav-content</find>
       <find>bg-</find>
       <find>: red</find>
+      <find>fade</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -342,7 +339,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182190000" />
+    <option name="totallyTimeSpent" value="182582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -809,8 +806,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="1075" column="26" lean-forward="true" selection-start-line="1075" selection-start-column="26" selection-end-line="1075" selection-end-column="26" />
+        <state relative-caret-position="791">
+          <caret line="1015" column="0" lean-forward="false" selection-start-line="1015" selection-start-column="0" selection-end-line="1015" selection-end-column="0" />
           <folding />
         </state>
       </provider>
