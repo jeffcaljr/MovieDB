@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import NavigationMenu from "./NavigationMenuWrapper";
 import MovieList from "./MovieList";
 import NavigationMenuCollapsed from "./NavigationMenuCollapsedWrapper";
-import VideoPlayer from "./VideoPlayer";
+import VideoPlayer from "./Functional/VideoPlayer";
 import MovieDetails from './MovieDetails'
 import {GENRES, TRENDING_GENRE} from "../constants/genres";
 import LoadingCover from "./LoadingCover";

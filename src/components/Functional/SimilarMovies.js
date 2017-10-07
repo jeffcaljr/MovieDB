@@ -1,5 +1,5 @@
 import {connect } from 'react-redux'
-import SimilarMovies from "../SimilarMovies";
+import SimilarMovies from "../Presentational/SimilarMovies";
 import {loadSimilarMovies} from "../../actions/SimilarMovies";
 
 const mapStateToProps = state => {

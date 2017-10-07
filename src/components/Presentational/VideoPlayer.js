@@ -1,17 +1,15 @@
-import React, {Component} from "react"
-import {connect} from 'react-redux'
+import React from "react"
 import PropTypes from 'prop-types'
 
-import {closeVideo} from "../actions/VideoPlayer";
 
 
 
 const VideoPlayer = ({className, movie, closeVideo}) =>{
 
-
     const closeWindow = () => {
         closeVideo()
     }
+
 
     return (
         <div className={className + " video-player "}>
@@ -36,28 +34,16 @@ const VideoPlayer = ({className, movie, closeVideo}) =>{
 
 }
 
+
 VideoPlayer.propTypes = {
     className: PropTypes.string
 }
+
 
 VideoPlayer.defaultProps = {
     className: ""
 }
 
 
-const mapStateToProps = state => {
-    return {
-        movie: state.videoPlayerReducer.video
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return{
-        closeVideo: () => {
-            dispatch(closeVideo())
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(VideoPlayer)
+export default VideoPlayer;
 
