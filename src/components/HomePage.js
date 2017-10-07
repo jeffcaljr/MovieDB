@@ -38,10 +38,10 @@ const HomePage = () => {
                     <div className="homepage-content-footer  w-100 text-right text-md-center">
 
                         <Link to="/home">
-                            <a className="btn btn-primary button-lg start-button sans-serif text-white" role="button">
+                            <button type="button" className="btn btn-primary button-lg start-button sans-serif text-white" role="button">
 
                                 Go to App
-                            </a>
+                            </button>
                         </Link>
 
                     </div>

@@ -12,7 +12,7 @@ class BackgroundCarousel extends Component{
         super()
 
         this.state = {
-            currentImageIndex: -1
+            currentImageIndex: 0
         }
 
         this.images = [image1, image2, image3, image4, image5]
