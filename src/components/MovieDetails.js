@@ -10,6 +10,7 @@ import {openVideo} from "../actions/VideoPlayer";
 import MovieCover from "./MovieCover";
 import {hide} from "../actions/MovieDetailModal";
 import {toggleLiked} from "../actions/MovieList";
+import ScrollingTextView from "./ScrollingTextView";
 
 class MovieDetails extends Component {
     constructor(props) {
@@ -80,15 +81,20 @@ class MovieDetails extends Component {
 
                             <div className="col-1 close-btn-container text-center">
                                 <btn
-                                    className=" btn btn-sm modal-close-button"
+                                    className=" btn btn-sm modal-close-button d-flex p-0 justify-content-center align-items-center"
                                     onClick={() => { this.props.closeModal()}}>
-                                    <i className="fa fa-close fa-2x text-white"></i>
+                                    <i className="fa fa-close fa-2x text-white w-100"></i>
                                 </btn>
                             </div>
 
-                            <div className="col-10 title-container text-center">
-                                <h3 className="title text-center text-white font-weight-bold typeface-serif text-uppercase">{this.props.movie.title}</h3>
+                            <div className="col-10 title-container text-center d-flex justify-content-center align-items-center">
+                                <ScrollingTextView
+                                    className="title text-center text-white font-weight-bold typeface-serif text-uppercase text-nowrap "
+                                    text={this.props.movie.title}/>
                             </div>
+
+
+
 
                             <div className="col-1 text-center">
                                 {/*<FavoriteButton isFavorite={this.props.thisMovieInStore.favorited}*/}

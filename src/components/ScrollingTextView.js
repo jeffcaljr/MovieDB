@@ -37,6 +37,8 @@ class ScrollingTextView extends Component{
     componentDidMount(){
 
         this.setState({ hasOverflow: this.hasOverflow()})
+
+        // alert("scroll-left width: " + this.scrollLeft.offsetWidth + "\n scroll text width: " + this.scrollText.offsetWidth)
     }
 }
 
