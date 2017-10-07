@@ -1,8 +1,8 @@
 import React from 'react'
 import {Switch, Route, Redirect} from 'react-router-dom'
-import HomePage from "./components/HomePage";
+import HomePage from "./components/Presentational/HomePage";
 import App from "./components/App";
-import Route404 from "./components/Route404";
+import Route404 from "./components/Presentational/Route404";
 
 
 

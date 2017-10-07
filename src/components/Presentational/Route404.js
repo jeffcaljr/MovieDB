@@ -1,6 +1,6 @@
 import React from 'react'
 
-import error404 from '../images/404-image.png'
+import error404 from '../../images/404-image.png'
 
 
 const Route404 = () => {

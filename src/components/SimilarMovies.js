@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-import {connect } from 'react-redux'
+
 import PropTypes from 'prop-types'
 
 import MovieItem from './MovieItem'
@@ -10,10 +9,12 @@ import {loadSimilarMovies} from "../actions/SimilarMovies";
 
 
 class SimilarMovies extends Component{
+
     constructor(){
-        super()
-        this.renderMovies = this.renderMovies.bind(this)
+        super();
+        this.renderMovies = this.renderMovies.bind(this);
     }
+
 
     renderMovies = () => {
 
@@ -25,10 +26,15 @@ class SimilarMovies extends Component{
                     similarMovie={true}
                     movie={movie}/>
             moviesJSX.push(movieJSX);
-        })
+        });
 
         return moviesJSX
 
+    }
+
+
+    componentDidMount(){
+        window.scrollTo(0,0);
     }
 
 
@@ -36,7 +42,8 @@ class SimilarMovies extends Component{
         return(
             <div>
                 <DropdownWrapper title={"Similar Titles"}
-                                 children={( (this.props.loading)
+                                 onExpand={() => this.props.loadSimilarMovies()}
+                                 children={ ( (this.props.loading)
                                          ? <div className="loading w-100 d-flex justify-content-center align-items-center">
                                              <img src={loadingSpinner} alt="loading" className="img-fluid w-25 p-2"/>
                                          </div>
@@ -61,23 +68,13 @@ class SimilarMovies extends Component{
 
                                                  {/*</div>*/}
 
-
-
                                                  </div>
                                          )
                                  )}
-                                 onExpand={() => this.props.loadSimilarMovies()}
                 />
-
-
             </div>
 
         );
-    }
-
-    componentDidMount(){
-        // ReactDOM.findDOMNode(this).scrollTop = 0
-        window.scrollTo(0,0)
     }
 }
 
@@ -85,20 +82,4 @@ SimilarMovies.propTypes = {
     movieID: PropTypes.number.isRequired
 }
 
-const mapStateToProps = state => {
-
-    return {
-        similarMovies: state.similarMoviesReducer.similarMovies,
-        loading: state.similarMoviesReducer.loading
-    }
-}
-
-const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        loadSimilarMovies: () => {
-            dispatch(loadSimilarMovies(ownProps.movieID))
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(SimilarMovies);
+export default SimilarMovies;

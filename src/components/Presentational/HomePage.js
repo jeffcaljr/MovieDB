@@ -1,14 +1,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import moviedb_logo from '../images/themoviedb_logo.png'
-import BackgroundCarousel from "./BackgroundCarousel";
+
+import BackgroundCarousel from "../BackgroundCarousel";
+import moviedb_logo from '../../images/themoviedb_logo.png'
+
 
 
 const HomePage = () => {
 
     return (
         <div className="root">
-            <BackgroundCarousel children={
+            <BackgroundCarousel children= {
                 <div className="content ">
 
                     <div className="homepage-content-info w-100 text-white text-center">
@@ -45,8 +47,6 @@ const HomePage = () => {
                         </Link>
 
                     </div>
-
-
 
 
                 </div>

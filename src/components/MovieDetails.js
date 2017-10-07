@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
-import SimilarMovies from './SimilarMovies'
+import SimilarMovies from './Functional/SimilarMovies'
 import Reviews from './Reviews'
 import FavoriteButton from "./FavoriteButton";
 import DropdownWrapper from "./DropdownWrapper";
