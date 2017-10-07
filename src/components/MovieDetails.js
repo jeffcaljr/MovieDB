@@ -37,7 +37,7 @@ class MovieDetails extends Component {
         if (movieGenres.length > 0) {
             let genresJSX = [];
             movieGenres.map((genre) => {
-                let genreJSX = <div key={genre.id             } className="genre typeface-serif font-weight-bold ">{genre.name}</div>
+                let genreJSX = <div key={genre.id} className="genre typeface-serif font-weight-bold ">{genre.name}</div>
                 genresJSX.push(genreJSX)
             })
 
@@ -47,15 +47,7 @@ class MovieDetails extends Component {
                 </div>
             );
         }
-        else {
-            //No genres found
 
-            let emptyGenres = <p className="text-muted">No genres found.</p>
-
-            return (
-                <DropdownWrapper title={"Genres"} children={emptyGenres}/>
-            );
-        }
     }
 
     renderSimilarMovies = () => {

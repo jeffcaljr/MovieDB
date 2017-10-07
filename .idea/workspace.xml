@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/BackgroundCarousel.js" afterPath="$PROJECT_DIR$/src/components/BackgroundCarousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage.js" afterPath="$PROJECT_DIR$/src/components/HomePage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieDetails.js" afterPath="$PROJECT_DIR$/src/components/MovieDetails.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovieDetails.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MovieDetails.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="91" column="135" lean-forward="false" selection-start-line="91" selection-start-column="135" selection-end-line="91" selection-end-column="135" />
+            <state relative-caret-position="342">
+              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -72,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/HomePage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
@@ -191,13 +189,13 @@
         <option value="$PROJECT_DIR$/src/reducers/Reviews.js" />
         <option value="$PROJECT_DIR$/src/components/MovieItem.js" />
         <option value="$PROJECT_DIR$/src/components/ScrollingTextView.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieDetails.js" />
         <option value="$PROJECT_DIR$/src/components/NavCategory.js" />
         <option value="$PROJECT_DIR$/src/components/MenuContent.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/BackgroundCarousel.js" />
         <option value="$PROJECT_DIR$/src/components/HomePage.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieDetails.js" />
       </list>
     </option>
   </component>
@@ -340,7 +338,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183137000" />
+    <option name="totallyTimeSpent" value="183586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1436" height="1440" extended-state="0" />
@@ -767,14 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="91" column="135" lean-forward="false" selection-start-line="91" selection-start-column="135" selection-end-line="91" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ScrollingTextView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -793,6 +783,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BackgroundCarousel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -803,13 +803,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="342">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
