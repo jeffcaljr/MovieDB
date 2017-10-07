@@ -819,12 +819,14 @@ movie-info-right-column{
 }
 
 .custom-category-selected{
-  color: rgba(244, 67, 54, 0.8)
+  color: rgba(244, 67, 54, 0.8);
+  font-weight: bold;
 }
 
 
 .custom-category{
   color: #B71C1C;
+  font-weight: bold;
 }
 
 .similar-movies{
