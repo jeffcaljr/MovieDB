@@ -53,7 +53,12 @@ body::after{
 }
 
 .categories-list{
-  max-height: 80%;
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
@@ -195,6 +200,21 @@ body::after{
   cursor: pointer;
 }
 
+.category-name{
+  margin-bottom: 0 !important;
+}
+
+.menu-content{
+  height: 100%;
+  overflow: hidden;
+  flex-grow: 1;
+  /*background: green;*/
+  /*position: relative;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*width:100%;*/
+  /*height: 100%;*/
+}
 
 
 .hidden{
@@ -430,6 +450,9 @@ movie-info-right-column{
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 8px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* The navigation menu links */
@@ -493,6 +516,11 @@ movie-info-right-column{
 
 .sidenav-elements{
   overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
 }
 
 .sidenav-header{
@@ -505,9 +533,19 @@ movie-info-right-column{
 }
 
 .sidenav-content{
-  height: auto;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  flex-grow: 1;
+  position: relative;
+  /*overflow-y: scroll;*/
+  /*-webkit-overflow-scrolling: touch;*/
+}
+
+.sidenav-content-holder{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0px;
+  right: 0;
+  overflow: hidden;
 }
 
 .collapsed-menu-header{

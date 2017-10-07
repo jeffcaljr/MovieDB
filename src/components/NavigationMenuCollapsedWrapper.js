@@ -73,7 +73,9 @@ class NavigationMenuCollapsed extends Component{
                             <SearchBar/>
 
                             <div className="sidenav-content">
-                                {this.props.children}
+                                <div className="sidenav-content-holder">
+                                    {this.props.children}
+                                </div>
                             </div>
                         </div>
 

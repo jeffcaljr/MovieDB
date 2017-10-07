@@ -26,14 +26,18 @@ const MenuContent = ({categories, loadGenre}) => {
     return (
         <div className="menu-content">
 
-            <DropdownWrapper title={"Categories"}
-                             expandedDefault={true}
-                             children={
-                                 <ul className="list-group categories-list">
-                                     {renderCategories()}
+            <ul className="list-group categories-list p-2">
+                {renderCategories()}
 
-                                 </ul>}
-            />
+            </ul>
+
+            {/*<DropdownWrapper title={"Categories"}*/}
+                             {/*expandedDefault={true}*/}
+                             {/*children={*/}
+                                 {/*<ul className="list-group categories-list">*/}
+                                     {/*{renderCategories()}*/}
+
+                                 {/*</ul>}*/}
         </div>
     );
 

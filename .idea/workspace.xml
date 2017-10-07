@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieDetails.js" afterPath="$PROJECT_DIR$/src/components/MovieDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ScrollingTextView.js" afterPath="$PROJECT_DIR$/src/components/ScrollingTextView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MenuContent.js" afterPath="$PROJECT_DIR$/src/components/MenuContent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavCategory.js" afterPath="$PROJECT_DIR$/src/components/NavCategory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" afterPath="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +20,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovieDetails.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovieDetails.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
               <caret line="91" column="135" lean-forward="false" selection-start-line="91" selection-start-column="135" selection-end-line="91" selection-end-column="135" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavigationMenuCollapsedWrapper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="76" column="57" lean-forward="false" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -40,11 +52,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
-              <caret line="637" column="27" lean-forward="false" selection-start-line="637" selection-start-column="27" selection-end-line="637" selection-end-column="27" />
+            <state relative-caret-position="605">
+              <caret line="1075" column="26" lean-forward="true" selection-start-line="1075" selection-start-column="26" selection-end-line="1075" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuContent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MenuContent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavCategory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/NavCategory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" column="76" lean-forward="true" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -62,12 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>overflow-y: sc</find>
-      <find>background: blue</find>
-      <find>start</find>
-      <find>start-b</find>
-      <find>gear</find>
-      <find>sidenav-h</find>
       <find>rgb</find>
       <find>#</find>
       <find>red-border</find>
@@ -92,6 +128,12 @@
       <find>scrolling</find>
       <find>scroll</find>
       <find>scroll-lef</find>
+      <find>nav-ca</find>
+      <find>categories</find>
+      <find>-list</find>
+      <find>sidenav-content</find>
+      <find>bg-</find>
+      <find>: red</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -130,9 +172,7 @@
         <option value="$PROJECT_DIR$/src/actions/MovieList.js" />
         <option value="$PROJECT_DIR$/src/actions/MobileNav.js" />
         <option value="$PROJECT_DIR$/src/components/SearchBar.js" />
-        <option value="$PROJECT_DIR$/src/components/MenuContent.js" />
         <option value="$PROJECT_DIR$/src/reducers/MobileNav.js" />
-        <option value="$PROJECT_DIR$/src/components/NavCategory.js" />
         <option value="$PROJECT_DIR$/src/constants/genres.js" />
         <option value="$PROJECT_DIR$/src/models/movie.js" />
         <option value="$PROJECT_DIR$/src/components/SimilarMovieItem.js" />
@@ -141,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/reducers/VideoPlayer.js" />
         <option value="$PROJECT_DIR$/src/Routes.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenuWrapper.js" />
-        <option value="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
         <option value="$PROJECT_DIR$/src/components/Route404.js" />
         <option value="$PROJECT_DIR$/src/components/HomePage.js" />
         <option value="$PROJECT_DIR$/src/components/BackgroundCarousel.js" />
@@ -162,8 +201,11 @@
         <option value="$PROJECT_DIR$/src/reducers/Reviews.js" />
         <option value="$PROJECT_DIR$/src/components/MovieItem.js" />
         <option value="$PROJECT_DIR$/src/components/ScrollingTextView.js" />
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/MovieDetails.js" />
+        <option value="$PROJECT_DIR$/src/components/NavCategory.js" />
+        <option value="$PROJECT_DIR$/src/components/MenuContent.js" />
+        <option value="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
       </list>
     </option>
   </component>
@@ -300,7 +342,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179041000" />
+    <option name="totallyTimeSpent" value="182190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -467,26 +509,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NavCategory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/genres.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="694">
           <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MenuContent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -546,16 +572,6 @@
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="20" lean-forward="false" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,14 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/MovieDetailModal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -751,14 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="637" column="27" lean-forward="false" selection-start-line="637" selection-start-column="27" selection-end-line="637" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -767,10 +767,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NavCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="76" lean-forward="true" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MenuContent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="76" column="57" lean-forward="false" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MovieDetails.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="91" column="135" lean-forward="false" selection-start-line="91" selection-start-column="135" selection-end-line="91" selection-end-column="135" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="1075" column="26" lean-forward="true" selection-start-line="1075" selection-start-column="26" selection-end-line="1075" selection-end-column="26" />
           <folding />
         </state>
       </provider>
