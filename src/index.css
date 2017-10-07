@@ -1097,3 +1097,11 @@ body{
 }
 
 /* End Movie Reviews*/
+
+/* Utility Classes */
+
+.flex-grow-1{
+  flex-grow: 1;
+}
+
+/*END Utility classes */

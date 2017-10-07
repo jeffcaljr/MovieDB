@@ -28,21 +28,23 @@ const MovieList = ({className, movies, modalIsShowing, loadNew}) =>{
 
     return (
         <div className={className + " " + ((modalIsShowing) ? " no-scroll-y " : " scroll-y ")}>
-            <div className={"movie-items-container-content container-fluid" + ((modalIsShowing) ? " no-scroll-y " : " scroll-y ")}>
+            <div className={"movie-items-container-content container-fluid " + ((modalIsShowing) ? " no-scroll-y " : " scroll-y ")}>
 
                 {
                     movies.length > 0
-                    ? <div className="row">{renderMovies(movies)}</div>
+                    ? <div className="movie-list-content">
+                            <div className="row">{renderMovies(movies)}</div>
+                            <a
+                                href="#"
+                                className="btn text-white w-100 text-center typeface-serif text-uppercase"
+                                onClick={(e) => { e.preventDefault(); loadNew()}}
+                            >
+                                Load More
+                            </a>
+                        </div>
                     : <EmptyMoviesList/>
                 }
 
-
-
-                {
-                    movies.length > 0
-                    ?   <a href="#" className="btn text-white w-100 text-center typeface-serif text-uppercase" onClick={(e) => { e.preventDefault(); loadNew()}}>Load More</a>
-                    : null
-                }
 
             </div>
 
