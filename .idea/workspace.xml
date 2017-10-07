@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Functional/VideoPlayer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/SimilarMovies.js" afterPath="$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Functional/MovieItem.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Functional/SimilarMovies.js" afterPath="$PROJECT_DIR$/src/components/Functional/SimilarMovies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/VideoPlayer.js" afterPath="$PROJECT_DIR$/src/components/VideoPlayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieItem.js" afterPath="$PROJECT_DIR$/src/components/MovieItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieList.js" afterPath="$PROJECT_DIR$/src/components/MovieList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js" afterPath="$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,21 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovieItem.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MovieItem.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoPlayer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/VideoPlayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="113" lean-forward="false" selection-start-line="17" selection-start-column="113" selection-end-line="17" selection-end-column="113" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -43,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoPlayer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Functional/VideoPlayer.js">
+      <file leaf-file-name="MovieItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Functional/MovieItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="72" lean-forward="true" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+            <state relative-caret-position="375">
+              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -77,8 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>load</find>
-      <find>loadSimilarMovies</find>
       <find>s</find>
       <find>setting state</find>
       <find>unmountin</find>
@@ -107,6 +94,8 @@
       <find>custom</find>
       <find>import Similar</find>
       <find>import Video</find>
+      <find>import MovieItem</find>
+      <find>similarM</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -128,8 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/actions/MovieDetailModal.js" />
-        <option value="$PROJECT_DIR$/src/actions/ErrorDisplay.js" />
         <option value="$PROJECT_DIR$/src/components/ErrorsDisplay.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenuCollapsed.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenu.js" />
@@ -168,9 +155,7 @@
         <option value="$PROJECT_DIR$/src/components/MenuContent.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
         <option value="$PROJECT_DIR$/src/components/BackgroundCarousel.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieList.js" />
         <option value="$PROJECT_DIR$/src/components/MoreContent.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieItem.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/HomePage.js" />
         <option value="$PROJECT_DIR$/src/components/Functional/SimilarMovies.js" />
@@ -179,6 +164,10 @@
         <option value="$PROJECT_DIR$/src/components/VideoPlayer.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/Functional/VideoPlayer.js" />
+        <option value="$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieList.js" />
+        <option value="$PROJECT_DIR$/src/components/Functional/MovieItem.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieItem.js" />
       </list>
     </option>
   </component>
@@ -337,12 +326,12 @@
       <workItem from="1506128065236" duration="133000" />
       <workItem from="1506286689626" duration="654000" />
       <workItem from="1506800911398" duration="102796000" />
-      <workItem from="1507390763290" duration="1050000" />
+      <workItem from="1507390763290" duration="1338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188508000" />
+    <option name="totallyTimeSpent" value="188796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -387,13 +376,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css" />
     <entry file="file://$PROJECT_DIR$/src/actions/ErrorDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -442,6 +424,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="721">
           <caret line="85" column="37" lean-forward="false" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -654,14 +639,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MoreContent.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/MovieList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12570">
@@ -674,9 +651,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="652">
           <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -696,16 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Functional/SimilarMovies.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -714,21 +679,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Functional/VideoPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="19" column="72" lean-forward="true" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/VideoPlayer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Presentational/VideoPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -740,12 +721,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Functional/VideoPlayer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Functional/MovieItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="72" lean-forward="true" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+        <state relative-caret-position="375">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="113" lean-forward="false" selection-start-line="17" selection-start-column="113" selection-end-line="17" selection-end-column="113" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>

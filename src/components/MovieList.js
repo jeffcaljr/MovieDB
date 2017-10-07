@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
 import EmptyMoviesList from './EmptyMoviesList'
-import MovieItem from "./MovieItem";
+import MovieItem from "./Functional/MovieItem";
 import {loadMore} from "../actions/MovieList";
 
 

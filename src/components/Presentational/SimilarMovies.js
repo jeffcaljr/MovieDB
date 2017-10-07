@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import PropTypes from 'prop-types'
 
-import MovieItem from '../MovieItem'
+import MovieItem from '../Functional/MovieItem'
 import loadingSpinner from '../../images/loading_spinner.gif'
 import DropdownWrapper from "../DropdownWrapper";
 import {loadSimilarMovies} from "../../actions/SimilarMovies";
