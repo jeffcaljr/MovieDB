@@ -1,15 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {connect } from 'react-redux'
+
 import {Link} from 'react-router-dom'
 
-import NavCategory from "./Functional/NavCategory";
-import DropdownWrapper from "./Presentational/DropdownWrapper";
-import {load} from "../actions/MovieList";
-import {ALL_POSSIBLE_GENRES, GENRES, TRENDING_GENRE} from "../constants/genres";
-import SearchBar from './Functional/SearchBar'
+import {ALL_POSSIBLE_GENRES, GENRES, TRENDING_GENRE} from "../../constants/genres";
+import SearchBar from '../Functional/SearchBar'
 
-const NavigationMenu  = (props) => {
+const NavigationMenuWrapper  = (props) => {
 
     const getLastGenre = () =>{
         const lastGenre = ALL_POSSIBLE_GENRES.find( (genre) => {return genre.id === props.lastGenreID})
@@ -56,29 +53,14 @@ const NavigationMenu  = (props) => {
 
 }
 
-NavigationMenu.propTypes = {
+NavigationMenuWrapper.propTypes = {
 
     className: PropTypes.string,
     children: PropTypes.node
 }
 
-NavigationMenu.defaultProps = {
+NavigationMenuWrapper.defaultProps = {
     className: ""
 }
 
-const mapStateToProps = state => {
-
-    return {
-        lastGenreID: state.movieListReducer.lastGenreID
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return{
-
-    }
-}
-
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(NavigationMenu);
+export default NavigationMenuWrapper;

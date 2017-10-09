@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'isomorphic-fetch'
 import {connect} from 'react-redux'
 
-import NavigationMenuWrapper from "./NavigationMenuWrapper";
+import NavigationMenuWrapper from "./Functional/NavigationMenuWrapper";
 import MovieList from "./Functional/MovieList";
 import NavigationMenuWrapperMobile from "./Functional/NavigationMenuWrapperMobile";
 import VideoPlayer from "./Functional/VideoPlayer";
