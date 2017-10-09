@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ScrollingTextView from "./ScrollingTextView";
 
 
 const ErrorBox = ({error, index, removeError}) => {
@@ -9,7 +10,7 @@ const ErrorBox = ({error, index, removeError}) => {
 
             <div className="error-box-content">
                 <div className="error-text">
-                    {error.message}
+                    <ScrollingTextView text={error.message}/>
                 </div>
             </div>
 
