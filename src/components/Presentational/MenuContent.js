@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {connect } from 'react-redux'
-import {TRENDING_GENRE} from "../constants/genres";
-import DropdownWrapper from "./Presentational/DropdownWrapper";
-import NavCategory from './Functional/NavCategory'
-import {load} from "../actions/MovieList";
+
+import {TRENDING_GENRE} from "../../constants/genres";
+import DropdownWrapper from "./DropdownWrapper";
+import NavCategory from '../Functional/NavCategory'
+
 
 
 const MenuContent = ({categories, loadGenre}) => {
@@ -55,19 +55,4 @@ MenuContent.defaultProps = {
     categories: []
 }
 
-const mapStateToProps = state => {
-    return {
-
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return{
-        loadGenre: genreID => {
-            dispatch(load(genreID))
-        }
-    }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(MenuContent)
+export default MenuContent;

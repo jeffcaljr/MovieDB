@@ -11,7 +11,7 @@ import {GENRES, TRENDING_GENRE} from "../constants/genres";
 import LoadingCover from "./Presentational/LoadingCover";
 import {load} from "../actions/MovieList";
 import ErrorDisplay from './Functional/ErrorsDisplay'
-import MenuContent from './MenuContent'
+import MenuContent from './Functional/MenuContent'
 
 class App extends Component {
 
