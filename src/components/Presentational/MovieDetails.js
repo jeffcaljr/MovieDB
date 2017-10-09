@@ -1,16 +1,11 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
 
-import SimilarMovies from './Functional/SimilarMovies'
-import Reviews from './Functional/Reviews'
-import FavoriteButton from "./Presentational/FavoriteButton";
-import DropdownWrapper from "./Presentational/DropdownWrapper";
-import {openVideo} from "../actions/VideoPlayer";
-import MovieCover from "./Presentational/MovieCover";
-import {hide} from "../actions/MovieDetailModal";
-import {toggleLiked} from "../actions/MovieList";
-import ScrollingTextView from "./Presentational/ScrollingTextView";
+
+import SimilarMovies from '../Functional/SimilarMovies'
+import Reviews from '../Functional/Reviews'
+import MovieCover from "./MovieCover";
+import ScrollingTextView from "./ScrollingTextView";
 
 class MovieDetails extends Component {
     constructor(props) {
@@ -163,29 +158,4 @@ MovieDetails.defaultProps = {
 }
 
 
-
-const mapStateToProps = state => {
-
-
-    return {
-        movie: state.movieDetailModalReducer.movie,
-        showing: state.movieDetailModalReducer.showing,
-        thisMovieInStore: state.movieListReducer.movies.find( movie => {return movie.id === state.movieDetailModalReducer.movie.id})
-    }
-}
-
-const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        playVideo: movie => {
-            dispatch(openVideo(movie))
-        },
-        closeModal: () => {
-            dispatch(hide())
-        },
-        toggleFavorite: (movie) =>{
-            dispatch(toggleLiked(movie))
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MovieDetails);
+export default MovieDetails;

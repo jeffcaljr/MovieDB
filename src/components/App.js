@@ -6,7 +6,7 @@ import NavigationMenu from "./NavigationMenuWrapper";
 import MovieList from "./Functional/MovieList";
 import NavigationMenuCollapsed from "./NavigationMenuCollapsedWrapper";
 import VideoPlayer from "./Functional/VideoPlayer";
-import MovieDetails from './MovieDetails'
+import MovieDetails from './Functional/MovieDetails'
 import {GENRES, TRENDING_GENRE} from "../constants/genres";
 import LoadingCover from "./Presentational/LoadingCover";
 import {load} from "../actions/MovieList";
