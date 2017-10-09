@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+
 import {Link} from 'react-router-dom'
 
 import {ALL_POSSIBLE_GENRES, GENRES, TRENDING_GENRE} from "../../constants/genres";
