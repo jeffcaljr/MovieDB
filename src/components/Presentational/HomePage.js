@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import BackgroundCarousel from "../BackgroundCarousel";
+import BackgroundCarousel from "./BackgroundCarousel";
 import moviedb_logo from '../../images/themoviedb_logo.png'
 
 

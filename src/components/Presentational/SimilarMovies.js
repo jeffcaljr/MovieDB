@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import MovieItem from '../Functional/MovieItem'
 import loadingSpinner from '../../images/loading_spinner.gif'
-import DropdownWrapper from "../DropdownWrapper";
+import DropdownWrapper from "./DropdownWrapper";
 import {loadSimilarMovies} from "../../actions/SimilarMovies";
 
 

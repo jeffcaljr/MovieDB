@@ -4,10 +4,10 @@ import {connect} from 'react-redux'
 
 import SimilarMovies from './Functional/SimilarMovies'
 import Reviews from './Reviews'
-import FavoriteButton from "./FavoriteButton";
-import DropdownWrapper from "./DropdownWrapper";
+import FavoriteButton from "./Presentational/FavoriteButton";
+import DropdownWrapper from "./Presentational/DropdownWrapper";
 import {openVideo} from "../actions/VideoPlayer";
-import MovieCover from "./MovieCover";
+import MovieCover from "./Presentational/MovieCover";
 import {hide} from "../actions/MovieDetailModal";
 import {toggleLiked} from "../actions/MovieList";
 import ScrollingTextView from "./Presentational/ScrollingTextView";

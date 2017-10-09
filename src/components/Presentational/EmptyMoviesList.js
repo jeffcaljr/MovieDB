@@ -1,5 +1,5 @@
 import React from 'react'
-import noResultsImg from '../images/no-results-image.png'
+import noResultsImg from '../../images/no-results-image.png'
 
 
 const EmptyMoviesList = () => {

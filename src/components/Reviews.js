@@ -3,7 +3,7 @@ import {connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import loadingSpinner from '../images/loading_spinner.gif'
-import DropdownWrapper from "./DropdownWrapper";
+import DropdownWrapper from "./Presentational/DropdownWrapper";
 import {loadReviews} from "../actions/Reviews";
 import ReviewItem from "./Presentational/ReviewItem";
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import spinner from '../images/loading_spinner.gif'
-import {STATUS_LOADING} from "../actions/MovieList";
+import spinner from '../../images/loading_spinner.gif'
+import {STATUS_LOADING} from "../../actions/MovieList";
 
 const LoadingCover = ({loading}) => {
 

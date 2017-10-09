@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {connect } from 'react-redux'
 import {TRENDING_GENRE} from "../constants/genres";
-import DropdownWrapper from "./DropdownWrapper";
-import NavCategory from './NavCategory'
+import DropdownWrapper from "./Presentational/DropdownWrapper";
+import NavCategory from './Functional/NavCategory'
 import {load} from "../actions/MovieList";
 
 

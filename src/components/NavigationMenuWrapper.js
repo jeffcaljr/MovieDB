@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import {connect } from 'react-redux'
 import {Link} from 'react-router-dom'
 
-import NavCategory from "./NavCategory";
-import DropdownWrapper from "./DropdownWrapper";
+import NavCategory from "./Functional/NavCategory";
+import DropdownWrapper from "./Presentational/DropdownWrapper";
 import {load} from "../actions/MovieList";
 import {ALL_POSSIBLE_GENRES, GENRES, TRENDING_GENRE} from "../constants/genres";
 import SearchBar from './Functional/SearchBar'

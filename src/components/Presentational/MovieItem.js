@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import FavoriteButton from "../FavoriteButton";
+import FavoriteButton from "./FavoriteButton";
 import ScrollingTextView from "./ScrollingTextView";
 
 import Movie from '../../models/Movie'

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import {connect } from 'react-redux'
 import {Link} from 'react-router-dom'
 
-import NavCategory from "./NavCategory";
+import NavCategory from "./Functional/NavCategory";
 import SearchBar from './Functional/SearchBar'
 import {ALL_POSSIBLE_GENRES, GENRES} from "../constants/genres";
 import {contractNav, expandNav} from "../actions/MobileNav";
