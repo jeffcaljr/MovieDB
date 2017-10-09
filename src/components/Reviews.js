@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import loadingSpinner from '../images/loading_spinner.gif'
 import DropdownWrapper from "./DropdownWrapper";
 import {loadReviews} from "../actions/Reviews";
-import ReviewItem from "./ReviewItem";
+import ReviewItem from "./Presentational/ReviewItem";
 
 
 const Reviews= ({movieID, reviews, loading, loadReviews}) => {

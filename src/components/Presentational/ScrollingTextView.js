@@ -9,7 +9,7 @@ class ScrollingTextView extends Component{
             hasOverflow: false
         }
 
-        this.hasOverflow= this.hasOverflow.bind(this)
+        this.hasOverflow = this.hasOverflow.bind(this)
 
     }
 
@@ -35,10 +35,7 @@ class ScrollingTextView extends Component{
     }
 
     componentDidMount(){
-
         this.setState({ hasOverflow: this.hasOverflow()})
-
-        // alert("scroll-left width: " + this.scrollLeft.offsetWidth + "\n scroll text width: " + this.scrollText.offsetWidth)
     }
 }
 

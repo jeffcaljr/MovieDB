@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {connect } from 'react-redux'
-import {removeError} from "../actions/ErrorDisplay";
+
 
 const ErrorBox = ({error, index, removeError}) => {
 
@@ -33,18 +32,4 @@ ErrorBox.propTypes = {
     error: PropTypes.instanceOf(Error).isRequired
 }
 
-const mapStateToProps = state => {
-    return {
-
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        removeError: index => {
-            dispatch(removeError(index))
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ErrorBox);
+export default ErrorBox;

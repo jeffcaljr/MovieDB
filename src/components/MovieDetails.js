@@ -10,7 +10,7 @@ import {openVideo} from "../actions/VideoPlayer";
 import MovieCover from "./MovieCover";
 import {hide} from "../actions/MovieDetailModal";
 import {toggleLiked} from "../actions/MovieList";
-import ScrollingTextView from "./ScrollingTextView";
+import ScrollingTextView from "./Presentational/ScrollingTextView";
 
 class MovieDetails extends Component {
     constructor(props) {

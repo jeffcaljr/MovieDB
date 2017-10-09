@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import ErrorBox from './ErrorBox'
+import ErrorBox from './Functional/ErrorBox'
 
 const ErrorsDisplay = ({errors}) => {
 

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import FavoriteButton from "../FavoriteButton";
-import ScrollingTextView from "../ScrollingTextView";
+import ScrollingTextView from "./ScrollingTextView";
 
 import Movie from '../../models/Movie'
 import cover from '../../images/default-movie-cover.jpg'
