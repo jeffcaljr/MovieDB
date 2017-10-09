@@ -1,11 +1,10 @@
 import React from 'react'
-import {connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import loadingSpinner from '../images/loading_spinner.gif'
-import DropdownWrapper from "./Presentational/DropdownWrapper";
-import {loadReviews} from "../actions/Reviews";
-import ReviewItem from "./Presentational/ReviewItem";
+import loadingSpinner from '../../images/loading_spinner.gif'
+import DropdownWrapper from "./DropdownWrapper";
+
+import ReviewItem from "./ReviewItem";
 
 
 const Reviews= ({movieID, reviews, loading, loadReviews}) => {
@@ -78,21 +77,4 @@ Reviews.propTypes = {
     movieID: PropTypes.number.isRequired
 }
 
-const mapStateToProps = state => {
-
-    return {
-        reviews: state.reviewsReducer.reviews,
-        loading: state.reviewsReducer.loading
-    }
-}
-
-const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        loadReviews: () => {
-            dispatch(loadReviews((ownProps.movieID)))
-        }
-    }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Reviews);
+export default Reviews;

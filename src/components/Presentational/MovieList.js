@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import EmptyMoviesList from './Presentational/EmptyMoviesList'
-import MovieItem from "./Functional/MovieItem";
+import EmptyMoviesList from './EmptyMoviesList'
+import MovieItem from "../Functional/MovieItem";
 
 
 

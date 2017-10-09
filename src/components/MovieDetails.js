@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
 import SimilarMovies from './Functional/SimilarMovies'
-import Reviews from './Reviews'
+import Reviews from './Functional/Reviews'
 import FavoriteButton from "./Presentational/FavoriteButton";
 import DropdownWrapper from "./Presentational/DropdownWrapper";
 import {openVideo} from "../actions/VideoPlayer";

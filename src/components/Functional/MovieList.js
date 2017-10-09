@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 import {loadMore} from "../../actions/MovieList";
 
-import MovieList from "../MovieList";
+import MovieList from "../Presentational/MovieList";
 
 const mapStateToProps = state => {
     return {
