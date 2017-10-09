@@ -1,15 +1,13 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import {connect } from 'react-redux'
 import {Link} from 'react-router-dom'
 
-import NavCategory from "./Functional/NavCategory";
-import SearchBar from './Functional/SearchBar'
-import {ALL_POSSIBLE_GENRES, GENRES} from "../constants/genres";
-import {contractNav, expandNav} from "../actions/MobileNav";
+import NavCategory from "../Functional/NavCategory";
+import SearchBar from '../Functional/SearchBar'
+import {ALL_POSSIBLE_GENRES, GENRES} from "../../constants/genres";
 
-class NavigationMenuCollapsed extends Component{
+
+class NavigationMenuWrapperMobile extends Component{
     constructor(){
         super();
         this.categorySelected = this.categorySelected.bind(this);
@@ -107,33 +105,13 @@ class NavigationMenuCollapsed extends Component{
 
 }
 
-NavigationMenuCollapsed.propTypes = {
+NavigationMenuWrapperMobile.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node
 }
 
-NavigationMenuCollapsed.defaultProps = {
+NavigationMenuWrapperMobile.defaultProps = {
     className: ""
 }
 
-const mapStateToProps = state => {
-
-    return {
-        lastGenreID: state.movieListReducer.lastGenreID,
-        navOpen: state.mobileNavReducer.expanded
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-
-    return{
-        openNav: () => {
-            dispatch(expandNav())
-        },
-        closeNav: () => {
-            dispatch(contractNav())
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(NavigationMenuCollapsed);
+export default NavigationMenuWrapperMobile;

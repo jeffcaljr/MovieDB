@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import 'isomorphic-fetch'
 import {connect} from 'react-redux'
 
-import NavigationMenu from "./NavigationMenuWrapper";
+import NavigationMenuWrapper from "./NavigationMenuWrapper";
 import MovieList from "./Functional/MovieList";
-import NavigationMenuCollapsed from "./NavigationMenuCollapsedWrapper";
+import NavigationMenuWrapperMobile from "./Functional/NavigationMenuWrapperMobile";
 import VideoPlayer from "./Functional/VideoPlayer";
 import MovieDetails from './Functional/MovieDetails'
 import {GENRES, TRENDING_GENRE} from "../constants/genres";
@@ -36,10 +36,10 @@ class App extends Component {
 
           <div className="container-fluid">
               <div className="row">
-                  <NavigationMenu
+                  <NavigationMenuWrapper
                       className="navigation-container col-md-3 hidden-sm-down"
                       children={<MenuContent categories={GENRES}/>}/>
-                  <NavigationMenuCollapsed
+                  <NavigationMenuWrapperMobile
                       className="hidden-md-up col-12 navbar navbar-toggleable-md"
                       children={<MenuContent categories={GENRES}/>}/>
                   <MovieList
