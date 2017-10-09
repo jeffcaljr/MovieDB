@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 import {load} from "../../actions/MovieList";
 import {menuItemChosen} from "../../actions/MobileNav";
-import NavCategory from "../NavCategory";
+import NavCategory from "../Presentational/NavCategory";
 
 
 const mapStateToProps = (state, ownProps) => {

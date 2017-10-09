@@ -3,7 +3,7 @@ import 'isomorphic-fetch'
 import {connect} from 'react-redux'
 
 import NavigationMenu from "./NavigationMenuWrapper";
-import MovieList from "./MovieList";
+import MovieList from "./Functional/MovieList";
 import NavigationMenuCollapsed from "./NavigationMenuCollapsedWrapper";
 import VideoPlayer from "./Functional/VideoPlayer";
 import MovieDetails from './MovieDetails'

@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Functional/NavCategory.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/BackgroundCarousel.js" afterPath="$PROJECT_DIR$/src/components/Presentational/BackgroundCarousel.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/DropdownWrapper.js" afterPath="$PROJECT_DIR$/src/components/Presentational/DropdownWrapper.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/EmptyMoviesList.js" afterPath="$PROJECT_DIR$/src/components/Presentational/EmptyMoviesList.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/FavoriteButton.js" afterPath="$PROJECT_DIR$/src/components/Presentational/FavoriteButton.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/LoadingCover.js" afterPath="$PROJECT_DIR$/src/components/Presentational/LoadingCover.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/MovieCover.js" afterPath="$PROJECT_DIR$/src/components/Presentational/MovieCover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Functional/MovieList.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/NavCategory.js" afterPath="$PROJECT_DIR$/src/components/Presentational/NavCategory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MenuContent.js" afterPath="$PROJECT_DIR$/src/components/MenuContent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieDetails.js" afterPath="$PROJECT_DIR$/src/components/MovieDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Functional/NavCategory.js" afterPath="$PROJECT_DIR$/src/components/Functional/NavCategory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieList.js" afterPath="$PROJECT_DIR$/src/components/MovieList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavCategory.js" afterPath="$PROJECT_DIR$/src/components/NavCategory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" afterPath="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavigationMenuWrapper.js" afterPath="$PROJECT_DIR$/src/components/NavigationMenuWrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Presentational/HomePage.js" afterPath="$PROJECT_DIR$/src/components/Presentational/HomePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Presentational/MovieItem.js" afterPath="$PROJECT_DIR$/src/components/Presentational/MovieItem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js" afterPath="$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Reviews.js" afterPath="$PROJECT_DIR$/src/components/Reviews.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,26 +20,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NavCategory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/NavCategory.js">
+      <file leaf-file-name="MovieList.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Functional/MovieList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavCategory.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Functional/NavCategory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,7 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>scroll-left</find>
       <find>scrolling</find>
       <find>scroll</find>
       <find>scroll-lef</find>
@@ -99,6 +71,7 @@
       <find>import Error</find>
       <find>import NavC</find>
       <find>import NavCat</find>
+      <find>import MovieList</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -124,7 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/EmptyMoviesList.js" />
         <option value="$PROJECT_DIR$/src/actions/MovieList.js" />
         <option value="$PROJECT_DIR$/src/actions/MobileNav.js" />
         <option value="$PROJECT_DIR$/src/reducers/MobileNav.js" />
@@ -157,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/components/VideoPlayer.js" />
         <option value="$PROJECT_DIR$/src/components/Functional/VideoPlayer.js" />
         <option value="$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js" />
-        <option value="$PROJECT_DIR$/src/components/MovieList.js" />
         <option value="$PROJECT_DIR$/src/components/Functional/MovieItem.js" />
         <option value="$PROJECT_DIR$/src/components/MovieItem.js" />
         <option value="$PROJECT_DIR$/src/components/Presentational/MovieItem.js" />
@@ -168,13 +139,15 @@
         <option value="$PROJECT_DIR$/src/components/Functional/ErrorBox.js" />
         <option value="$PROJECT_DIR$/src/components/ErrorsDisplay.js" />
         <option value="$PROJECT_DIR$/src/components/Functional/ErrorsDisplay.js" />
-        <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/Presentational/ErrorBox.js" />
         <option value="$PROJECT_DIR$/src/components/NavCategory.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationMenuWrapper.js" />
         <option value="$PROJECT_DIR$/src/components/MenuContent.js" />
         <option value="$PROJECT_DIR$/src/components/Functional/NavCategory.js" />
+        <option value="$PROJECT_DIR$/src/components/App.js" />
+        <option value="$PROJECT_DIR$/src/components/MovieList.js" />
+        <option value="$PROJECT_DIR$/src/components/Functional/MovieList.js" />
       </list>
     </option>
   </component>
@@ -239,13 +212,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Functional" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_tutorial_learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_tutorial_learning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Presentational" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react_tutorial_learning" type="b2602c69:ProjectViewProjectNode" />
@@ -334,12 +300,12 @@
       <workItem from="1506286689626" duration="654000" />
       <workItem from="1506800911398" duration="102796000" />
       <workItem from="1507390763290" duration="1624000" />
-      <workItem from="1507508379158" duration="2071000" />
+      <workItem from="1507508379158" duration="2221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191153000" />
+    <option name="totallyTimeSpent" value="191303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -384,7 +350,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/SimilarMovieItem.js" />
     <entry file="file://$PROJECT_DIR$/src/actions/MovieList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -577,14 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Functional/SearchBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -643,14 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -747,33 +696,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NavCategory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MenuContent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NavigationMenuWrapper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
@@ -783,11 +706,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Functional/NavCategory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
+        <state relative-caret-position="285">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Presentational/NavCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="78" lean-forward="true" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NavigationMenuCollapsedWrapper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NavigationMenuWrapper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Functional/MovieList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
