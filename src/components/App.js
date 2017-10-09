@@ -10,7 +10,7 @@ import MovieDetails from './MovieDetails'
 import {GENRES, TRENDING_GENRE} from "../constants/genres";
 import LoadingCover from "./LoadingCover";
 import {load} from "../actions/MovieList";
-import ErrorDisplay from './ErrorsDisplay'
+import ErrorDisplay from './Functional/ErrorsDisplay'
 import MenuContent from './MenuContent'
 
 class App extends Component {

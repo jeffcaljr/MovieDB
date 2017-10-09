@@ -1,6 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import ErrorBox from './Functional/ErrorBox'
+
+import ErrorBox from '../Functional/ErrorBox'
 
 const ErrorsDisplay = ({errors}) => {
 
@@ -29,16 +29,4 @@ const ErrorsDisplay = ({errors}) => {
 
 }
 
-const mapStateToProps = state => {
-    return{
-        errors: state.errorReducer.errors
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ErrorsDisplay);
+export default ErrorsDisplay;

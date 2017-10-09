@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4669efa-e8d6-42b1-bb7d-ea7ca027d7bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Functional/ErrorBox.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/ErrorBox.js" afterPath="$PROJECT_DIR$/src/components/Presentational/ErrorBox.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/ReviewItem.js" afterPath="$PROJECT_DIR$/src/components/Presentational/ReviewItem.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/ScrollingTextView.js" afterPath="$PROJECT_DIR$/src/components/Presentational/ScrollingTextView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Functional/ErrorsDisplay.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/ErrorsDisplay.js" afterPath="$PROJECT_DIR$/src/components/Presentational/ErrorsDisplay.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ErrorsDisplay.js" afterPath="$PROJECT_DIR$/src/components/ErrorsDisplay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MovieDetails.js" afterPath="$PROJECT_DIR$/src/components/MovieDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Presentational/MovieItem.js" afterPath="$PROJECT_DIR$/src/components/Presentational/MovieItem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Reviews.js" afterPath="$PROJECT_DIR$/src/components/Reviews.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,18 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ErrorBox.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Functional/ErrorBox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,8 +30,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>unmountin</find>
-      <find>lift-</find>
       <find>emptyGe</find>
       <find>this.props.</find>
       <find>scroll-left</find>
@@ -76,6 +58,8 @@
       <find>similarM</find>
       <find>import Searc</find>
       <find>import ErrorB</find>
+      <find>import ErrorsD</find>
+      <find>import Error</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -97,7 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/FavoriteButton.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/EmptyMoviesList.js" />
@@ -133,7 +116,6 @@
         <option value="$PROJECT_DIR$/src/components/MovieDetails.js" />
         <option value="$PROJECT_DIR$/src/components/SimilarMovies.js" />
         <option value="$PROJECT_DIR$/src/components/VideoPlayer.js" />
-        <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/Functional/VideoPlayer.js" />
         <option value="$PROJECT_DIR$/src/components/Presentational/SimilarMovies.js" />
         <option value="$PROJECT_DIR$/src/components/MovieList.js" />
@@ -146,8 +128,10 @@
         <option value="$PROJECT_DIR$/src/components/Functional/SearchBar.js" />
         <option value="$PROJECT_DIR$/src/components/ScrollingTextView.js" />
         <option value="$PROJECT_DIR$/src/components/ErrorBox.js" />
-        <option value="$PROJECT_DIR$/src/components/ErrorsDisplay.js" />
         <option value="$PROJECT_DIR$/src/components/Functional/ErrorBox.js" />
+        <option value="$PROJECT_DIR$/src/components/ErrorsDisplay.js" />
+        <option value="$PROJECT_DIR$/src/components/Functional/ErrorsDisplay.js" />
+        <option value="$PROJECT_DIR$/src/components/App.js" />
       </list>
     </option>
   </component>
@@ -307,16 +291,15 @@
       <workItem from="1506286689626" duration="654000" />
       <workItem from="1506800911398" duration="102796000" />
       <workItem from="1507390763290" duration="1624000" />
-      <workItem from="1507508379158" duration="1313000" />
+      <workItem from="1507508379158" duration="1520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190395000" />
+    <option name="totallyTimeSpent" value="190602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16601562" sideWeight="0.47052518" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -326,7 +309,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16601562" sideWeight="0.5294748" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32230216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -357,7 +340,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/SearchBar.ts" />
     <entry file="file://$PROJECT_DIR$/src/components/FavoriteButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -623,14 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Functional/SearchBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -709,14 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ErrorsDisplay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Presentational/ErrorBox.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -732,6 +698,34 @@
         <state relative-caret-position="15">
           <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Functional/ErrorsDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Presentational/ErrorsDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
