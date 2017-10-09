@@ -5,7 +5,7 @@ import {connect } from 'react-redux'
 import {Link} from 'react-router-dom'
 
 import NavCategory from "./NavCategory";
-import SearchBar from './SearchBar'
+import SearchBar from './Functional/SearchBar'
 import {ALL_POSSIBLE_GENRES, GENRES} from "../constants/genres";
 import {contractNav, expandNav} from "../actions/MobileNav";
 

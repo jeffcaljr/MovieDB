@@ -7,7 +7,7 @@ import NavCategory from "./NavCategory";
 import DropdownWrapper from "./DropdownWrapper";
 import {load} from "../actions/MovieList";
 import {ALL_POSSIBLE_GENRES, GENRES, TRENDING_GENRE} from "../constants/genres";
-import SearchBar from './SearchBar'
+import SearchBar from './Functional/SearchBar'
 
 const NavigationMenu  = (props) => {
 
