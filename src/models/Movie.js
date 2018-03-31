@@ -2,7 +2,7 @@ import 'isomorphic-fetch'
 import config from '../config'
 import {GENRES} from "../constants/genres";
 
-export const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
+export const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/";
 export const BASE_VIDEOS_URL_PREFIX = "https://api.themoviedb.org/3/movie/";
 export const BASE_VIDEOS_URL_SUFFIX = `/videos?language=en-US&api_key=${config.MOVIEDB_KEY}`;
 export const BASE_YOUTUBE_URL = "https://www.youtube.com/embed/";
